@@ -1,0 +1,82 @@
+Editing Files with vi
+
+vi and vim are the same thing minus some improvement seen in vim like syntax highlighting.
+
+In Linux files do not need file extention to be saved. However this would get confusing overtime, however
+it is possiable.
+
+
+
+
+vi (and vim)
+:
+Command mode
+
+:w
+Save file
+:w to "Save As"
+
+:wq or :x
+Save and exit
+
+:q!
+Exit without saving
+
+i
+Insert at current location
+
+I
+Insert at beginning of line
+
+a
+Append to end of word
+
+A
+Append to end of line
+
+dw
+delete word
+
+:u
+undo 
+
+:d or dd
+delete line
+
+<#>G or :<#>
+Move to a particular line #
+
+Ranges
+:#,#
+:1,10d
+Deletes line 1-10
+
+:set number
+Displays line numbers
+:set number! to disable
+vi +[# line number] filename opens a file to a particular line
+vi +12 file.txt
+To be permanent
+vi ~/.vimrc
+set number
+
+Search
+/ or :s/
+Search forward for text
+? for backward
+n for next
+N for previous
+
+vi +/ filename.txt
+Opens a file to the first occurrence of a term
+
+Search and Replace
+:s/[word]/[changed word]
+Replaces text on one line
+
+:%s/[word]/[changed word]
+Replaces text throughout the file because of (%)
+
+:#,#s//
+:4:6s/{word]/[other word]
+Replaces text within a range

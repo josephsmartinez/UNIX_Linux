@@ -1,0 +1,6 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-16-04
+
+Introduction
+VNC, or "Virtual Network Computing", is a connection system that allows you to use your keyboard and mouse to interact with a graphical desktop environment on a remote server. It makes managing files, software, and settings on a remote server easier for users who are not yet comfortable with the command line.
+
+In this guide, we will be setting up VNC on an Ubuntu 16.04 server and connecting to it securely through an SSH tunnel. The VNC server we will be using is TightVNC, a fast and lightweight remote control package. This choice will ensure that our VNC connection will be smooth and stable even on slower internet connections.

@@ -1,0 +1,36 @@
+CompTIA Linux+ LX0-103 - 101 System Architecture
+File System Health Part 2
+du
+Display disk usage of a file or folder
+du /home/dpezet
+df
+Display the total disk utilization
+df -h
+fsck
+Check the file system for errors
+fsck -A
+Check all filesystems
+fsck -t ext2 /dev/sda2
+It is a front end for the various filesystem tools e.g. e2fsck checks ext2/ext3 filesystems
+mkfs
+Front end for format utilities
+mke2fs similar, but for ext
+formats ext2/ext3/ext4
+debugfs
+Special filesystem that resides in RAM
+Useful for troubleshooting tools
+dumpe2fs
+Prints out filesystem information
+dumpe2fs -h /dev/sda1
+tune2fs
+Tune the performance of a filesystem
+Change # of mounts between filesystem integrity checks
+tune2fs -c 60 -i 6m /dev/sda1
+60 mounts
+6 months
+Change a volume's name
+tune2fs -L Storage /dev/sdb1
+tune2fs -l /dev/sda1 | grep volume
+Convert ext2 to ext3
+Enables journaling
+tune2fs -j /dev/sdc1

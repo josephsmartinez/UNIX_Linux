@@ -1,0 +1,104 @@
+Processing Text
+
+Synopsis: 
+When we take the output of one command and feed it as the input to another command you chain 
+yourcommands together into a pipeline to perform all sorts of cool actions.
+The problem is sometimes the output of one command is not exactly the way weneed it for that 
+second command to receive it, so we need to manipulate it a bit. We're going to talk about 
+how to manipulate files in their content and command output to put it into the right format 
+forwhat we need for performance or action.
+
+Example: Combining text from two files. The cat command combine the data within the files vertically. 
+The join command will conbime the data horizontally. The paste command will combine the data while placing
+tab between the different file data.
+
+cat [file] [other file]
+
+$cat file.txt
+Jim 987654321
+Mike 123456789
+
+$cat otherfile.txt
+987654321 Miami
+123456789 South Carolina
+
+$cat file.txt otherfile.txt
+Jim 987654321
+Mike 123456789
+987654321 Miami
+123456789 South Carolina
+
+join [file] [other file]
+
+$join file.txt otherfile.txt
+Jim 987654321 Miami 
+Mike 123456789 South Carolina
+
+
+paste [file] [other file] 
+
+$paste file.txt otherfile.txt
+Jim 987654321	987654321 Miami
+Mike 123456789	123456789 South Carolina
+
+Example: Finding number lines of files using nl. What if you were looking through a large program file that
+has an error at line number 100. How would count the line in that file. 
+
+$nl megafile.txt
+
+
+Example: Let's say that I wanted to print some kind of configuration file form my 
+system. While the configuration file by itself might look good on the screen, 
+but when you print it out, you got things like a certain character width, 
+you have to doword wrapping at a certain point, and so how you handle that is important.
+The following are some examples of how you can structure the print out of some data.
+
+cat /etc/profile
+
+cat /etc/profile | pr
+
+#This will show the line numbers
+cat -n /etc/profile | pr
+
+#This will show line numbers and add double spaces
+cat -n /etc/profile | pr -d
+
+Example: Whay happend if some hardware fails on the system. Well using the command dmesg will 
+display all the hardware detection that happened when I boosted this system up.So if you are trying 
+to troubleshoot a hardware problem...lets try and find the USB network adapter.(This may take some time)
+So what do we do?
+
+Soluation: You can use use a combinaion of command. Try this out on your own.
+
+Example: What if a program you have takes input as MAC addresses. How would filter the data using the 
+command ifconfig and only return the hex MAC address? This would be a good use for the command 'cut'.
+
+
+Soluation:
+#cut uses a deleminator -d which looks for space " " add returns field number 10
+$ifconfig | grep ehter | cut -d " " -f 10
+
+
+
+
+
+commands:
+cat
+join [OPTION]... FILE1 FILE2
+paste
+sort [OPTION]... [FILE]...
+sort -k
+nl [OPTION]... [FILE]...
+pr
+split [OUT DATED COMMAND]
+tail [OPTION]... [FILE]... Print the last 10 lines of each FILE to standard output.
+head [OPTION]... [FILE]... Print the first 10 lines of each FILE to standard output.
+dmesg [options] dmesg - print or control the kernel ring buffer
+cut
+grep
+ifconfig
+more
+less
+
+ket terms:
+CLI - command line interface  

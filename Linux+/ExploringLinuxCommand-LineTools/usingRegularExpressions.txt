@@ -1,0 +1,177 @@
+Using Regular Expressions
+
+Synopsis: In real life you'll find that if you work with scripts, you work with files in Linux, 
+you are gonna use regular expressions,and that's what we're gonna see in this section.
+
+Regular Expressions also known as REGEX are special characters that we can search for. 
+
+Some commands in the Linux environment are "command syntax" or "C++ structured".
+
+Example: What if you where looking for multiple types of words and files to make edites or find key information
+without sending multiple commands?
+
+#If a file had:
+fish
+fishing
+fished
+
+fis[h, hing, hed]
+
+#If we where looking for text files.
+test01.txt
+test02.txt
+test03.txt
+test04.txt
+test05.txt
+
+test0[2-4].txt
+test[a-z, A-Z, 0-9].txt
+        
+test0.\.txt
+	 ^ ^
+	 | |
+	 |  To note a regular period we need to escape the the character
+     The period in a regular expression is a wildcard
+
+
+Example: Given the following files, what would the two regular expression return. 
+
+ab.txt
+abb.txt
+abbb.txt
+abc.txt
+def.txt
+
+Solution:
+
+ab*\.txt
+# Although wildcards alone can be usful, this expression would only return files with "ab" and 
+only repeating "b" after. The files with different characters after "ab", like c, d, e, ..., z 
+would not be found.
+
+ab.*\.txt
+# Using a period before the wildcard mean "any character" and the star "*" means any number of 
+repeating.  	 
+
+
+Example: Given the follow HTML code, how would find the first and last accurance of the word "This". 
+How would this happen this lower-case and captial letters? 
+
+Hint:
+Dollar signs ($) - End of a line
+Carat (^) - Beginning of a line
+		 
+<html>
+	<head></head>
+	<body>
+		<p>
+		This is a sentence.
+		
+		This is a different sentence.
+		
+This is yet another sentence to work with.
+		
+		Who would believe it? Another sentence.
+		
+		Ok, you got me. That last one was two sentences.
+		
+		This sentence ends with This.
+		</p>
+	</body>
+</html>
+
+Solution:
+
+^[T, t]his
+# Notice how this does not highlight all the first word of "This". 
+# This because the most the line contain a tab
+
+
+[T, t]his\.$
+# This would find the last word of "This.", but notice how we captured the period.
+# This is a great expample of how we can use multiple searches when building an expression.
+
+This|this
+# This would work too and return all the accurances of the word "this, This". The pipe (|) can be used an
+# an OR opperator.
+
+Example: What about slicing and ejecting? What if you wanted to take a chunck of a word fragment or simply add
+a word into the sentence? Let us continue with the above expample. 
+
+(^This is)(.*)
+# This will slice the sentence into two parts
+
+\1not\2
+# If we used a replace function with the above, we would be able to enject the word "not".
+# \1 is the first part of the sentence, while, \2 is the secoond meaning "anything after, at any length". 	 
+		
+
+
+USING THE grep COMMAND (Globally Search a Regular Expression and Print)
+
+grep -r eno /etc/*
+# Fixed string expression
+
+ifconfig | grep ether
+# Fixed string expression
+
+ifconfig | grep -E "ether|eno" 
+# Regular expression, the -E is to single "grep" that we using a regular expression.
+
+
+ifconfig | grep -E "^eno16" 
+# Find the first accurance of eno16
+
+
+ifconfig | grep -E "^eno167.*" 
+# This will return the whole line the "eno167" is on.
+
+
+USING THE sed COMMAND (Another command that you can use regular expressions)
+
+Using sed
+Another classic Unix command
+Stream Editor
+Modifies a files contents based on command-line criteria
+Command modifiers
+a: Append text to file
+i: Insert text in file
+r: Append text from one file into another
+c: Replace selected range of lines with text
+s: Replace text that matches a regular expression
+Example
+sed 's/2012/2015' cal-2012.txt > cal-2015.txt
+Replaces any occurrence of "2012" in cal-2012.txt with "2015"
+Redirects output into "cal-2015.txt"
+
+Lab
+Requirements:
+Text file named cal-2012.txt
+Contents: 
+01/01/2012 New Year's Day 
+07/04/2012 Independence Day 
+10/31/2012 Halloween 
+12/25/2012 Christmas
+
+Solution:
+
+sed -i 's/2015/2016/g' cal-2015.txt
+
+
+		
+Commands:
+man 3 [command]
+man 7 [command]
+man 1 [command]
+grep
+fgrep (this command is found on some Linux distros)
+egrep (this command is found on some Linux distros)
+sed
+
+Key Terms: 
+POSIX
+Regular Expressions
+Escaping
+String
+Wildcard
+

@@ -1,0 +1,24 @@
+Command Prompt
+
+    Get the serial number of the current windows 
+    >wminc bios get serialnumber
+    
+    Get the man address of the currnet 
+    >getmac -v 
+    
+
+menciaj
+
+voltaircentosvm
+    
+Castic
+G1g4nt3!
+
+    
+casticbk
+    
+voltair_w
+
+Domain: AD
+
+Wired

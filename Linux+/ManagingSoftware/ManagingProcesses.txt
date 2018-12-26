@@ -1,0 +1,75 @@
+MANAGING PROCESSES
+
+CompTIA Linux+ (LX0-103) - Exploring Linux Command-Line Tools
+
+MANAGING PROCESSES
+    
+    Understanding the Kernel
+        uname
+        -n/--nodename
+        -v/--kernel-version
+        -a/--all
+            [kernel-name][nodename][kernel-release][kernel-version] [machine][processor][hardware-platform][operating-system]
+        ps (Process List)
+        
+        3 options
+            Unix options
+            Single dash before options
+            BSD options
+            No dash before options
+            GNU Long options
+            Two dashes before options
+        
+        Common usage
+            ps -A/-ef List all processes
+            ps -u user List processes of specific user
+            ps -u jbond
+            ps -xf/-AH List process hierarchy
+            Use grep to find specific process
+            ps -Af | grep lynx
+        top
+        top -d 10 Delay updates 10 seconds
+        top -p 4244 Display stats on PID# 4244
+        
+        Single letter commands
+            k Kill a process
+            r Change a process' priority
+            P Sort by CPU usage
+            M Sort by MEM usage
+            free Displays basic MEM stats
+            
+        jobs
+        Checks for running jobs before logging out
+        pgrep
+        Same basic output as ps | grep
+        ps -u root | grep cron
+        pgrep -u root cron
+        Foreground and Background processes
+        Ctrl+Z pauses a program
+        fg unpauses a program $>nano ctrl+Z $>fg
+        bg unpauses the program but runs it in the background
+        Adding an & to a command runs it in the background as soon as its initiated
+
+* MANAGING PROCESS PRIORITIES
+    nice launch a program with a specified priority
+        3 ways to run nice to set priorities
+            $>nice -12 number-crunch data.txt
+            $>nice -n 12 number-crunch data.txt
+            $>nice --adjustment=12 number-crunch data.txt
+    nice values are -20 to 19
+            Negative values are higher priority
+            Only root can run negative values and increase priority
+            Regular users can run positive values and decrease priority
+            Default nice value is 10
+            Default program priority value is 0
+    renice change the priority of an already running process
+        renice 12 [PID] [[-g] pgrps] [[-u] users] $>renice 12 6051 -u dpezet
+    
+* KILLING PROCESSES
+    kill command
+        kill -l lists all the kill signals
+            1 SIGHUP
+            9 SIGKILL
+            15 SIGTERM
+        kill -9 -s 9 --signal 9 $> ./stress_cpu.sh $> ps -u dpezet $> kill -9 PID for stress_cpu.sh
+    killall command $>killall stress_cpu.sh $>killall -i stress_cpu.sh

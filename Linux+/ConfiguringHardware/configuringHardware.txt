@@ -1,0 +1,53 @@
+CompTIA Linux+ LX0-103 - 101 System Architecture
+
+Hardware Settings
+
+    Hardware devices are mapped to files in /dev
+        Udev <--> HAL <--> Dbus
+            Udev is the system that maps hardware to files in /dev
+            Provides dynamic naming so files represent hardware that is actually present
+    
+        HAL populates the files with XML data
+        Dbus enables communications between HAL and the software process (file managers, media players, etc)
+    
+    Device mappings can be overridden if necessary
+        /etc/udev/rules.d
+        For example, say you removed eth0 and you now want eth1 to be eth0
+            vi /etc/udev/rules.d/70-persistent-net.rules
+            Correct names as required
+            Reboot is generally required
+    
+    List loaded modules
+        lsmod Calls /proc which contains a wide variety of system information cat /proc/modules
+    
+    Cold plug / Hot plug
+    
+    Loading modules
+        modprobe -v Not normally needed as kmod should load them when hardware is detected modinfo
+    
+    List connected hardware
+        lspci
+        lsusb
+        Both commands call /sys (the sysfs) which contains a wide variety of device information
+        ls /sys/bus/pci/devices or ls /sys/bus/pci/drivers/e1000
+   
+   All hardware is represented in /dev
+        /dev/cdrom
+        /dev/cpu
+        /dev/mem
+        /dev/sda
+        /dev/sda1
+        /dev/snd
+        /dev/stdout
+        /dev/tty##
+    
+    Disabling Hardware
+        Option #1: If you installed the driver, simply remove the package.
+        Option #2: If it is built in to the distro, add it to the modprobe blacklist:
+            Determine the module name (lsmod) vi /etc/modprobe.d/blacklist.conf
+        Option #3: Use one of the following to temporarily remove it from memory (will return after reboot)
+            rmmod
+                rmmod bluetooth
+                -f to force
+                -w to wait until unused
+            modprobe -r

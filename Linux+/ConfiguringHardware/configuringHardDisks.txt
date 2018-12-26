@@ -1,0 +1,91 @@
+CompTIA Linux+ LX0-103
+
+3.3 Configuring Hard Disks
+
+Why partition? 3.3.1
+    Reasons to partition
+        Multi-OS support
+        Filesystem choice
+        Disk space management
+        Disk error protection
+        Security
+        Backup
+   
+   Understanding partitioning systems
+        MBR Partitions
+        Primary Partitions
+        Extended Partitions
+        Logical Partitions
+        GPT Partitions
+        Does away with primary/extended/logical
+        128 definable partitions by default
+    
+    Creating Partitions and Filesystems
+        
+        Partitioning a disk
+       
+        Using fdisk for MBR disks
+            $sudo fdisk -l /dev/sdb
+            $sudo fdisk /dev/sdb
+            Command (m for help) p
+            Command (m for help) n [follow prompts]
+            Command (m for help) q [quit without saving]
+            Command (m for help) w [write and exit]
+            
+        Using gdisk for GPT disks
+            $sudo gdisk /dev/sdc
+            Command (? for help) p
+            Command (? for help) n
+            Command (? for help) 
+            Command (? for help) +0M
+            Command (? for help) -3000M
+            Command (? for help) 
+            Command (? for help) w
+            Y/N? yes
+            
+        Using parted for MBR, GPT, APM, and BSD
+            $sudo parted /dev/sdb
+            (parted) print
+            (parted) mkpart
+            
+        GUI gparted partition software
+            Preparing a partition for use
+            
+        Common filesystem types
+            ext2, ext3, ext4
+            ReiserFS
+            FAT, NTFS
+            ISO-9660, UDF Creating a filesystem
+        $sudo mkfs -t ext3 /dev/sdb1
+
+        Creating swap space
+            $sudo mkswap /dev/sdb2
+            $sudo swapon /dev/sdb2
+    
+    Mounting and Unmounting 3.3.2
+        mount [-alrsvw] [-t fstype] [-o options] [device] [mountpoint]
+        mount -a: Mount all filesystems in /etc/fstab
+        mount -r: Mount as read only
+        mount -w: Mount as read/write
+        mount -t: Specify the filesystem type
+        mount -o: Specify additional options
+        [device]: Specify the device filename that is to be mounted /dev/fd0, /dev/cdrom, /dev/hda4
+        [mountpoint]: Specify the directory to which
+    
+    the device's contents should be attached
+
+    $sudo mount /dev/sdb1 /home/dpezet/Files
+    $sudo umount /dev/sdb1 /home/dpezet/Files
+        Make mounting changes permanent by editing the /etc/fstab file
+        Mount Points
+        Common Partitions and Filesystem layouts
+            Swap
+            /home
+            /boot
+            /usr
+            /usr/local
+            /opt
+            /var
+            /tmp
+            /mnt
+            /media

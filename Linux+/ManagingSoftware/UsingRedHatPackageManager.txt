@@ -1,0 +1,49 @@
+REDHAT, DEBIAN, UBUNTU
+
+A B C D E
+
+A = Package Name B = Version # C = Build # D = Distribution E = Architecture
+
+x86_64 / amd64 i386 ARM noarch
+
+Install a local package with RPM
+rpm -Uvh samba-4.1.9-4.fc20.x86_64.rpm rpm -ivh webmin-1.750-1.noarch.rpm
+
+-i Install only (no upgrade) -U Install or Upgrade -vh Displays hash marks on the screen to represent progress
+
+Webmin Dependencies yum -y install perl perl-Net-SSLeay openssl perl-IO-Tty
+
+List details of an installed package with RPM
+rpm -qi webmin
+
+-q Queries the package if it exists -i Displays information
+
+Removing a package with RPM
+rpm -e webmin-1.750-1.noarch.rpm
+
+Extracting a package's contents
+rpm2cpio webmin-1.750-1.noarch.rpm > webmin-1.750-1.noarch.cpio cpio -i --make-directories < webmin-1.750-1.noarch.rpm
+
+NOTE: rpm today is mainly used for information gathering. For the most part "yum"
+is the most common when using a package manager.
+
+YELLOW DOG MANAGER
+
+Installing a package with Yum
+yum list httpd yum install httpd yum info httpd yum erase httpd
+
+Yum repositories
+/etc/yum.repos.d/[name].repo
+
+[Webmin]
+name=Webmin Distribution Neutral
+#baseurl=http://download.webmin.com/download/yum
+mirrorlist=http://download.webmin.com/download/yum/mirrorlist
+enabled=1
+wget http://www.webmin.com/jcameron-key.asc rpm --import jcameron-key.asc
+
+yum install webmin
+
+
+Keyterms: 
+RPM : Red Hat package manager

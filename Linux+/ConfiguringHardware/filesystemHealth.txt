@@ -1,0 +1,54 @@
+CompTIA Linux+ LX0-103 - 101 System Architecture
+
+File System Health Pt. 1
+
+Example /etc/fstab
+Device        Mount   FS          Options     Dump    Pass
+
+/dev/sda1    /       ext4        defaults    1       1
+/dev/sda2    /boot   ext4        defaults    1       1
+/dev/sda3     none    swap        defaults    0       0
+/dev/sda4    /home   ext4        defaults    0       2
+Device Formats
+lsblk -f or blkid to see names
+
+Filename:     /dev/sda1
+Label:        LABEL=Sales
+UUID:        UUID=1318f765-f170-4933-8295-fd49ba6f040a
+GPT Label:    PARTLABEL=EFI
+GPT UUID:    PARTUUID=c6c21355-9dbe-485f-a50a-d422458bc1e2
+Assign a Label
+tunefs -L Sales /dev/vg1/Sales
+
+Filesystem
+ext2
+ext3
+ext4
+btfrs
+reiserfs
+xfs
+jfs
+iso9660
+swap
+auto
+Options
+auto/noauto - Automatically mount at boot time
+user/nouser - Allow non-root users to mount
+exec/noexec - Allow executables
+ro - Mount read-only
+rw - Mount read-write
+sync/async - Perform disk I/O synchronous or asynchronous
+Sync - Commands wait for writes to complete
+Async - Commands terminate prior to writes completing
+dev/nodev - Allow block devices (/dev/*)
+usrquota/grpquota - Enable user/group quotas
+suid - Allow the use of SetUID/SetGID
+defaults - rw,suid,dev,exec,auto,nouser,async
+Dump
+Only used by dump
+0 = Do not backup
+1 = Perform backup
+Pass
+0 = Do not run filesystem check
+1 = High priority filesystem check
+2 = Low priority filesystem check

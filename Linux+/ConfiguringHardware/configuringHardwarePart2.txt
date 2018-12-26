@@ -1,0 +1,30 @@
+CompTIA Linux+ LX0-103 - 101 System Architecture
+    Hardware Settings
+       
+       Redirecting output to the serial port
+            vi /boot/grub/grub.conf
+                Add the following after "hiddenmenu" 
+                    serial --unit=1 --speed=9600 
+                    terminal --timeout=300 console serial
+                Disable the splashimage if one is set
+                Add the following options to your kernel line: 
+                    console=tty0 console=ttyS1,9600n8
+            
+            vi /etc/securetty
+                Add the following to the end of the file: 
+                ttyS1
+            
+            vi /etc/init/ttyS1.conf
+                Add the following to the end of the file: 
+                start on runlevel [1345] 
+                stop on runlevel [S06] 
+                respawn 
+                instance /dev/ttyS1 
+                exec /sbin/agetty ttyS1 9600 vt100-nav
+            
+            Boot to console
+                vi /etc/inittab
+                Set runlevel to 3
+            
+            Connect to console from VM Host
+                socat -d -d unix-connect:./centos6-serial stdio

@@ -1,0 +1,56 @@
+CompTIA Linux+ (LX0-103) - Exploring Linux Command-Line Tools
+Errata
+At the end of the episode, Don mentioned installing the LVM during an install allowed all partitions to participate in LVM. He specifically mentioned the "boot volume" when he should have said "root volume". For the system to boot, the EFI partition and /boot cannot be a part of LVM as the service is not loaded until after the kernel fires.
+
+Logical Volume Manager (LVM)
+Drive naming convention
+/dev/sda
+/dev/sda1
+/dev/sdb
+/dev/sdb3
+List available physical drives:
+fdisk -l
+Create a partition
+fdisk /dev/sdb
+n - Create new partition
+p - primary partition
+When done press "p" for a list
+w - write the changes
+Reboot or execute "partprobe"
+If install was a minimal install
+yum install lvm2
+Create physical volumes
+pvcreate /dev/sdb1 /dev/sdc1
+Verify creation
+pvdisplay
+Create a volume group
+vgcreate vg1 /dev/sdb1 /dev/sdc1
+vgdisplay
+Create logical volumes
+lvcreate -L vg1 -n
+lvcreate -L 70G vg1 -n lv1
+Format and mount the logical volume
+mkfs.ext4 /dev/vg1/lv1
+mount /dev/vg1/lv1
+Add more storage to the volume group / logical volume
+fdisk /dev/sdd
+n - create new partition
+w - write changes
+partprobe
+pvcreate /dev/sdd1
+vgextend vg1 /dev/sdd1
+lvresize -L +1G /dev/vg1/lv1
+df -h
+resize2fs /dev/vg1/lv1
+df -h
+lvdisplay
+Verify volume added to /etc/fstab if needed at boot
+more /etc/fstab/dev/mapper/vg1-lv1
+/root/Videos ext4 defaults 1 1
+1 - Do backup
+1 - Do check for errors
+Tear it all down
+umount
+lvremove /dev/vg1/lv1
+vgremove /dev/vg1
+pvremove /dev/sdb1 /dev/sdc1 /dev/sdd1

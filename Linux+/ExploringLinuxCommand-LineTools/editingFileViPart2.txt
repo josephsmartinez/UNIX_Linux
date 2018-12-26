@@ -1,0 +1,26 @@
+Editing Files with vi Part 2
+
+vi commands - his includes things like searching and navigating text, 
+appending and deleting, and saving changes.
+
+i insert is before
+a append is after
+
+cc - change the line
+cw - changes the word
+
+dd - Deletes a line
+dw - Delete word
+
+D - Deletes the line after the cursor
+
+y - Yakes the line (cut)
+V - Yank multiple line, move the cursor to the end of where to cut or delete. The press y to yank.
+
+p - puts the line back (paste)
+
+q! - Quit without changes
+w! - Overwrite the file
+
+:e - Change to another file
+:e! - Change to another file without saving

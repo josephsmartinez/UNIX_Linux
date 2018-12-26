@@ -1,0 +1,66 @@
+CompTIA Linux+ (LX0-104)
+9.3 Managing Email
+Background
+Installed by default on most distros
+Used for system notifications (cron)
+Message Transfer Agents (MTA)
+Simple Mail Transfer Protocol (SMTP)
+Used for sending email
+Used for transfering email between servers
+Mail User Agents (MUA)
+Post Office Protocol (POP3)
+Internet Message Access Protocol (IMAP4)
+Used for receiving e-mail
+MTAs
+Qmail
+High performance, but no longer directly updated
+Postfix
+Complex configuration but good balance of features and security
+Sendmail
+Stable and mature but a spotted security history
+Exim
+Very feature rich, but poor performance
+Sendmail was popular for a long time
+Postfix is the default for most distros now
+SMTP on TCP/25
+Emulates the 'sendmail' handling/calls to preserve functionality with older software
+/etc/postfix/main.cf (Main configuration)
+To Begin
+
+myhostname = mail.example.com
+mydomain = example.com
+myorigin = $mydomain
+inet_interfaces = all
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+mynetworks = 192.168.0.0/24, 127.0.0.0/8
+relay_domains = $mydestination
+relayhost = [192.168.0.5]
+home_mailbox = Mailbox 
+# Mailbox maps to /var/spool/mail/
+Next
+
+Aliases can be defined in /etc/aliases
+root: john
+Delivers mail for root to John
+Only root can edit /etc/aliases
+Users can configure their own forwards by:
+vi ~/.forward
+user1
+user2
+user3
+That will forward all of their e-mail to the three listed users.
+Execute 'newaliases' to update
+MUAs
+
+POP3 and IMAP4
+Dovecot
+Webmail
+RoundCube
+SquirrelMail
+mail is a CLI based e-mail client
+mailq displays queued e-mails
+Example
+
+mail -s "Test email" dpezet
+This is a test email.
+.

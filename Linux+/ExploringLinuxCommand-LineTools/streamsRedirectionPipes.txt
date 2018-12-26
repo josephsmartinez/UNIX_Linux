@@ -1,0 +1,88 @@
+Streams, Redirection and Pipes
+
+STREAM, have have different types of "input" stdin (Standard In) and "output" stdout (Standard Out). 
+Some output may be errors known as stderr (Standard Error).
+
+Types: 
+					numerical identifier
+(Standard In) 		0
+(Standard Out)		1
+(Standard Error)	2
+
+REDIRECTION
+[command] > [file]		Writes to
+[command] >> [file]		Appends to
+	
+Example: We will take the information from the root and home and place into directory.txt
+
+ls -la / > directory.txt 
+ls -la >> directory.txt
+
+Example: We will now use the numerical identifier to redirect the streams
+
+[some script] 1> good.txt 2> bad.txt 
+[some script] 1> good.txt 2> bad.txt 	
+
+Example: Here /dev/null means to throw the information. When commands are successful sometimes we dont need
+to know. Instead we would be more interested in the errors.
+
+[some script] 1> /dev/null 2>> show.log
+
+Example: A realworld example would be automate FTP and using scripting to perform usful task.
+
+$./download.sh
+$cat ./download.sh
+#/bin/bash
+ftp -v -n 10.1.10.4 << EOF
+user anonymous password
+binary
+get silence.wav
+exit
+EOF
+
+REDIRECTION USER PIPE
+
+We can use the pipe command and continus attaching more pipe as needed.
+
+ls -la | less
+ls -la | more
+ls -la | sort
+ls -la | sort -k 7
+ls -la | sort -k 7 | n1 > output.txt
+
+A lot of times, you're working with a command that can only accept somuch input, or 
+so many operators, or so much options that you can give to it.And once you reach the 
+end of that, you're done.Well, problem is, especially when you're working with scripts 
+and things like that,it might be a lot of data that you need to pipe around or move around 
+or redirect.Xargs help us do that by actually creating an instance for each one ofthe files 
+that they pull down, and running a command on those individually.
+
+
+Example: In shell, you're in what's called an exec session. 
+And, it's the exec session that determines exactly how much data you can provide it,and 
+it's based on a memory size, which can be as low five kilobytes (5kb).
+
+In this example, we use the xargs command to process the rm for each file individually.
+note the changes made to the conncatinated line.
+
+find ./ -user [user name] -name file* | rm -r
+find ./ -user [user name] -name file* | xargs "\n" rm
+find ./ -user [user name] -name | xargs "\n" rm
+
+
+Commands: 
+>
+>>
+|
+sort
+ls
+less
+more
+grep
+touch
+find
+xargs
+
+	
+Key Terms:
+file descriptors - 

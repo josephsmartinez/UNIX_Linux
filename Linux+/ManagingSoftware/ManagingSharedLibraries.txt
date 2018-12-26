@@ -1,0 +1,72 @@
+MANAGING SHARED LIBRARIES
+
+--------------------------------------------------------------
+CompTIA Linux+ (LX0-103) - Exploring Linux Command-Line Tools
+--------------------------------------------------------------
+Shared Libraries
+    Libraries typically end in .so
+
+    Fully qualified name:
+        /usr/lib/libreadline.so.3
+        /usr/lib64/mysql/libmysqlclient.so.18
+
+    ldconfig name:
+        /usr/lib/libreadline.so.3.0
+        /usr/lib64/mysql/libmysqlclient.so.18.0.0
+
+    link name:
+        /usr/lib/libreadline.so
+        /usr/lib64/mysql/libmysqlclient.so
+
+    Display all shared libraries:
+        ldconfig -v
+        /etc/ld.so.conf
+        /etc/ld.so.conf.d/mariadb-x86_64.conf
+
+    Specify a new library location
+        ldconfig -n /home/dpezet/lib
+        or
+        vi /etc/ld.so.conf
+
+    Display the library dependencies of a file
+        ldd /bin/bash
+        ldd /bin/vim
+
+Links
+    ln
+
+    HARDLINK, A hard link points to the data itself
+
+    Hard link
+        Default link type
+        Links to a file's inode
+        Can only link to files in the same filesystem
+        More efficient
+        ln
+        ln /sbin/fsck ~/fsck
+
+    SOFTLINK, a soft link doesn't like to the raw, hard data on the hard drive.Instead, it just links to
+    a path, and on a positive side,that makes them a lot more flexible.On a negative side, it 
+    means you can't move the target.If you move the target, it breaks the link.
+
+    Soft link / symlink / Symbolic Link
+        Links to a file path
+            Can link to any file anywhere
+            Less efficient
+            ln -s /sbin/fsck ~/fsck
+            
+    copying vs linking
+
+EXAMPLE:
+Create a hard linked and soft linked relationship between files. Have 
+one the main library update and re-link the files to point to the updated version.
+
+hint: 
+$ln -s [main file] [file link]
+$ln [main file] [file link]
+
+
+//MAKE SURE TO REBOOT AFTER MAKING CHANGES TO: UPDATED SOFTWARE AND LINKS ECT.
+
+
+

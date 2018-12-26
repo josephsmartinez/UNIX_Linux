@@ -1,0 +1,55 @@
+CompTIA Linux+ (LX0-104)
+
+8.2 Configuring Basic Networking
+
+    /etc/services
+        Enables/disables basic network services
+        
+    Temporarily bring up an interface
+        ifconfig eth0 up 192.168.0.100 netmask 255.255.255.0
+        route add default gw 192.168.0.1
+        ifconfig and route -n to verify
+        
+    /etc/sysconfig/network-scripts/ifcfg-eth0
+        Configuration for a NIC on Redhat
+        Ubuntu uses /etc/network/interfaces
+        RedHat uses NetworkManager
+            chkconfig NetworkManager off
+    
+    To Begin
+
+    DEVICE=eth0
+    TYPE=Ethernet
+    BOOTPROTO=static
+    IPADDR=192.168.0.2
+    NETMASK=255.255.255.0
+    GATEWAY=192.168.0.1
+    ONBOOT=yes
+    NM_CONTROLLED=no
+    
+    /etc/sysconfig/network
+        Configurations that apply to all NICs
+        GATEWAY=192.168.0.1
+    
+    Name Lookups
+        /etc/hosts
+        Overrides DNS
+        
+    /etc/hostname
+        hostname is not normally persistent
+        Defines a machines hostname
+        Not present in all distros
+        In RedHat you must update /etc/sysconfig/network and /etc/hosts
+        
+    /etc/resolv.conf
+        DNS Servers
+    
+    /etc/nsswitch.conf
+        Controls lookup system beyond just DNS
+        NIS+ Servers
+            hosts: files dns
+    
+    Restarting the network service
+        Most changes require restarting the network service
+        service network restart
+        systemctl restart network.service
