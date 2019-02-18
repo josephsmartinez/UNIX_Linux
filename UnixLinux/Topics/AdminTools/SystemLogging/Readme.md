@@ -1,5 +1,7 @@
 # Tools for common admin task
 
+https://wiki.archlinux.org/index.php/Rsyslog#Facility_Levels
+
 ## System Logging
 Logging Daemons  
 syslogd (System Logging)  

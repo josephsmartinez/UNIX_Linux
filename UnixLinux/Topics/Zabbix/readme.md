@@ -1,6 +1,15 @@
 # Zabbix Monitoring Tool
 
-Zabbix Installation and Configuration for Windows
+## Installation and Configuration Specs
+
+
+[Requirments](https://www.zabbix.com/documentation/3.4/manual/installation/requirements)
+
+
+
+
+
+## Zabbix Installation and Configuration for Windows
 
 Agent downloads can be found here:
 https://www.zabbix.com/download_agents

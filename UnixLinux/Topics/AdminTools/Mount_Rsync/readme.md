@@ -9,6 +9,11 @@ You can use plenty of things, among which, popular options are:
 https://www.tecmint.com/rsync-local-remote-file-synchronization-commands/
 
 
+## Copy a Directory from Local Server to a Remote Server
+`rsync -avz rpmpkgs/ root@192.168.0.101:/home/`
+
+
+
 ## Mount Remote Linux Filesystem or Directory Using SSHFS Over SSH
 
 https://www.tecmint.com/sshfs-mount-remote-linux-filesystem-directory-using-ssh/
