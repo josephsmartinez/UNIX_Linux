@@ -1,7 +1,0 @@
-- hosts: venom
-  roles:
-    - webservices
-
-# Note:
-# - update FQDN
-# - 

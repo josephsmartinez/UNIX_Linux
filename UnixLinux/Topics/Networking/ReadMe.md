@@ -1,5 +1,15 @@
 # Configure CentOS 7 Network Settings
 
+## Trouble shooting
+
+nc -vz code42.example.com 443
+
+telnet code42.example.com 443
+
+https://support.code42.com/CrashPlan/5/Troubleshooting/Test_your_network_connection
+
+
+
 Resources:
 
 Connecting to VM
