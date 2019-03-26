@@ -1,8 +1,0 @@
-Resources for this course may be found online. 
-
-Making updates to this course takes time. Therefore, 
-if there are any changes in between updates, you can 
-always access course updates, as well as other course resources online:
-
-Go to https://training.linuxfoundation.org/cm/LFS201/.
-The user ID is LFtraining and the password is Penguin2014. 

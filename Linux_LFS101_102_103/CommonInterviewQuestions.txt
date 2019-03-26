@@ -1,9 +1,0 @@
-How to Effectively and Efficiently Edit Configuration Files in Linux
-
- I’ll first discuss the command-line tools that are 
- invaluable to the task of making configuration more efficient.
- 
- $diff
- 
- 
- 
