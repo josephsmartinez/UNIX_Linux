@@ -18,6 +18,7 @@ Keyword:
 - Trace signals
 - Runaway process
 - Periodic process
+- Run levels
 
 ## Life cycle of a process
 
@@ -92,14 +93,25 @@ process states:
 ## Controlling processes with limits
 
 A system administrator may need to change limits:
-- To restrict capabilities so an individual user and/or process
-cannot exhaust system resources.
+
+- To restrict capabilities so an individual user and/or process cannot exhaust system resources.
 - To expand capabilities so a process does not run into resource limits i.e.
-a server handing many clients may find that the default of 1024 open files
-makes its work impossible to perform.
+a server handing many clients may find that the default of 1024 open files makes its work impossible to perform.
 
 Hard Limits, the maximum value, set only by the root user.
 Soft Limits, the current limiting value, which a user can modify but can not exceed.
+
+## Run Levels
+
+A run level is a state of init and the whole system that defines what system services are operating.
+
+0 – System halt i.e the system can be safely powered off with no activity.
+1 – Single user mode.
+2 – Multiple user mode with no NFS(network file system).
+3 – Multiple user mode under the command line interface and not under the graphical user interface.
+4 – User-definable.
+5 – Multiple user mode under GUI (graphical user interface) and this is the standard runlevel for most of the LINUX based systems.
+6 – Reboot which is used to restart the system.
 
 ## User mode and Kernel Mode
 
@@ -108,6 +120,7 @@ Soft Limits, the current limiting value, which a user can modify but can not exc
 ## Signals
 
 Signals are process-level interrupts requests. About thirty different kinds.
+
 - Sent among processes as a means of communication
 - Can be sent by the terminal diver to kill, interrupt, or suspend processes
 - Can be sent by the kernel
