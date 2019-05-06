@@ -37,8 +37,8 @@ Chapters and Topics
 31.	Group Management
 32.	File Permissions and Ownership
 33.	Pluggable Authentication Modules (PAM)
-34.	Network Addresses
-35.	Network Devices and Configuration
+34.	Network Addresses [COMPLETE]
+35.	Network Devices and Configuration [COMPLETE]
 36.	Firewalls
 37.	System Startup and Shutdown
 38.	GRUB
