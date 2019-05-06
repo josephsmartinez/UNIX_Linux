@@ -7,8 +7,8 @@ Chapters and Topics
 1.	Preface [COMPLETE]
 2.	Linux Filesystem Tree Layout [COMPLETE]
 3.	Processes [COMPLETE]
-4.	Signals
-5.	Package Management Systems
+4.	Signals [COMPLETE]
+5.	Package Management Systems [COMPLETE]
 6.	RPM
 7.	DPKG
 8.	yum

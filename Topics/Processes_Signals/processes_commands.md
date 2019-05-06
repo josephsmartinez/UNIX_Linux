@@ -5,8 +5,13 @@ associated with processes running under a shell.
 > unlimit
 
 > kill
+
+> killall
+
 a list of signals names and numbers
 > kill -l
+
+> pkill
 
 A command is issued for background processing
 > <command> &

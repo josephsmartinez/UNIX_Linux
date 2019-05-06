@@ -57,7 +57,6 @@ The first user process on the system is init which has a process ID = 1. It is
 started as soon as the kernel is initialized and has mounted the root filesystem.
 The init process will run until the system is shutdown.
 
-
 ## Processes
 
 A process is an instance of a program in execution. It may be in a number of
