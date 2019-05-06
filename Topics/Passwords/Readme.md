@@ -19,4 +19,6 @@ https://www.madboa.com/geek/openssl/
 `echo -n "foobar" | openssl dgst -sha256`
 
 ## SSH Keys
-https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-centos7
+
+> ssh-keygen
+> ssh-copy-id username@remote_host
