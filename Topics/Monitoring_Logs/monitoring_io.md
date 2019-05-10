@@ -43,6 +43,20 @@ Important log files found under /var/log
 | messages | All important system messages    |
 | secure   | Security related messages        |
 
+### iostat extended options
+| Device   | Device or partition name |
+| rrqm/s   | Number of read requests merged per second, queued to device    |
+| wrpm/s   | Number of write requests merged per second, queued to device   |
+| r/s      | Number of read requests per second, issued to the device       |
+| w/s      | Number of wirte requests per second, issued to the device      |  
+| rkB/s    | KB read from the device per second                             |
+| wkB/s    | KB written to the device per second                            | 
+| avgrq-sz | Average request size in 512 byte sectors per second            |
+| await    | Average queue length of requests issued to the device          |
+| svctm    | Average time (in msecs) I/O requests between when a request is issued and when it is complete: queue time plus service time |
+| %util    | Percentage of CPU time during the device serviced request      |
+
+
 Resources:
 
 RedHat  

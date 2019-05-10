@@ -9,15 +9,15 @@ Chapters and Topics
 3.	Processes [COMPLETE]
 4.	Signals [COMPLETE]
 5.	Package Management Systems [COMPLETE]
-6.	RPM
-7.	DPKG
+6.	RPM 
+7.	DPKG 
 8.	yum
 9.	zypper
-10.	APT
+10.	APT 
 11.	System Monitoring [COMPLETE]
 12.	Process Monitoring [COMPLETE]
 13.	Memory: Monitoring Usage and Tuning [COMPLETE]
-14.	I/O Monitoring and Tuning
+14.	I/O Monitoring and Tuning [COMPLETE]
 15.	I/O Scheduling
 16.	Linux Filesystems and the VFS [COMPLETE]
 17.	Partitioning and Formatting Disks
