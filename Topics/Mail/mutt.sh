@@ -19,36 +19,37 @@ userSettings(){
     touch /home/$USER/.mutt/muttrc &&
     touch /home/$USER/.mutt/passwords
 
-    echo '''
-    # About Me
-    set from = "test@test.edu"
-    set realname = "Test User"
+echo '''
+# About Me
+set from = "test@test.edu"
+set realname = "Test User"
 
-    # # My credentials
-    set smtp_url = "smtp://test@test.edu@outlook.office365.com:587/"
-    set smtp_pass = "$email_password"
-    set imap_user = "test@test.edu"
-    set imap_pass = "$email_password"
+# # My credentials
+set smtp_url = "smtp://test@test.edu@outlook.office365.com:587/"
+source "gpg -d ~/.mutt/passwords.gpg |"
+set smtp_pass = "$my_pass"
+set imap_user = "test@test.edu"
+set imap_pass = "$my_pass"
 
-    # # My mailboxes
-    set folder = "imaps://outlook.office365.com:993"
-    set spoolfile = "+INBOX"
+# # My mailboxes
+set folder = "imaps://outlook.office365.com:993"
+set spoolfile = "+INBOX"
 
-    # # Where to put the stuff
-    set header_cache = "~/.mutt/cache/headers"
-    set message_cachedir = "~/.mutt/cache/bodies"
-    set certificate_file = "~/.mutt/certificates"
+# # Where to put the stuff
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
 
-    # # Etc
-    set mail_check = 30
-    set move = no
-    set imap_keepalive = 900
-    set sort = threads
-    set editor = "vim"
-    #
-    # # GnuPG bootstrap
-    # # source ~/.mutt/gpg.rc
-    ''' > /home/$USER/.mutt/muttrc
+# # Etc
+set mail_check = 30
+set move = no
+set imap_keepalive = 900
+set sort = threads
+set editor = "vim"
+#
+# # GnuPG bootstrap
+# # source ~/.mutt/gpg.rc
+''' > /home/$USER/.mutt/muttrc
 }
 
 setPassword(){
@@ -78,3 +79,9 @@ setPassword(){
 sendMail(){
     echo "Testing 1,2,3..." | mutt -s "subject" josemart@fiu.edu
 }
+
+
+install_mutt
+userSettings
+setPassword
+sendMail
