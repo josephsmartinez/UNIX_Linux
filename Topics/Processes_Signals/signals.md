@@ -1,10 +1,10 @@
 # Signals
 
 Learning Objectives
+
 - Expain what signals are and hoe they are used
 - Know the avaiable signals and types of signals available in Linux
 - Use kill, killall, pkill to send signal from the command line
-
 
 Key Words
 
@@ -45,4 +45,4 @@ Displays a list of signals
 
 A process cannot send a signal directly to another process; it must ask the kernel to send the signal by executing a system call. If a signal number is not given (as in the first example), the default is to send SIGTERM (15), a terminate signal that can be handled, the program can take elusive action or clean up, rather than just die immediately.
 
-If this signal is ignored, the user can usually send a SIGKILL (9), which cannot be ignored, to terminate with extreme prejudice. 
+If this signal is ignored, the user can usually send a SIGKILL (9), which cannot be ignored, to terminate with extreme prejudice.

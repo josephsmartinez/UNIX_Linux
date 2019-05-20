@@ -22,3 +22,6 @@ https://www.madboa.com/geek/openssl/
 
 > ssh-keygen
 > ssh-copy-id username@remote_host
+
+> ssh-keygen -t rsa -N "" -f centostest.key
+> ssh-copy-id -i username@remote_host

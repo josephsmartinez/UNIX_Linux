@@ -1,6 +1,7 @@
 # Tools for common admin task
 
 ## System Logging
+
 Logging Daemons  
 syslogd (System Logging)  
 klogd (Kernel Logging)  
@@ -8,15 +9,17 @@ Funnels through syslog in most distros
 Can view syslogs by their files (/var/log/messages)  
 `grep eth0 /var/log/*`  
 `tail -f /var/log/messages`  
+
 Can create log messages with logger  
 logger System rebooted due to hardware change  
 `logger -p local0.crit Major issue detected`  
 `logger -i -p mail.err "Oh Noes"`  
 `/etc/rsyslog.conf`  
 `/etc/rsyslog.d/*.conf`  
-Settings are defined by:` .`  
+Settings are defined by:` .`
 Disable/exclude logging with facility.none  
 Facilities  
+
 ```
 | Keyword | Facility | Description          |
 |---------|----------|----------------------|
@@ -45,7 +48,9 @@ Facilities
 | 22      | local6   | Local Use            |
 | 23      | local7   | Local Use            |
 ```
+
 ## Severity Levels
+
 ```
 |Integer  | Severity | Description          |
 |---------|----------|----------------------|
@@ -58,6 +63,7 @@ Facilities
 | 6       | info     | Informational Mesg   |
 | 7       | debug    | Debugging Details    |
 ```
+
 Remote syslogging is possible
 `vi /etc/services`
 `syslog 514/udp`
