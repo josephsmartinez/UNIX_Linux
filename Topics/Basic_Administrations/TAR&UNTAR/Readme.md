@@ -1,5 +1,12 @@
 # How to untar a tar file
 
+## Commands
+
+> tar
+> star
+> gzip 
+
+
 ```
 tar xvzf file.tar.gz- to uncompress a gzip tar file (.tgz or .tar.gz)
 tar xvjf file.tar.bz2 - to uncompress a bzip2 tar file (.tbz or .tar.bz2) to extract the contents.
