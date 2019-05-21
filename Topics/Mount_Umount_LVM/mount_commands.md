@@ -17,6 +17,7 @@ Makes a 1GB file
 ## Using fdisk
 
 > fsdisk
+inform the OS of partition table changes
 > partprobe
 > mount -U [UUID]
 

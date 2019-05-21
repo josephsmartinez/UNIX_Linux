@@ -1,4 +1,10 @@
-# Partitions
+# Partitions, Mounting, and LVM
+
+View all mounts
+> mount
+
+Resources:
+[Mountin and Unmounting](https://www.thegeekstuff.com/2013/01/mount-umount-examples/?utm_source=tuicool)
 
 Gerneral step when mounting new disk:
 - Create Disk Partitions
