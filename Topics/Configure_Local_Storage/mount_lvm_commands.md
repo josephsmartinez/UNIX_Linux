@@ -33,8 +33,15 @@ Makes a 1GB file
 > 8300
 > w & y
 
+<<<<<<< HEAD
+> fsdisk
+inform the OS of partition table changes
+> partprobe
+> mount -U [UUID]
+=======
 > mkfs -t btrfs /dev/sdc1
 > mount  -U cca706bc-4af4-468b-a3c4-ec13da8de897  /mnt/sdc1/
+>>>>>>> 43d59cf9c5a02744afdd46629ec395678a58528a
 
 ## Using LVM
 
