@@ -31,7 +31,7 @@ default via 10.100.36.1 dev ens192 proto dhcp metric 100
 > nmcli connection add con-name "mycon-static-ethernet" type ethernet ifname eth1 ip4 10.0.0.16 gw4 10.100.36.1
 > nmcli connection up "mycon-static-ethernet"
 
-Modify connection
+Modify connection and start connection on boot
 > nmcli connection modify "mycon" connection.autoconnect yes
 > nmcli connection delete "mycon"
 
