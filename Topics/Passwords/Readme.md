@@ -20,8 +20,13 @@ https://www.madboa.com/geek/openssl/
 
 ## SSH Keys
 
+- 600 Private Key Permissions 
+- 644 Public Key Permissions 
+
 > ssh-keygen
 > ssh-copy-id username@remote_host
 
 > ssh-keygen -t rsa -N "" -f centostest.key
 > ssh-copy-id -i username@remote_host
+
+> 

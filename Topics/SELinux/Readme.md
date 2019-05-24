@@ -1,5 +1,15 @@
 # SELINUX
 
+
+> getenforce
+> setenforce 0
+> getenforce
+> setenforce 1
+> cd /etc/selinux
+> 
+
+
+
 Resets SELINUX file tags
 `restorecon -Rv *`
 
