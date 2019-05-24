@@ -41,3 +41,6 @@ vim /etc/crontab
   *  *  *  *  * /usr/bin/mysqldump --defaults-file=/root/.my.cnf -u root --all-databases --single-transaction --quick --lock-tables=false  > /root/Documents/SqlBackup/full-backup-$(date +%F).$(date +"%T").sql
  ```
 https://mariadb.com/kb/en/library/configuring-mariadb-with-mycnf/
+
+
+
