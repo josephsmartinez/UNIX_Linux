@@ -3,6 +3,10 @@
 ## NOTE
 
 - It is possible to run out of inode and still have disk space on a device
+- XFS file system has built-in ACL support
+- After using lvextend to increase the size of a logical volume, you modify the file system to reflect the changes by using `xfs_growfs /mnt/myvolume`
+- To move the physical extents off of the /dev/xvdg1 physical volume disk onto another physical volume associated with the battlestar volume group `pvmove /dev/xvdg1`
+- `vgreduce battle /dev/xvdg1` can be used to reduce the volume group by removing the /dev/xvdg1 partition from the volume group "battlestar"
 
 ## Create, Mount, Unmount and Use VFAT, EXT4 and XFS File Systems
 
@@ -54,14 +58,13 @@ Filesystem information dumpe2fs - dump ext2/ext3/ext4
 10.0.0.100:/nfsshare /mnt/nfsshare nfs defaults 0 0
 ```
 
-
 ## Extend Existing Logical Volumes
 
 > pvdisplay
 > pvcreate /dev/sdc1
 > vgcreate battlestar /dev/sdc1
 > lvcreate -n galactica -L 1G battlestar
->  mkfs.xfs /dev/battlestar/galactica
+> mkfs.xfs /dev/battlestar/galactica
 > vgextend battlestar /dev/sdd1
 > pvmove /dev/sdc1 
 > vgreduce battlestar /dev/sdc1
@@ -85,3 +88,27 @@ Files of the blueteam directory will enharent the GID
 > setfacl -d -m u:starbuck /somedir
 > setfacl -m u:starbuck /somedir
 > getfacl --remove-default somedir
+> setfacl -x d:u:startbuck dir1
+> setfacl -m g:finance:rwX,u:johndoe:rw dir1
+> setfacl -R -m g:finance:rwX,u:johndoe:rw dir1
+> setfacl -m g::rwx file2
+The dash (-) mean std-in input from std-out
+> getfacl file1 | setfacl --set-file=- file2
+
+## Diagnose and Correct File Permission Problems
+
+- Update the acl on a file or directory changes the MASK
+- Using uppercase X will change keep the directory set to executed and not the files
+
+> chmod -R g+rwX /tmp
+
+- The cp command does not preserve ACL rules
+- The mv command does not preserve ACL rules
+- Default ACL permissions are for inheritance
+
+Things to think about... 
+
+- Does something have the proper permissions like proper group ownership
+- Does it need an ACL
+- Is the proper UMASK set for creating new files
+- Does the /etc/bash_profile need to edited to enable UMASK persistence

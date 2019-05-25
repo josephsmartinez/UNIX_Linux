@@ -1,13 +1,16 @@
 # Interrupt the Boot Process to Gain Access to a System
 
 - During the boot process select the kernel and press the 'e' key to edit the GRUB configuration
-- On the end of the linux16 line append: rd.break 
+- On the end of the linux16 line append: rd.break or systemd.unit=rescue.target
 - Then press ctrl-x and wait for reboot
+
 > mount -oremount,rw /sysroot
 > cd /sysroot/etc
 > chroot /sysroot
 > passwd
+
 - Next is to change SELinx context after file changes
+
 > touch /.autorelabel 
 > exit
 > exit

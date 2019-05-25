@@ -16,3 +16,9 @@ Find all files owned by jeff and copy to marry's account
 > find / -user jeff -type f -exec cp {} /home/marry \;
 
 > find /home/ -user -jeff -type f -exec rm {} \;
+
+Find configuration files
+> rpm -qc sysstat
+
+Find documentation for programs
+rpm -qd pykickstart
