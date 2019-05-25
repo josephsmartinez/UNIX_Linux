@@ -46,7 +46,7 @@ See which process are internal kernel or external user processes
 List all processes owned by the root user
 > pgrep -u root -l
 List all processes not owned by the root user
-> pgrep -u -v root -l 
+> pgrep -u root -lv 
 
 Ascertain what shared libraries an executable requires
 > ldd <program>
