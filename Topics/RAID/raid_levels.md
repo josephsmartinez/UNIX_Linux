@@ -30,8 +30,5 @@ Pros: Very high performance. Fault tolerance.
 Cons: Lower usable capacity/High cost. Limited scalability
 Ideal use: Highly utilized database servers/ servers performing a lot of write operations.
 
-
-
-
 Resources:
 [Advantages and disadvantages of various RAID levels](https://datapacket.com/blog/advantages-disadvantages-various-raid-levels/)

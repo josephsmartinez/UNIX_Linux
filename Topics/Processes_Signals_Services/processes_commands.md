@@ -1,5 +1,9 @@
 # Process commands
 
+- /proc, developed to display information about processes (pseudo filesystem)
+- /sys,
+- /proc/sys, tunable system parameters
+
 ## Kill user TTY
 
 Example 1
@@ -80,3 +84,33 @@ Ascertain what shared libraries an executable requires
 
 > dd if=/dev/zero of=/root/test.file bs=1M count=1024
 > time nice -n 19 tar -cvf test.tar test.file
+
+## System Activity Reporter
+
+- `sar` is a system tool for gathering system information and performance data to create reports
+
+> sar
+
+## Using top
+
+> top
+Check all CPUs usage enter: 1
+
+## Commands Listed:
+
+> top
+> uptime
+> ps
+> pstree
+> mpstat
+> iostat
+> sar
+> numastat
+> strace
+> free
+> vmstat
+> pmap
+> netstat
+> iptraf
+> tcpdump
+> wireshark
