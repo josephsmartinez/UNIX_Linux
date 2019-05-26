@@ -11,5 +11,8 @@ https://stackoverflow.com/questions/34400272/visual-studio-code-always-asking-fo
 Git ignore Files
 https://github.com/github/gitignore
 
-
+Create useful .gitignore files for your project
 https://www.gitignsore.io/
+
+Using Version Control in VS Code
+https://code.visualstudio.com/Docs/editor/versioncontrol

@@ -101,10 +101,27 @@ Example
 
 ## IMCP
 
+
+## Gateway Information
+
+> route
+> route -n
+
+The flag U indicates that route is up and G indicates that it is gateway. 
+
+``` $ route -n
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         134.209.160.1   0.0.0.0         UG    0      0        0 eth0
+10.17.0.0       0.0.0.0         255.255.0.0     U     0      0        0 eth0
+```
+
+
+> netstat -r -n
+> ip route
+
 ip is a very powerful program that can do many things. Older (and more specific) utilities such as ifconfig and route are often used to accomplish similar tasks.
 > ip
 > ifconfig
-> route
 > iptables
 ping is used to check whether or not a machine attached to the network can receive and send data; i.e. it confirms that the remote host is online and is responding.
 > ping
