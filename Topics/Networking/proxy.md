@@ -14,6 +14,21 @@
 > proxychain firefox
 > proxychain nmap [HOST]
 
+
+##  Setting Up a SOCKS5 Proxy to mask your IP Address for Web Browsing
+
+-N Do not execute a remote command.  This is useful for just forwarding ports.
+-D Specifies a local “dynamic” application-level port forwarding.
+> ssh -N -D 64000 root@proxyserverIP -vvvv
+
+Configure your web browser to connect to the loopback 127.0.0.1 on the port 
+the proxy server is connected to. (This case it would be 64000)
+
+
+
+
+
+
 Resources: 
 
 How to Evade Detection Using Proxychains

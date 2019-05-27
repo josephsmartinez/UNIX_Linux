@@ -84,3 +84,11 @@ Some systems do not store logs persistently by default because /var/log/journal 
 `/etc/systemd/journald.conf`
 
 View logs: `journalctl`
+
+
+
+
+Resources: 
+
+Linux Logs Explained
+https://www.plesk.com/blog/featured/linux-logs-explained/
