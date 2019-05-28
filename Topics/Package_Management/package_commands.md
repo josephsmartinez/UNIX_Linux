@@ -1,5 +1,13 @@
 # Package Management and REPOs
 
+## Commands
+
+- yum
+
+## About
+
+Something
+
 ## Install and Update Software Packages from Red Hat Network, YUM REPO
 
 - NEVER ASSUME ALL PACKAGES NEED UPDATING
@@ -80,3 +88,6 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 ```
 
+Resources:
+
+[EPEL Wiki](https://fedoraproject.org/wiki/EPEL)
