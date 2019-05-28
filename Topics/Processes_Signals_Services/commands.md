@@ -42,7 +42,6 @@ See which process are internal kernel or external user processes
 > ps -aux
 > ps axo pid,comm,nice
 > ps -u root
-> 
 
 ## Using pgrep to find runnning processes
 
