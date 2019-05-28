@@ -80,3 +80,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 ```
 
+Resources: 
+
+VERIFYING SIGNED PACKAGES
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sect-security_guide-updating_packages-verifying_signed_packages
