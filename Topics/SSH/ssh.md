@@ -6,6 +6,12 @@
 
 ## Generating Keys for login
 
+- Place ssh public and private within ~/.ssh
+- Add config file if managing multiple keys
+
+> ssh-keygen
+> ssh-copy-id -i user@hostname.com
+
 ## Configuring ssh config for many private keys
 
 - Make sure all files are permission set 600, only the user should have permissions to read and write
