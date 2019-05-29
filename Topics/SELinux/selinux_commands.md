@@ -55,6 +55,54 @@ Set the persistent changes after rebooting
 
 > yum install setroubleshoot-server
 
+## Creating Confined Users in SELinux
+
+Map Linux user jhalpert to SELinux user user_u:
+> semanage login -a -s user_u jhalpert
+
+Map Linux user pbeesley to SELinux user staff_u:
+>semanage login -a -s staff_u pbeesley
+
+Check the user mappings:
+> semanage login -l
+
+NOTE: We can see our Linux users successfully mapped to the assigned SELinux users.
+
+Ensure the SELinux user xguest can not mount media
+Check SELinux booleans for "xguest":
+
+> getsebool -a | grep xguest
+
+We see "xguest_mount_media" is an option and it is enabled, so lets disable it.
+
+Disable SELinux boolean "xguest_mount_media":
+> setsebool -P xguest_mount_media off
+
+Check to make sure our changes were successful:
+> getsebool -a | grep xguest
+
+We can see our change was successful.
+Put SELinux into enforcing mode and ensure that setting is persistent
+Check SELinux state:
+> getenforce
+
+It is in permissive mode, so we need to change it to enforcing mode.
+Put SELinux into enforcing mode:
+
+> setenforce 1  
+
+Check to make sure SELinux is now in enforcing mode:
+> getenforce
+
+We can see our change worked and SELinux is now in enforcing mode.
+Ensure SELinux boots into enforcing mode:
+
+> vi /etc/selinux/config
+
+``` conf
+SELINUX=enforcing
+```
+
 Resources:
 
 SELinux
