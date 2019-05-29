@@ -16,3 +16,6 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-an-
 
 How to install OpenVPN Server and Client on CentOS 7
 https://www.howtoforge.com/tutorial/how-to-install-openvpn-on-centos-7/
+
+How To Set up OpenVPN Server In 5 Minutes on Ubuntu Linux
+https://www.cyberciti.biz/faq/howto-setup-openvpn-server-on-ubuntu-linux-14-04-or-16-04-lts/

@@ -88,13 +88,9 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 ```
 
-<<<<<<< HEAD
 Resources:
 
-[EPEL Wiki](https://fedoraproject.org/wiki/EPEL)
-=======
-Resources: 
+[EPEL Wiki](https://fedoraproject.org/wiki/EPEL): 
 
 VERIFYING SIGNED PACKAGES
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sect-security_guide-updating_packages-verifying_signed_packages
->>>>>>> 6fdd034e4000dc52a254af4f8c77b048f525e182
