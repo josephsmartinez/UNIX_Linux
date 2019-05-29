@@ -38,8 +38,11 @@ Remove context rule
 
 - When software is installed you'll get different bool values
 
+Get the current SELinux boolean values
 > getsebool -a
+SELinux Policy Management boolean tool
 > semanage boolean -l
+
 
 > yum install httpd
 > systemctl start httpd
@@ -58,10 +61,10 @@ Set the persistent changes after rebooting
 ## Creating Confined Users in SELinux
 
 Map Linux user jhalpert to SELinux user user_u:
-> semanage login -a -s user_u jhalpert
+> semanage login -a -s user_u newuser
 
 Map Linux user pbeesley to SELinux user staff_u:
->semanage login -a -s staff_u pbeesley
+> semanage login -a -s staff_u staffuser
 
 Check the user mappings:
 > semanage login -l
@@ -114,3 +117,6 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/se
 
 CONFINED AND UNCONFINED USERS
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/sect-security-enhanced_linux-targeted_policy-confined_and_unconfined_users
+
+SELinux/Users and logins
+https://wiki.gentoo.org/wiki/SELinux/Users_and_logins

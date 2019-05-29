@@ -26,3 +26,18 @@ SIDE NOTES:
 
 > yum list kernel
 > grub2-set-default
+
+## Linux Kernel Security
+
+Developing a hardened image for general use. You must create a list of possible configuration changes that should be further investigated for optimal security on general purpose servers. Below will get a list of possible kernel parameters to ensure the address space layout randomization is in effect and to examine possible network security configurations for ICMP, configured system limits managed by pam_limits.so
+
+- /usr/share/doc/kernel-doc-3.10.0/Documentation/sysctl/kernel.txt
+- /etc/security/limits.conf
+
+Find and Document the Value of the randomize_va_space Parameter
+> sudo yum install kernel-doc
+> sysctl -ar randomize_va
+
+Temporarily Disable ICMP Using a Kernel Parameter
+> sysctl -ar icmp
+> sudo sysctl -w net.ipv4.icmp_echo_ignore_all=1

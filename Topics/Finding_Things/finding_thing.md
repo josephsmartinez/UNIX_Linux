@@ -22,3 +22,10 @@ Find configuration files
 
 Find documentation for programs
 rpm -qd pykickstart
+
+
+
+Resources: 
+
+Find Files in Linux, Using the Command Line
+https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line/
