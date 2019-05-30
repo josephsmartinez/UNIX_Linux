@@ -1,4 +1,4 @@
-# Linux Interview Lab
+# Linux Interview Lab Solutions
 
 ## About
 
@@ -24,20 +24,85 @@ This lab will have a time limit of 60 minutes in which the administrator must co
 ### User Management
 
 - Create a new admin user named “admin” on the system with ssh access.
+
+> useradd admin  
+> usermod -aG wheel admin  
+
 - Create an ssh-key for the new admin user.
+
+> cd /home/admin/.ssh/  
+> ssh-keygen  
+
+- Create a group called LabUsers
+
+> groupadd LabUsers  
+
+- Create two new users john and sara and add them to group LabUsers. Make sure to add passwords for the new users.
+
+> useradd sara && useradd john  
+> usermod -aG LabUsers sara && usermod -aG LabUsers john  
+> passwd sara  
+> passwd john  
+
+- Create a shared directory /home/LabUser_Documents for the new group LabUsers and login as john and sara to create a file. Make sure the files created by the users can only be read (not executed and written) by other users within the LabUser_Documents directory.
+
+> mkdir /home/LabUser_Documents  
+> chown LabUsers:LabUsers /home/LabUser_Documents  
+> su sara -  
+> touch /home/LabUser_Documents/sarafile  
+> chmod 640 /home/LabUser_Documents/sarafile  
+> exit  
+> su john -  
+> touch /home/LabUser_Documents/johnfile  
+> chmod 640 /home/LabUser_Documents/johnfile  
 
 ### Package Management
 
+- Correct yum repo enabled setting
+
+> yum repolist all  
+> yum-config-manager --enable "CentOS-7 – Base"  
+> yum-config-manager --enable "CentOS-7 – Updates"  
+> yum-config-manager –-enable “CentOS-7 – Extras”  
+> yum repolist enabled  
+
 - Update only the security packages on the Linux system
+
+> yum --security check-update  
+> yum -y --security update-minimal  
+or    
+> yum -y --security update  
+
 - Configure the Extra Packages for Enterprise
   - Linux (EPEL)
   - Repo URL: 
  https://dl.fedoraproject.org/pub/epel/7/x86_64/
-- Add GPG key checking on the EPEL repository to ensure authenticity of packages. 
+# yum-config-manager --add-repo=https://dl.fedoraproject.org/pub/epel/7/x86_64/ 
+
+- Add GPG key checking on the EPEL repository to ensure authenticity of packages.
+ 
+> cd /etc/pki/rpm-gpg/  
+> wget https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7  
+> vim 
+/etc/yum.repos.d/dl.fedoraproject.org_pub_epel_7_x86_64_.repo  
+
+```
+
+[dl.fedoraproject.org_pub_epel_7_x86_64_]  
+name=added from: https://dl.fedoraproject.org/pub/epel/7/x86_64/  
+baseurl=https://dl.fedoraproject.org/pub/epel/7/x86_64/  
+enabled=1  
+gpgcheck=1  
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7  
+
+```
+
 - Install python3.6
 - Install Apache Webserver
 - Install Anaconda
   - Installation Script: https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
+
+- Check the current kernel version and compare against the latest kernel version with the base repository.
 
 ### Storage Configuration
 
@@ -46,12 +111,14 @@ This lab will have a time limit of 60 minutes in which the administrator must co
 ### Networking
 
 - Open ports for HTTP and HTTPS
+- Check the browser to make sure HTTP is working correctly
 - Close FTP, Telnet, and all VNC ports
 - Disable eth1 ethernet port
 - Find the default gateway IP address
 - Resolve the SSH connection issue when trying to connect to ubuntulab.ad.fiu.edu
 	Hint: use ping and nslookup for clues
 - Check and remove the system from Active Directory domain
+- Disable ICMP
 
 ### Processes
 
