@@ -1,4 +1,7 @@
+# Local configs
 *.code-workspace
 hosts
 .vscode
+## Interview Keys
 interview_lab_solutions.md
+labenvsetup.sh
