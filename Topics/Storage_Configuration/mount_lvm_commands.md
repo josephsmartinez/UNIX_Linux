@@ -36,6 +36,9 @@ Makes a 1GB file
 > fsdisk
 inform the OS of partition table changes
 
+Finding UUID
+> blkid
+
 > partprobe
 > mount -U [UUID]
 > mkfs -t btrfs /dev/sdc1

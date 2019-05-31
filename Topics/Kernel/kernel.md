@@ -8,6 +8,7 @@ All Information
 > uname -a
 Kernal Version
 > uname -r
+> rpm --query centos-release
 Automatically updates the kernel
 > yum upgrade
 Check Kernel in repos

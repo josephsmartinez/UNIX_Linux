@@ -2,6 +2,7 @@
 
 - /etc/selinux
 - `semanage fcontext -l` defines the contexts
+- matchpathcon
 
 ## Set Enforcing and Permissive Modes for SELinux
 
@@ -60,6 +61,10 @@ Set the persistent changes after rebooting
 
 ## Creating Confined Users in SELinux
 
+create user(s) that are mapped to the SELinux user_u user.
+> useradd -Z user_u newuser
+> useradd -Z user_u staffuser
+
 Map Linux user jhalpert to SELinux user user_u:
 > semanage login -a -s user_u newuser
 
@@ -69,11 +74,13 @@ Map Linux user pbeesley to SELinux user staff_u:
 Check the user mappings:
 > semanage login -l
 
+Log out of your current session, and log in as the Linux newuser
+> id -Z
+
 NOTE: We can see our Linux users successfully mapped to the assigned SELinux users.
 
 Ensure the SELinux user xguest can not mount media
 Check SELinux booleans for "xguest":
-
 > getsebool -a | grep xguest
 
 We see "xguest_mount_media" is an option and it is enabled, so lets disable it.
@@ -111,6 +118,8 @@ Resources:
 SELinux
 https://wiki.centos.org/HowTos/SELinux
 
+SELINUX CONTEXTS – LABELING FILES
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/selinux_users_and_administrators_guide/sect-security-enhanced_linux-working_with_selinux-selinux_contexts_labeling_files
 
 SECURITY-ENHANCED LINUX
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security-enhanced_linux/index
@@ -120,3 +129,6 @@ https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/se
 
 SELinux/Users and logins
 https://wiki.gentoo.org/wiki/SELinux/Users_and_logins
+
+Difference between a Confined User (staff_u) and a Confined Administrator.
+https://danwalsh.livejournal.com/66587.html

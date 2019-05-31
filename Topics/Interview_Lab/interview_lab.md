@@ -46,7 +46,7 @@ This lab will have a time limit of 60 minutes in which the administrator must co
 
 ### Storage Configuration
 
-- Mount a storage device as an ext4 file-system that will be persistent after system rebooting.
+- Mount a storage device (sdc) as an ext4 file-system that will be persistent after system rebooting. You can use: `gdisk` or `fdisk`
 
 ### Networking
 
