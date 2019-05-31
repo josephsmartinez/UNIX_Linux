@@ -180,11 +180,9 @@ Older ip address and hostname resolver
 > dhclient
 > hostnamectl
 
-
 ## Investigate sockets
 
 - ss
-
 
 ## Trouble shooting
 

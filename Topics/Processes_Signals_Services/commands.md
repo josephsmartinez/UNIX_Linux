@@ -67,6 +67,8 @@ Ascertain what shared libraries an executable requires
 
 ## Using nice and renice to adjust running processes
 
+- Nice Levels: -20 to 19. The lower the number the more priority that task gets. If the niceness value is high number like 19 the task will be set to the lowest priority and the CPU will process it whenever it gets a chance.
+
 > renice --help
 > nice --help
 > systemctl start httpd
