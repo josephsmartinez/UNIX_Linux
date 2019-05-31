@@ -162,14 +162,14 @@ UUID=0000-0000-0000 /mnt/sdc1data/ ext4 defaults 1 2
   - Hint: use ping and nslookup for clues
 
 > nslookup centostest.ad.fiu.edu  
-> ping centostest.ad.fiu.edu  
+> ping centostest.DOMAIN
 > ping 10.100.36.84  
 > vim /etc/hosts
 
 ``` conf
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-#10.0.0.0    ubuntu19.ad.fiu.edu
+#10.0.0.0    ubuntu19[DOMAIN]
 ```
 
 - Check open xrdp port 3389 connection on centostest.ad.fiu.edu
@@ -222,20 +222,20 @@ AllowUsers user1 user2
 or  
 > echo "net.ipv4.conf.icmp_echo_ignore_all = 1" >> /etc/sysctl.conf  
 or  
-> iptables -I INPUT -p icmp --icmp-type 8 -j DROP
-> ip6tables -I INPUT -p icmpv6 --icmp-type 8 -j DROP
+> iptables -I INPUT -p icmp --icmp-type 8 -j DROP  
+> ip6tables -I INPUT -p icmpv6 --icmp-type 8 -j DROP  
 
 ### File Transferring and Compression
 
 - Compress the directory called ansible-role-ntp within /testuser/Downloads/ as a zip and tar.
 
-> tar -cvf ntp-role.tar /testuser/Downloads/ansible-role-ntp
+> tar -cvf ntp-role.tar /testuser/Downloads/ansible-role-ntp  
 or  
-> zip -r ntp-role.zip /testuser/Downloads/ansible-role-ntp
+> zip -r ntp-role.zip /testuser/Downloads/ansible-role-ntp  
 
 - Compaire the byte size of the two zip and tar
 
-> ls -lah ntp-role.{tar,zip}
+> ls -lah ntp-role.{tar,zip}  
 
 - Securely transfer the compressed directory to another server called: ubuntutestvm.p.fiu.edu
 
@@ -245,61 +245,87 @@ or
 
 - A process is consuming the system’s CPU, shut down this process.
 
-> top
-> ps aux | head 10
-> ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -10
-> kill [PID]
+> top  
+> ps aux | head 10  
+> ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -10  
+> kill [PID]  
 
 - A parent process is running a child process called “sleep 1”. Remove this runaway process. 
 
 > ps fjx  
 or  
-> man ps
-> ps axjf
-> ps axjf | grep [CHILD_PROCESS_NAME]
-> kill [PPID]
+> man ps  
+> ps axjf  
+> ps axjf | grep [CHILD_PROCESS_NAME]  
+> kill [PPID]  
 
 - Adjust the nice level of the httpd process to 10 priority.
 
-> ps axo pid,comm,nice | grep httpd
-> ps axo pid,comm,ni | grep httpd
-> 
-
+> ps axo pid,comm,nice | grep httpd  
+> ps axo pid,comm,ni | grep httpd  
+> pgrep httpd  
+> renice -n 10 $(pgrep httpd)  
 
 ### Memory
 
 - Gather system information:
 
 1. Block Device Information
-2. System Memory
-3. CPU Information
-4. Storage Mount Locations
-5. Processes owed by user “test”  
 
-> 1
-> 2
-> 3
-> 4
-> pgrep -u root named
+> blkid  
+> lsscsi  
+> cat /proc/*  
+> ls /dev  
+
+2. System Memory
+
+> free -h  
+> cat /proc/meminfo  
+> vmstat -s --unit M  
+
+3. CPU Information
+
+> cat /proc/cpuinfo  
+> lscpu  
+> lshw -class processor  
+
+4. Storage Mount Locations
+
+> lsblk  
+> df  
+> fdisk -l  
+> mount | column -t  
+
+5. PCI Slot Information
+
+> lspci  
+
+6. Processes owed by user "mikey"  
+
+> pgrep -u mikey -l  
 
 ### Discovery
 
 - Find a file on the system called “lost.txt”
 
-> locate lost.txt
-> find /etc -name lost.txt
+> locate lost.txt  
+> find /etc -name lost.txt  
 
 - Find all files owned by user “test”
-- Find a hidden admin user within the system and remove them
+
+> find /etc -user root  
+
 - Search the manual page names and descriptions for the keyword “network” and append to a file called “networking_commands.txt”
+
+> apropos network > networking_commands.txt
 
 ### SELinux
 
 - Enable SELinux by updating the config file
 
-> getenforce
-> setenforce 0
-> vi /etc/selinux/config
+> getenforce  
+> setenforce 0  
+> vi /etc/selinux/config  
 
 ``` conf
 SELINUX=enforcing
@@ -307,22 +333,20 @@ SELINUX=enforcing
 
 - Restore the files 1-50 context headers within the user’s test home/test/Documents as user_home_t
 
-> chcon -t user_home_t file{1..50}.txt
+> chcon -t user_home_t file{1..50}.txt  
 
 - Create users that are mapped to the SELinux user_u and add john and sara to mappings.
 
-> useradd -Z user_u david
-> useradd -Z user_u jennifer
-> semanage login -a -s user_u sara
-> semanage login -a -s user_u john
+> useradd -Z user_u david  
+> useradd -Z user_u jennifer  
+> semanage login -a -s user_u sara  
+> semanage login -a -s user_u john  
 
 - Log out of your current session, and log in as the Linux jennifer to confirm mapping. 
 
-> id -Z
+> id -Z  
 
 - Ensure the SELinux user xguest can not mount media
 
-> getsebool -a | grep xguest
-> setsebool -P xguest_mount_media off
-
-## Cryptography
+> getsebool -a | grep xguest  
+> setsebool -P xguest_mount_media off  
