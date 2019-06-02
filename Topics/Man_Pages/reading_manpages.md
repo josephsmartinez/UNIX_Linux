@@ -1,12 +1,5 @@
 # Locate, Read, and Use System Documentation
 
-
-
-
-
-
-
-
 ## Commands
 
 > apropos

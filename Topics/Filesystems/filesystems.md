@@ -8,11 +8,11 @@ Keywords:
 - Mount Points
 - Virtual Pseudo Filesystem
 - Virtual Filesystem (VFS)
-- Journalling
+- ***Journalling*** 
 - Tansactions
 - Special Filesystems
 
-# Filesystem
+## Filesystem
 
 Local filesystem generally reside within a disk partition which can be a
 physical partition on a disk, or logical partition controlled by a Logical
@@ -33,7 +33,7 @@ inodes. It is common for two to more direntory entries to point to the same inod
 a file known by multiple names. Howenver, it can have only one inode no matter
 which name is being used.
 
-# Filesystem Tree Organization
+## Filesystem Tree Organization
 
 All Linux systems use an inverted tree hierrarchy branching off the root (/).
 While entire tree may contain one local filesystem in one partition, usually there
@@ -43,24 +43,33 @@ removable mediam such as USB drives, optical drives, etc.
 In addtion, certain Virtual Pseudo Filesystem will be mounted within the tree;
 these include /proc, /sys, and /dev and perhaps /tmp and /run as well.
 
-# Vurtual File Systems
+## Vurtual File Systems
 
 When an application needs to access a file, it interacts with the VFS adstraction
 layer, which then translates all the I/O system calls into specific code relevant
 to the particular actual filesystem.
 
-# Available Filesystems
+## Available Filesystems
 
 Linux support many filesystem varients, most with read and write access, including:
-- ext4
+
+- EXT4
 - XFS
 - JFS
+- *ReiserFS, ZFS (Can be supported)
 - Window-natives: FAT12, FAT16, FAT32, VFAT, NTFS
 - Pseudo-filesystems: proc, sysfs, devfs, debugfs
 - Network filesystems: NFS, coda, afs
 - etc.
 
+Ext, Ext2 dont have journaling
+Ext3 introduced journaling
+Ext4 is backward compatible
+
+FATs are good for USB devices
+
 Commonly used filesystems include: ext4, xsf, btrfsm squashfs, nfs, vfat.
+
 A list of supported filessytem us at /proc/filessytems.
 
 ## Journalling filesystems
@@ -73,7 +82,7 @@ A transaction must be completed without error, atomically; otherwise, the filess
 will not change. A log file is maintained of transactions. When an error occursm
 usally only the last transactions needs to be examined.
 
-# Special Filesystems
+## Special Filesystems
 
 Special filesystems are useful for accessing various kernel data structures and
 tuning kernel behavior. NOTE that some of these special filesystems have no
@@ -118,7 +127,6 @@ Demo:
 > df -h
 > cat /proc/filesystems
 > lsmod | less
-
 
 Resources:
 [profs](https://en.wikipedia.org/wiki/Procfs)
