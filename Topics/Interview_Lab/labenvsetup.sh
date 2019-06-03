@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 function testuser(){
   id testuser
   testuser_home=`echo $?`
@@ -32,9 +31,9 @@ yum-config-manager --disable "CentOS-7 - Updates"
 yum-config-manager --disable "CentOS-7 - Base"
 yum-config-manager --disable "CentOS-7 - Extras"
 
-# yum-config-manager --enable "CentOS-7 - Updates"
-# yum-config-manager --enable "CentOS-7 - Base"
-# yum-config-manager --enable "CentOS-7 - Extras"
+yum-config-manager --enable "CentOS-7 - Updates"
+yum-config-manager --enable "CentOS-7 - Base"
+yum-config-manager --enable "CentOS-7 - Extras"
 }
 
 
@@ -56,9 +55,14 @@ mv ansible-role-ntp /home/testuser/
 chown -R testuser:testuser /home/testuser/ansible-role-ntp
 }
 
-dnsposion(){
+function dnsposion(){
  echo "10.0.0.0    centostest.ad.fiu.edu centostest" >> /etc/hosts
 }
+
+function stress(){
+  stress --vm-bytes $(awk '/MemFree/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 1
+}
+
 
 fileToTransfer
 yumRepoDisable
