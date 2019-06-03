@@ -86,6 +86,10 @@ Opitions when creating the partitions
 > 2048
 > +3G
 
+List the all filesystem type
+> lsblk
+> blkid /dev/sdc
+
 Check and change partition types
 > l
 > t
