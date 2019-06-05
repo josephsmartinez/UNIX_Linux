@@ -85,7 +85,7 @@ or
 
 - Add GPG key checking on the EPEL repository to ensure authenticity of packages.
 
-> cd /etc/pki/rpm-gpg/  
+> cd /etc/pki/rpm-gpg/
 > wget https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7  
 > vim  /etc/yum.repos.d/dl.fedoraproject.org_pub_epel_7_x86_64_.repo  
 
@@ -103,7 +103,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 > yum whatprovides python3  
 > yum whatprovides python3.6  
 > yum whatprovides python36  
-> yum install python36-3.6.8-1.el7.x86_64  
+> yum install python36-3.6.8-1.el7.x86_64
 or  
 > yum install python36  
 
@@ -120,7 +120,7 @@ or
 
 - Check the current kernel version and compare against the latest kernel version with the base repository.
 
-> uname -r  
+> uname -r
 > cat /etc/redhat-release  
 > rpm --query centos-release  
 > yum list kernel  

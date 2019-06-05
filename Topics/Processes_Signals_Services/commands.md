@@ -1,5 +1,12 @@
 # Process commands
 
+## Commands 
+
+- ps
+- stress
+
+## Direcoties
+
 - /proc, developed to display information about processes (pseudo filesystem)
 - /sys,
 - /proc/sys, tunable system parameters

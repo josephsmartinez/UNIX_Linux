@@ -1,6 +1,7 @@
 # Linux Network Settings
 
 Sections:
+
 - Network Devices
 - Predictable Network Interface Device Names
 
@@ -12,10 +13,12 @@ Keywords:
 - Name resolution
 - Domain Name Server DNS
 
-Keyfile or Directories: 
+Keyfile or Directories:
+
 - /etc/hosts
 - /etc/resolv.conf
 - /etc/hosts.resolv
+- /etc/network/interfaces
 
 ## Network Devices
 
