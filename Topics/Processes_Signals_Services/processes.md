@@ -123,3 +123,10 @@ Signals are process-level interrupts requests. About thirty different kinds.
 - Sent among processes as a means of communication
 - Can be sent by the terminal diver to kill, interrupt, or suspend processes
 - Can be sent by the kernel
+
+
+NOTE: Linux system priorities are 0 to 139. 0 to 99 for real time. 100 to 139 for users
+
+Nice value range is -20 to +19. -20 is highest. 0 is the default. +19 is lowest.
+
+The relation between nice value and priority is: PR = 20 + NI

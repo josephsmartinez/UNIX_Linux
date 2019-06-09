@@ -2,7 +2,10 @@
 
 ## Commands
 
+- rpm
 - yum
+- apt
+- dnf
 
 ## About
 
@@ -87,6 +90,12 @@ enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 ```
+
+## The apt package manager for Ubuntu/Debain
+
+> apt-get install apache2
+> apt-get purge apahce2
+> apt-get remove --purge apache2
 
 Resources:
 

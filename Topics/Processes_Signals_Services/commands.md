@@ -1,9 +1,10 @@
 # Process commands
 
-## Commands 
+## Commands
 
 - ps
 - stress
+- top
 
 ## Direcoties
 
@@ -102,7 +103,21 @@ Ascertain what shared libraries an executable requires
 ## Using top
 
 > top
+
 Check all CPUs usage enter: 1
+> top
+> 1
+
+Display User Processes
+> top -u root
+
+Path of Processes
+> top
+> c
+
+Kill running process
+> top
+> k
 
 ## Commands Listed:
 

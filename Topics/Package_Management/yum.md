@@ -2,8 +2,6 @@
 
 ## Group Installations
 
-
-
 ## Installing security updates
 
 install the security plugin
