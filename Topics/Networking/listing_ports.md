@@ -29,7 +29,6 @@ Attempts to display software using ports
 -n:  inhibits the conversion of network numbers to host names
 > lsof -n -P | grep LISTEN
 
-
 Resources:
 
 https://www.cyberciti.biz/faq/unix-linux-check-if-port-is-in-use-command/

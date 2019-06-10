@@ -1,5 +1,7 @@
 # Networking
 
+- /etc/services
+
 ## Commands
 
 - nmcli
@@ -172,7 +174,11 @@ Combines functionality of ping and traceroute and gives a continuously updated d
 > scp
 > nmtui
 > nmcli
+
+## Statically Route IP Traffic
+
 > route
+
 
 Older ip address and hostname resolver
 > nslookup
