@@ -7,11 +7,14 @@
 Flags: -c create -f file name
 > tar -cvf myarchive.tar file1 file2 dir/ dir2/
 
-View the contents of the tar 
-> tar -t myarchive.tar
+View the contents of the tar
+> tar -tvf myarchive.tar
 
 Make a tar.gz which is smaller in size
 > gzip myarchive.tar
+
+View the content of the .gz file
+> tar -ztvf myarchive.tar.gz
 
 Filter the archive through gzip
 > tar -cvzf other_archive.tar.gz  file1 file2 dir/ dir2/

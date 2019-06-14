@@ -1,12 +1,27 @@
 # Setting up Mail Services
 
-
 Types:
 
-mutt
-postfix
+- mutt
+- postfix
 
-### Mutt: how to safely store password?
+## Setting up postfix
+
+> yum install postfix
+
+### Creating Alises
+
+> touch /etc/postfix/aliases
+> vim /etc/postfix/aliases
+
+``` conf
+webmaster: user
+chad: chad, boss
+```
+
+> postalias /etc/postfix/aliases
+
+## Mutt: how to safely store password
 
 Create a passwords file: ~/.mutt/passwords:
 
@@ -26,8 +41,8 @@ Add to your muttrc:
 
 source "gpg -d ~/.mutt/passwords.gpg |"
 
-
 ## Sending emails with CURL
+
 Basic implementation for email sending with CURL:
 
 curl --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
@@ -36,8 +51,10 @@ curl --url 'smtps://smtp.gmail.com:465' --ssl-reqd \
   
 In order to send an email with CURL, you need to set up SMTP connection. Most often Google's or Yahoo's outgoing mail servers are used for testing email sending with SMTP. Please note that you must turn on access for less secure apps in Gmail settings and similar additional security settings may apply for Yahoo as well.
 
-
 Resources:
+
+Postfix
+http://www.postfix.org/
 
 https://www.thegeekdiary.com/how-to-install-and-configure-mutt-in-centos-rhel/
 

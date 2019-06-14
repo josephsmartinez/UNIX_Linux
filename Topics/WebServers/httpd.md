@@ -110,6 +110,25 @@ require user userName
 `setsebool -P httpd_enable_homedirs true`
 `chcon -R -t httpd_sys_content_t /home/testuser/public_html`
 
+## Virtual Host
+
+> vim conf/httpd.conf
+Additional directories can be added for virtual host
+
+``` conf
+# Supplemental configuration
+#
+# Load config files in the "/etc/httpd/conf.d" directory, if any.
+IncludeOptional conf.d/*.conf
+#IncludeOptional vhost.d/*.conf
+```
+
+> mkidr /etc/httpd/vhost.d
+
+## Adding custom log formats
+
+> vim /etc/httpd/conf/httpd.conf
+
 Resources:
 
 [Apache Userdir with SELinux](https://www.if-not-true-then-false.com/2010/enable-apache-userdir-with-selinux-on-fedora-centos-red-hat-rhel/)

@@ -12,6 +12,8 @@
 - geoiplookup
 - nmap
 - nc
+- curl
+- lynx
 
 ## Locating Network Setting and Interfaces
 

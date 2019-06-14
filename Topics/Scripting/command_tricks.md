@@ -1,8 +1,9 @@
 # Command for general system information
 
-RHEL systems
+## Command Tricks
 
---------------
+Execute last command
+> !!
 
 ### Packages and Software
 

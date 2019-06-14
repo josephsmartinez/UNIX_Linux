@@ -3,12 +3,19 @@
 
 ## Configure a Physical Machine to Host Virtual Guests
 
-> yum install virt-manager qemu-kvm qemu-img
+> yum install virt-manager virt-viewer qemu-kvm qemu-img
 > yum install libvirt libvirt-python python-virtinst libvirt-client -y
 
 Enables VM to start on boot
 > systemctl enable libvirtd
 > systemctl start libvirtd
+
+Check if vituralization is enabled
+> cat /proc/cpuinfor | grep vmx
+
+## Install and Run VM
+
+> 
 
 ## Install Red Hat Enterprise Linux Systems as Virtual Guests
 
@@ -19,10 +26,11 @@ http://mirrors.acm.wpi.edu/archlinux/iso/2019.05.02/
 
 ## Configure Systems to Launch Virtual Machines at Boot
 
-
 > virsh
 > list --all
-> autostart [vm-name] 
+> autostart [vm-name]
+
+
 
 Resources:
 
