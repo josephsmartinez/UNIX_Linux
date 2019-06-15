@@ -26,7 +26,6 @@ Make sure configuration are set correctly
 Open port 53
 > firewall-cmd --list-all
 
-
 ## Maintaining DNS Zones
 
 Zone are configured in /etc/named.conf
@@ -69,9 +68,6 @@ www       IN CNAME webserver
 
     IN NS dns1.la.local
     IN NS dns2.la.local
-
-
-
 ```
 
 Create the new zone file in /etc/

@@ -105,7 +105,6 @@ require user userName
 </Directory>
 ```
 
-
 ## Adding custom log formats
 
 > vim /etc/httpd/conf/httpd.conf
@@ -164,11 +163,30 @@ Set up SSL
 > cd /etc/ssl
 > yum install mod_ssl
 > sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/somewebsit.key -out /etc/ssl/cert/somewebsite.crt
-
 > cd /etc/httpd/vhost.d/www.somewebsite.com_http.conf
 > cp www.somewebsite.com_http.conf www.somewebsite.com_https.conf
 > 
 
+``` xml
+<VirtualHost *:443>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    SSLEngine On
+    SSLCertificateFile /etc/ssl/certs/somewebsite.crt
+    SSLCertificateKeyFile /etd/ssl/certs/somewebsite.key
+</VirtualHost>
+```
+
+> systemctl restart httpd
+
 Resources:
+
+How To Install the Apache Web Server on CentOS 7
+https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-centos-7
 
 [Apache Userdir with SELinux](https://www.if-not-true-then-false.com/2010/enable-apache-userdir-with-selinux-on-fedora-centos-red-hat-rhel/)

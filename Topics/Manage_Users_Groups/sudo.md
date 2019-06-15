@@ -22,4 +22,3 @@ pbeesly     ALL=(ALL)       ALL
 jhalpert    ALL=(ALL)       ALL
 Defaults    timestamp_timeout=0
 ```
-

@@ -26,7 +26,7 @@ Chapters and Topics
 20.	The Ext2/Ext3/Ext4 Filesystems [COMPLETE]
 21.	The XFS and btrfs Filesystems [COMPLETE]
 22.	Encrypting Disks
-23.	Logical Volume Management (LVM) [COMPLETE]
+23.	Logical Volume Management (LVM) [REDO]
 24.	RAID [COMPLETE]
 25.	Kernel Services and Configuration
 26.	Kernel Modules
@@ -38,7 +38,7 @@ Chapters and Topics
 32.	File Permissions and Ownership
 33.	Pluggable Authentication Modules (PAM)
 34.	Network Addresses [COMPLETE]
-35.	Network Devices and Configuration [COMPLETE]
+35.	Network Devices and Configuration [REDO]
 36.	Firewalls
 37.	System Startup and Shutdown
 38.	GRUB
@@ -48,3 +48,11 @@ Chapters and Topics
 42.	Local System Security
 43.	Basic Troubleshooting
 44.	System Rescue
+
+
+Resources:
+
+A Linux Foundation Certified Engineer (LFCE) is prepared to install, configure, manage, and troubleshoot network services in Linux systems, and is responsible for the design and implementation of system architecture.
+
+Preparation for the LFCE (Linux Foundation Certified Engineer) exam
+https://www.tecmint.com/installing-network-services-and-configuring-services-at-system-boot/
