@@ -105,14 +105,24 @@ require user userName
 </Directory>
 ```
 
+
+## Adding custom log formats
+
+> vim /etc/httpd/conf/httpd.conf
+
 ## Apache Userdir with SELinux
 
 `setsebool -P httpd_enable_homedirs true`
 `chcon -R -t httpd_sys_content_t /home/testuser/public_html`
 
-## Virtual Host
+## Deployment of a full Web Server with SSL
 
+Install
+> yum install httpd
+
+Create Virtual Host
 > vim conf/httpd.conf
+
 Additional directories can be added for virtual host
 
 ``` conf
@@ -125,9 +135,39 @@ IncludeOptional conf.d/*.conf
 
 > mkidr /etc/httpd/vhost.d
 
-## Adding custom log formats
+Edit the /etc/hosts file
 
-> vim /etc/httpd/conf/httpd.conf
+> vim /etc/hosts
+
+``` conf
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.0.1.238 www www.somewebsite.com
+```
+
+Create the virtualhost file
+
+> vim /etc/httpd/vhost.d/www.somewebsite.com.conf
+
+``` xml
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+```
+
+Set up SSL
+> cd /etc/ssl
+> yum install mod_ssl
+> sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/certs/somewebsit.key -out /etc/ssl/cert/somewebsite.crt
+
+> cd /etc/httpd/vhost.d/www.somewebsite.com_http.conf
+> cp www.somewebsite.com_http.conf www.somewebsite.com_https.conf
+> 
 
 Resources:
 
