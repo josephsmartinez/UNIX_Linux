@@ -229,3 +229,10 @@ AUTOSTART=true
 
 > systemctl start mdmonitor
 
+Resources:
+
+A Linux user's guide to Logical Volume Management
+https://opensource.com/business/16/9/linux-users-guide-lvm
+
+LVM and disaster recovery
+https://serverfault.com/questions/31518/lvm-and-disaster-recovery
