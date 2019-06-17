@@ -1,0 +1,7 @@
+; Created by cloud-init on instance boot automatically, do not edit.
+;
+search nyc1.volt.net  # your private domain
+nameserver 10.136.199.130  # ns1 private IP address
+nameserver 10.136.197.161  # ns2 private IP address
+nameserver 67.207.67.2
+nameserver 67.207.67.3

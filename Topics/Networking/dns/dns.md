@@ -2,7 +2,7 @@
 
 ## Commands
 
-- nslookup 
+- nslookup
 - hostname
 - hostnamectl
 

@@ -1,0 +1,9 @@
+zone "nyc1.volt.net" {
+    type master;
+    file "/etc/named/zones/db.nyc1.volt.net"; # zone file path
+};
+
+zone "136.10.in-addr.arpa" {
+    type master;
+    file "/etc/named/zones/db.10.136";  # 10.136.0.0/16 subnet
+};
