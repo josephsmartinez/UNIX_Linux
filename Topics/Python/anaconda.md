@@ -18,6 +18,7 @@
 ## Using anaconda (conda)
 
 > conda info --envs
+> conda create --name myenv
 > conda activate
 > conda deactivate
 > conda env create -f example.yml
