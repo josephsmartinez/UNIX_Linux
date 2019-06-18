@@ -50,7 +50,8 @@ First make sure the partitions are set to LVM when using fdisk or gdisk
 > pvcreate /dev/sdb1 /dev/sdc1
 > pvdisplay
 
-> vgcreate battlestar /dev/sdb1 /dev/sdc1> lvcreate
+> vgcreate battlestar /dev/sdb1 /dev/sdc1
+> lvcreate
 > vgdisplay
 
 > lvcreate -n galactica -L 6G battlestar
@@ -61,6 +62,8 @@ First make sure the partitions are set to LVM when using fdisk or gdisk
 > mkfs.btrfs galactica
 > mount /dev/battlestar/galactica /mnt/galactica/
 > umount /mnt/galactica/
+
+> vg remove vgpool
 
 > lvremove /dev/battlestar/galaxy 
 > lvremove /dev/battlestar/galactica 
@@ -236,3 +239,6 @@ https://opensource.com/business/16/9/linux-users-guide-lvm
 
 LVM and disaster recovery
 https://serverfault.com/questions/31518/lvm-and-disaster-recovery
+
+How to Create, Extend, Remove Swap Partition in Redhat/Centos LVM
+https://linoxide.com/how-tos/how-to-create-new-swap-partition-on-rhel/
