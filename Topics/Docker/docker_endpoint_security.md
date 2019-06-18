@@ -1,12 +1,14 @@
 # Portainer Endpoint Configuration
 
 ## Important notes
+
 systemd vs daemon.json
 Configuring Docker to listen for connections using both the systemd
 unit file and the daemon.json file causes a conflict that prevents
 Docker from starting.
 
 ## Resources
+
 https://docs.docker.com/engine/security/https/#related-information
 https://docs.docker.com/config/daemon/
 https://docs.docker.com/engine/reference/commandline/dockerd/#daemon-configuration-file
@@ -15,7 +17,6 @@ https://docs.docker.com/install/linux/linux-postinstall/#control-where-the-docke
 https://github.com/moby/moby/issues/22339
 
 ***During testing connection shutdown all running containers before connecting permenently***
-
 **Make sure filewall setting reflect for TLS port**
 
 ## Steps to configuration
@@ -34,7 +35,8 @@ The docker service needs to be off when using dockerd command for testing.
 ### Test configurations
 
 Run the following from the .docker directory
-```
+
+``` shell
 dockerd --tlsverify \
 --debug \
 --tlscacert=ca.pem \
@@ -48,12 +50,14 @@ using the following command succeeds, then the endpoint are
 configured correctly.
 
 To be ran from another endpoint with CA/TLS files
-```
+
+``` shell
 docker --tlsverify \
 --tlscacert=ca.pem \
 --tlscert=cert.pem --tlskey=key.pem \
  -H=$HOST:2376 version
 ```
+
 ### Adjusting docker.service
 
 Open the following file  
@@ -61,8 +65,7 @@ Open the following file
 or if the service has been enabled
 /etc/systemd/system/multi-user.target.wants/docker.service
 
-
-Amend the following line    
+Amend the following line
 ***From...***
 `ExecStart=/usr/bin/dockerd -H unix://`
 ***To...***
@@ -89,7 +92,7 @@ NOTE: Make sure to change the client hostname
 
 ### Start and enable docker.service
 
-```
+``` bash
 systemctl restart docker.service
 systemctl enable docker.service
 ```
