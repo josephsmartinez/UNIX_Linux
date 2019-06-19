@@ -1,9 +1,18 @@
 # AWS Cloud Practitioner Certificatiion Resources
 
+Terminology Definitions
 
+High Availbiility
 
+Fault Tolernace
 
+Scalability
 
+Elasticity
+
+Cost Efficient
+
+Secure
 
 Resources:
 

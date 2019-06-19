@@ -11,6 +11,15 @@ a cloud service solution that makes it easy to establish a dedicated network con
 Amazon Route 53
 a highly available and scalable cloud Domain Name System (DNS) web service. It is designed to give developers and businesses an extremely reliable and cost effective way to route end users to Internet applications by translating names like www.example.com into the numeric IP addresses like 192.0.2.1 that computers use to connect to each other. Amazon Route 53 is fully compliant with IPv6 as well.
 
+Benefits:
+
+- Domain Registration
+- Domain Name System (DNS) Service
+- Traffic Flow
+- Health Checks
+- DNS Failover
+- Integrates with ELB, S3, and CloundFront
+
 AWS VPN
 lets you establish a secure and private tunnel from your network or device to the AWS global network. AWS VPN is comprised of two services: AWS Site-to-Site VPN and AWS Client VPN.
 
@@ -28,4 +37,6 @@ lets you provision a logically isolated section of the AWS Cloud where you can l
 Amazon CloudFront
 a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.
 
-
+- Cache content a Edge Location for fast distribution to customers
+- Built-in Distributed Denial of Service (DDoS) attack protection
+- Intergrates with many AWS services (S3, EC2, ELB, Route 53m Lambda)

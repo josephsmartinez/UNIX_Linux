@@ -3,8 +3,14 @@
 Amazon EBS Volumes
 a durable, block-level storage device that you can attach to a single EC2 instance. You can use EBS volumes as primary storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application. You can also use them for throughput-intensive applications that perform continuous disk scans. EBS volumes persist independently from the running life of an EC2 instance.
 
-Amazon Simple Storage Service (Amazon S3) 
+Amazon Simple Storage Service (Amazon S3)
 is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics.
+
+Durability rating of S3 Standard Storage Class:
+
+Durability of 99.999999999%, 99.99% availability over a year, S3 supports Lifecycle Management of objects
+
+- 
 
 - Buckets are root level folders
 - Subfolders are folders

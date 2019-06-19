@@ -15,6 +15,14 @@ o AWS Lambda and Lambda Edge functions
 o Amazon Lightsail resources
 o Amazon Elastic Beanstalk environments
 
+Prohibited Activities – The following activities are prohibited at this time:
+
+o DNS zone walking via Amazon Route 53 Hosted Zones
+o Denial of Service (DoS), Distributed Denial of Service (DDoS), Simulated DoS, Simulated DDoS
+o Port flooding
+o Protocol flooding
+o Request flooding (login request flooding, API request flooding)
+
 PCI DSS
 applies to all entities that store, process, or transmit cardholder data (CHD) or sensitive authentication data (SAD), including merchants, processors, acquirers, issuers, and service providers. The PCI DSS is mandated by the card brands and administered by the Payment Card Industry Security Standards Council.
 
