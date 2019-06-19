@@ -16,3 +16,6 @@ combine the usage across all accounts in the organization to share the volume pr
 
 Consolidated Billing
 Consolidate billing and payment for multiple AWS accounts or multiple Amazon Internet Services Pvt. Ltd (AISPL) accounts. Every organization in AWS Organizations has a master account that pays the charges of all the member accounts. Used to ensure costs can be reduced if you have multiple accounts
+
+
+Reserved Instance Payment Options

@@ -525,17 +525,3 @@ Which of the following from AWS can be used to transfer petabytes of data from o
 > AWS Snowball
 
 The AWS Documentation mentions the following Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of the AWS cloud. Using Snowball addresses common challenges with large-scale data transfers including high network costs, long transfer times, and security concerns. Transferring data with Snowball is simple, fast, secure, and can be as little as one-fifth the cost of high-speed Internet. For more information on AWS Snowball , please visit the Link: https://aws.amazon.com/snowball/?p=tile
-
-----------------
-
-Resources:
-
-Practitioner's Brief
-https://interactive.linuxacademy.com/diagrams/thepractionersbrief.html
-
-Practitioner's Brief
-http://bit.ly/2je42V9
-
-
-
-
