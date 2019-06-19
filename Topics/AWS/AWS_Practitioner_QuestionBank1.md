@@ -1,4 +1,4 @@
-# Amazon Web Services Randome Questions
+# Amazon Web Services Random Question Bank 1
 
 - Which of the below cannot be used to get data onto Amazon Glacier.
 
