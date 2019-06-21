@@ -39,7 +39,10 @@ Allow and Deny Access with atd or cron
 > ls /etc | grep -e "^cron\." | grep -v "cron.deny"
 > man anacron
 
-Resources: 
+Resources:
+
+Cron Format
+http://www.nncron.ru/help/EN/working/cron-format.htm
 
 One Time Task Scheduling using at Command in Linux
 https://tecadmin.net/one-time-task-scheduling-using-at-commad-in-linux/
@@ -47,8 +50,3 @@ https://tecadmin.net/one-time-task-scheduling-using-at-commad-in-linux/
 Crontab in Linux with 20 Useful Examples to Schedule Jobs
 https://tecadmin.net/crontab-in-linux-with-20-examples-of-cron-schedule/
 
-
-<h4>Installing Crash Plan NotesM</h4>
-<p>Web Location: https://crashplan.fiu.edu:4285</p>
-<p>website: https://crashplan.fiu.edu:4285/login/#/login</p>
-<p>server_name: crashplan.fiu.edu:4282</p>

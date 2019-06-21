@@ -1,6 +1,15 @@
 # GRUB and Bootloaders
 
+## Command
+
+- `update-grub`
+
+## Directories
+
 - /etc/default/grub (main grub file)
+- /etc/grub.d/
+- /boot/grub/grub.cfg
+- /boot/grub2/
 
 ## All grub specific files
 
@@ -12,14 +21,14 @@
 
 ## Make a custom script /etc/grub.d/
 
-> vim /etc/grub.d/42_custom
+> vim /etc/grub.d/42_customLinux
+> vim /etc/grub.d/43_customWindows
 
-``` conf
+``` sh
 #!/ban/sh -e
-
-echo "display when update grub is run"
+echo "Adding my custom Linux to GRUB 2"
 cat << EOF
-menuentry "Ohter Linux Partition" {
+menuentry "My custom Linux" {
 set root=(hd0,3)
 linux /boot/vmlinuz
 initrd /boot/initrd.img
@@ -27,7 +36,20 @@ initrd /boot/initrd.img
 
 ```
 
+``` sh
+#!/bin/sh -e
+echo "Adding Windows 8 to GRUB 2 menu"
+cat << EOF
+menuentry "Windows 8" {
+set root=(hd0,1)
+chainloader (hd0,1)+1
+}
+EOF
+```
+
 > chmod +x 42_custom
+Update grub.cfg
+> update-grub
 
 ## Recover GRUB
 
@@ -35,6 +57,9 @@ Should be on the location as the mount bootloader location
 > grub-install --root-directory=/mnt /dev/sda
 
 Resources:
+
+GNU GRUB
+https://www.gnu.org/software/grub/
 
 GRUB 2 bootloader - Full tutorial
 https://www.dedoimedo.com/computers/grub-2.html

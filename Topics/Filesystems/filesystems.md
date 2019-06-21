@@ -128,7 +128,25 @@ Demo:
 > cat /proc/filesystems
 > lsmod | less
 
+## Removing File Systems
+
+mkfs doesn't create a partition, it creates a filesystem. You created a filesystem on the entire device /dev/sdd (as opposed to a partition e.g. /dev/sdd1).
+
+Your disk is not partitioned, the resulting layout is called superfloppy. If you want to utilize (almost) the whole device to a single filesystem then it's still better to have a partition table with one partition. Compare: Uses of single-partition disk configuration.
+
+Tools like fdisk or gdisk should allow you to create a partition table without any preparations (you will lose data from the current filesystem though, so copy what you want to save). If you create a single partition then you should later run mkfs.ext4 with /dev/sdd1 as a target to create a filesystem on the partition.
+
+If you want to wipe the current filesystem (prior to fdisk/gdisk/whatever or for any other reason) then
+
+fill the beginning of the disk with zeros, 1MB should be enough:
+
+> dd if=/dev/zero of=/dev/sdd bs=1M count=1
+or use 
+> wipefs on /dev/sdd
+this tool is designed to erase filesytems.
+
 Resources:
+
 [profs](https://en.wikipedia.org/wiki/Procfs)
 [Understanding file systems](https://www.ufsexplorer.com/articles/file-systems-basics.php)
 [XFS](http://landoflinux.com/linux_xfs_filesystem_introduction.html)

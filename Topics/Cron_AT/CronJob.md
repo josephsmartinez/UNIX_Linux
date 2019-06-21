@@ -1,6 +1,7 @@
 # Scheduling Jobs
 
-Creating a New Crontab
+## Creating a New Crontab
+
 The crontab can be created easily by using the crontab command.
 
 To Create or Edit your cron jobs
@@ -12,14 +13,9 @@ crontab -l To Display the crontab file.
 crontab -r To Remove the crontab file.
 crontab -v To Display the last time you edited your crontab file. (This option is only available on a few systems.)
 
-
-
-https://www.codementor.io/akul08/the-ultimate-crontab-cheatsheet-5op0f7o4r
-
-
-
 ### Data Base Back Up
-```
+
+``` conf
 vim .my.cnf
 
 [client]
@@ -40,7 +36,12 @@ vim /etc/crontab
 # *  *  *  *  * user-name  command to be executed
   *  *  *  *  * /usr/bin/mysqldump --defaults-file=/root/.my.cnf -u root --all-databases --single-transaction --quick --lock-tables=false  > /root/Documents/SqlBackup/full-backup-$(date +%F).$(date +"%T").sql
  ```
+
+Resources:
+
 https://mariadb.com/kb/en/library/configuring-mariadb-with-mycnf/
 
+https://www.codementor.io/akul08/the-ultimate-crontab-cheatsheet-5op0f7o4r
 
+http://www.nncron.ru/help/EN/working/cron-format.htm
 

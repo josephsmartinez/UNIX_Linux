@@ -28,18 +28,25 @@ Then set up the array, format it, add to the configuration and mount it
 /dev/md0 /myraid ext4 defaults 0 2
 ```
 
-Examine RAID status 
-> cat /proc/mdstat 
+Examine RAID status
+> cat /proc/mdstat
 > mdadm --detail /dev/md0
 
 Stop RAID service
 > mdadm -S /dev/md0
-
-
 > systemctl start mdmonitor.service
 
+## Creating Different Types of RAIDS
 
-Resources: 
+### RAID1
+
+### RAID 2
+
+### RAID 4
+
+### RAID 5
+
+Resources:
 
 RedHat / CentOS : Managing software RAID with mdadm
 https://www.thegeekdiary.com/redhat-centos-managing-software-raid-with-mdadm/
