@@ -15,6 +15,9 @@ Gerneral Purpose, Compute optimized, GPU optimized, Memory Optimized, Storage Op
 EC2 Buying Options:
 On-Demand, Reserved, Spot (Bid)
 
+EC2 Pricing
+https://aws.amazon.com/ec2/pricing/on-demand/
+
 Amazon EC2 Spot Instances
 let you take advantage of unused EC2 capacity in the AWS cloud. Spot Instances are available at up to a 90% discount compared to On-Demand prices.
 

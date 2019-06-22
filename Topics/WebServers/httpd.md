@@ -129,7 +129,7 @@ Additional directories can be added for virtual host
 #
 # Load config files in the "/etc/httpd/conf.d" directory, if any.
 IncludeOptional conf.d/*.conf
-#IncludeOptional vhost.d/*.conf
+IncludeOptional vhost.d/*.conf
 ```
 
 > mkidr /etc/httpd/vhost.d

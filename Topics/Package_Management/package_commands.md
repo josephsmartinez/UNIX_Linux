@@ -14,8 +14,7 @@ Something
 ## Install and Update Software Packages from Red Hat Network, YUM REPO
 
 - NEVER ASSUME ALL PACKAGES NEED UPDATING
-- DONE RUN yum update -y WITHIN A COMPLEX PRODUCTION ENVIRONMENT
-
+- DONT RUN yum update -y WITHIN A COMPLEX PRODUCTION ENVIRONMENT
 
 > yum check-update
 > yum search apache
@@ -29,7 +28,6 @@ Something
 > yumdownloader
 > yum search nano
 > yumdownloader nano
-
 > rpm -i nano-2.3.1-10.el7.x86_64.rpm
 > rpm -qa nano
 -OR-
@@ -37,10 +35,10 @@ Something
 > yum list installed nano
 
 Update package
-> rpm -U 
+> rpm -U
 
 Upgrade
-> rpm -F 
+> rpm -F
 
 Install, verbos, hash progress bar
 > rpm -ivh nano-2.3.1-10.el7.x86_64.rpm
@@ -49,7 +47,7 @@ List file when package is installed
 > rpm -ql nano
 
 List installed package (if package is missing, returns nothing)
-> rpm -qa 
+> rpm -qa
 
 List all documentation files when package isntalled
 > rpm -qd nano
@@ -99,7 +97,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
 Resources:
 
-[EPEL Wiki](https://fedoraproject.org/wiki/EPEL): 
+[EPEL Wiki](https://fedoraproject.org/wiki/EPEL):
 
 VERIFYING SIGNED PACKAGES
 https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/sect-security_guide-updating_packages-verifying_signed_packages
