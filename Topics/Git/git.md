@@ -1,9 +1,15 @@
 # Git and Git Management
 
 
+> git init
+> git add [filename]
+> git commit -m "Adding files"
+> git status
+
 ## Configure Username and User Email
+
 > git config --global user.name johndoe
-> git config --global user.email 
+> git config --global user.email
 
 Git SSH key setup
 https://stackoverflow.com/questions/34400272/visual-studio-code-always-asking-for-git-credentials/50420113#50420113

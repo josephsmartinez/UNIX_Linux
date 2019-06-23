@@ -14,6 +14,8 @@
 - nc
 - curl
 - lynx
+- tcpdump
+- ss
 
 ## Locating Network Setting and Interfaces
 

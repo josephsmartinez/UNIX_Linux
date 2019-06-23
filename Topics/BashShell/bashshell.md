@@ -10,5 +10,7 @@ Getting a login shell
 > su -l
 > su --login
 
+Resources:
 
-
+The bash shell
+https://www.computerhope.com/unix/ubash.htm#pipelines

@@ -5,6 +5,9 @@
 - ps
 - stress
 - top
+- vmstat
+- lsof
+- iostat
 
 ## Direcoties
 

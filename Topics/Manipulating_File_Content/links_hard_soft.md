@@ -3,7 +3,6 @@
 > ln file file_hardlink
 > ln -s file file_softlink
 
-
 How to create hard and symbolic links
 https://www.tecmint.com/create-hard-and-symbolic-links-in-linux/
 
