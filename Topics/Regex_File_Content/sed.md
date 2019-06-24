@@ -4,11 +4,14 @@
 
 - Some of BRE
 
+## Return match inline
+
+> cat Traffic_Violations.csv | sed -n '/VOLVO/p'
+
 ## Replace String in file
 
-sed -i 's/foo/bar/g' .env
-
-sed -i 's/maxmemory.*/maxmemory 26gb/' /some/file/some/where.txt
+> sed -i 's/foo/bar/g' file
+> sed -i 's/maxmemory.*/maxmemory 26gb/' /some/file/some/where.txt
 
 
 ## Deleting Text in Files

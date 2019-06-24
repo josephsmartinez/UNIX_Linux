@@ -96,6 +96,9 @@ Running the container after exiting
 > docker start -ai [Container name]
 > docker start [Container name]
 
+Quick Stop, Remove, Process Check, and Container listing
+> docker stop webhost1 && docker rm webhost1 && docker ps -a | docker container ls -a
+
 Resources:
 
 docker run reference

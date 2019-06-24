@@ -32,14 +32,29 @@ Searching multiple files using a wildcard
 Recursively searching subdirectories `-r`
 > grep --color -n -i -r "Iowa" *
 
-## Using Regex with grep
+## Using Regex with grep (BRE) BRE
 
-Anchors
+Plain text  
+Matches with any word that contain (substring or no)
+> grep "foo" bar
+
+Anchors `^`
+Very beginning of a line.
 > ^
 
-Brackets
-> []
+- Brackets `[]`
+Can be any one character found within the bracket group
 
+> grep --color "0[3-4]:..:.." Traffic_Violations.csv
+
+Period character `.`  
+Used in regular expressions to mean that any single character can exist at the specified location.
+
+Any ticket between 3 and 4 AM
+> grep --color "0[3-4]:..:.." Traffic_Violations.csv
+
+Specifying Match Repetition `{}`
+> 
 
 
 Resources:

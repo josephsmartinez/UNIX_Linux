@@ -1,5 +1,7 @@
 # Archive, Compress, Unpack, and Uncompress Files
 
+NOTE: Flag order matters!!!S
+
 ## Compressing
 
 > gzip file.txt
@@ -17,6 +19,7 @@ View the content of the .gz file
 > tar -ztvf myarchive.tar.gz
 
 Filter the archive through gzip
+> tar -cvz --file RabbitHole.tar.gz
 > tar -cvzf other_archive.tar.gz  file1 file2 dir/ dir2/
 
 Compression information
@@ -24,6 +27,7 @@ Compression information
 
 ## Decompressing
 
+> tar -xv --file RabbitHole.tar.gz
 > gzip -d other_archive.tar.gz
 > tar -xvf other_archive.tar.gz
 
