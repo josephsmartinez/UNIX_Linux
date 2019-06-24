@@ -1,15 +1,5 @@
 # Anaconda and Pythons Installations
 
-## install from source
-
-> yum install gcc openssl-devel bzip2-devel libffi-devel
-> wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
-> tar -zxvf Python-3.7.3.tgz
-> ./configure --enable-optimizations
-> make altinstall
-> exit
-> sudo pip3.7 install --upgrade pip
-
 ## install from install script
 
 > wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh

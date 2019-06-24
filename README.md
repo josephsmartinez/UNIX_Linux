@@ -54,7 +54,9 @@ Topics
 
 Resources:
 
-A Linux Foundation Certified Engineer (LFCE) is prepared to install, configure, manage, and troubleshoot network services in Linux systems, and is responsible for the design and implementation of system architecture
+Linuxtopia is an extensive online resource for anyone learning or deploying enterprise level open source technology. (I like this site)
+https://www.linuxtopia.org/online_books/linux_programming_index.html
 
+A Linux Foundation Certified Engineer (LFCE) is prepared to install, configure, manage, and troubleshoot network services in Linux systems, and is responsible for the design and implementation of system architecture
 Preparation for the LFCE (Linux Foundation Certified Engineer) exam
 https://wwwtecmintcom/installing-network-services-and-configuring-services-at-system-boot/
