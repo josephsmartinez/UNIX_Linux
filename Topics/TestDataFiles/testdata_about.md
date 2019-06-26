@@ -1,10 +1,6 @@
 # Test Data About
 
-CSVs
-
-- 
-
-Common Log Files
+Common Linux Log Files
 
 - Web Logs (Apache or Nignx)
 - PAM
@@ -21,6 +17,9 @@ Common Log Files
 - Docker
 
 Resources:
+
+Kaggle is the place to do data science projects
+https://www.kaggle.com/
 
 The home of the U.S. Government’s open data
 https://catalog.data.gov/dataset?res_format=CSV
