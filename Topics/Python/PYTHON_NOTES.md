@@ -1,5 +1,9 @@
 # Anaconda and Pythons Installations
 
+## Convert IPython to .py file
+
+> jupyter nbconvert --to script [YOUR_NOTEBOOK].ipynb
+
 ## install from install script
 
 > wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
