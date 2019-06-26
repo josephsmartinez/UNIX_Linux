@@ -6,6 +6,7 @@ Sections:
 - Predictable Network Interface Device Names
 
 Keywords:
+
 - Netlink socket
 - Gateway
 - Static Routes
@@ -22,7 +23,7 @@ Keyfile or Directories:
 
 ## Network Devices
 
-Network devices are assocuated by their names: 
+Network devices are assocuated by their names:
 
 - eth0, et1, ..., etc. Ehternet
 
@@ -37,15 +38,8 @@ Network devices are assocuated by their names:
 There are five types of names that can be given:
 
 - eno1
-
 - ens1
-
--  enp2s0
-
+- enp2s0
 - enx7837d1ea46da
-
-- 
-
-
 
 The Netlink socket family is a Linux kernel interface used for inter-process communication between both the kernel and userspace processes, and between different userspace processes, in a way similar to the Unix domain sockets.

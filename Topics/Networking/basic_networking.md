@@ -150,3 +150,5 @@ CompTIA Linux+ (LX0-104)
         Displays packets passing through an interface
         tcpdump -i eth0 > data.txt
         tail -f ./data.txt
+
+Resources:

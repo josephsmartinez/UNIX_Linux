@@ -57,20 +57,35 @@ Linux support many filesystem varients, most with read and write access, includi
 - XFS
 - JFS
 - *ReiserFS, ZFS (Can be supported)
-- Window-natives: FAT12, FAT16, FAT32, VFAT, NTFS
+- Window-natives: FAT12, FAT16, FAT32, VFAT, NTFS, exFAT
 - Pseudo-filesystems: proc, sysfs, devfs, debugfs
 - Network filesystems: NFS, coda, afs
 - etc.
 
+### Ext
+
 Ext, Ext2 dont have journaling
 Ext3 introduced journaling
-Ext4 is backward compatible
-
+Ext4 is backward compatible with older Exts
 FATs are good for USB devices
 
 Commonly used filesystems include: ext4, xsf, btrfsm squashfs, nfs, vfat.
 
 A list of supported filessytem us at /proc/filessytems.
+
+### ZFS
+
+- Drive pooling, snapshotsm dynamic disk striping
+
+### XFS
+
+- Can be enlarged (not shrunk) on the fly
+- Good with many large files
+- Poor with manu small files
+
+### BTRFS
+
+- Drive pooling, snapshots, compression, online defragmentation
 
 ## Journalling filesystems
 

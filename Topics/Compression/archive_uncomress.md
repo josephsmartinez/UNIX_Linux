@@ -32,4 +32,7 @@ Compression information
 > tar -xvf other_archive.tar.gz
 
 Check the difference of files before decompressing
-> tart - dvf other_archive.tar.gz
+> tar - dvf other_archive.tar.gz
+
+Compress from other directory
+> tar czf /tmp/backup.tar.gz -C /home/centos/ RabbitHole

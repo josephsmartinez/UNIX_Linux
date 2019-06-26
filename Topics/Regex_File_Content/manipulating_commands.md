@@ -16,8 +16,15 @@
 > wc
 > cut
 > comm
+> fmt
+> ls
 
 Examples:
+
+## ls, list directory contents
+
+Using the long format `-l` directories hidden `-a` Recursive sub directories `-R`
+> ls -laR
 
 ## cat
 
