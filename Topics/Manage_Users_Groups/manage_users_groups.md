@@ -2,14 +2,14 @@
 
 ## Commands
 
-- useradd
-- userdel
-- groupadd
-- groupdel
-- passwd
-- getent
-- id
-- quota
+- `useradd`
+- `userdel`
+- `groupadd`
+- `groupdel`
+- `passwd`
+- `getent`
+- `id`
+- `quota`
 
 ## User/Group Configuration Setting
 
@@ -100,67 +100,13 @@ Add a group admin
 
 change user password expiry information
 > chage -l mike
+Expire user password
+> chage -d 0 testuser
+> passwd -e testuser
+
 
 ## Using set-GID On Directories
 
 ## Configure a System to Use an Existing Authentication Service for User and Group (LDAP/Active Directory)
 
 > yum install -y realmd
-
-## Setup User and Group Disk Quotas for File Systems
-
-NOTE: This can be done on the root (/) directory filesystem
-
-> yum install quota
-
-Change params
-> vim /etc/fstab
-
-``` conf
-#
-# /etc/fstab
-# Created by anaconda on Tue Jun  4 09:10:31 2019
-#
-# Accessible filesystems, by reference, are maintained under '/dev/disk'
-# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info
-#
-#UUID=60d67439-baf0-4c8b-94a3-3f10a362e8fe /                       xfs     defaults        0 0
-UUID=60d67439-baf0-4c8b-94a3-3f10a362e8fe /mnt/sda1                xfs     defaults,discard,usrquota       0 0
-```
-
-> mount -o remount /mnt/sda1  
-Create quota files
-> quotacheck -cugm /mnt/sda1  
-Assign quotas for users on the system
-> edquota user
-
-``` conf
-# quota username
-Disk quotas for user username (uid 501): 
-   Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
-     /dev/sda1    1000*   1000    1000               0       0       0
-```
-
-> quota user
-> repquota -a
-
-## LAB 1 Make sure user apache has no login and add a user to the apache group
-
-> useradd mike
-> yum install httpd
-> usermod -aG apache mike
-> cat /etc/passwd
-> id mike
-
-``` /etc/passwd | grep acahe
-apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
-```
-
-## LAB 2
-
-## LAB 3
-
-Resources:
-
-DISK QUOTAS - RedHat
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/storage_administration_guide/ch-disk-quotas

@@ -42,6 +42,16 @@ Find files based on permissions
 
 > find /usr/bin -prem 755
 
+Find file with SUID/SGID 
+
+To find all the files with SUID
+> find / -perm +4000
+To find all the files with SGID
+> find / -perm +2000
+
+Find all GID and UID
+> find / -xdev -user root \( -perm -4000 -o -perm -2000 \)
+
 ## Execute command post find operation
 
 Use the cat command on all files own user jeff
@@ -65,3 +75,6 @@ Resources:
 
 Find Files in Linux, Using the Command Line
 https://www.linode.com/docs/tools-reference/tools/find-files-in-linux-using-the-command-line/
+
+Finding setuid binaries
+https://linux-audit.com/finding-setuid-binaries-on-linux-and-bsd/

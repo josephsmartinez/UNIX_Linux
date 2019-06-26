@@ -2,18 +2,24 @@
 
 ## Topics
 
-Sticky Bit, File Permissions, Access Control List
+- File Permissions
+- Access Control List
+- setuid
+- setgid
+- Sticky Bit
+- Diagnose and Correct File Permission Problems
 
 ## Commands
 
-> chown
-> chmod
-> mask
-> umask
-> chcon
-> stat
+- `chown`
+- `chmod`
+- `mask`
+- `umask`
+- `chcon`
+- `stat`
+- `file`
 
-## Setting File Permissions
+## File Permissions
 
 ### Text method
 
@@ -27,14 +33,6 @@ chmod who=permissions filename
 > chmod g+w foobar
 
 ### Numeric method
-
-
-## Understanding umask
-
-## Create and Configure Set-GID Directories for Collaboration
-
-Files of the blueteam directory will enharent the GID
-> chmod g+s /home/blueteam
 
 ## Create and Manage Access Control Lists (ACLs)
 
@@ -53,6 +51,30 @@ Files of the blueteam directory will enharent the GID
 The dash (-) mean std-in input from std-out
 > getfacl file1 | setfacl --set-file=- file2
 
+## Create and Configure Set-UID
+
+Capital S. This means there are no execute permissions
+> chmod u+s file1 && ls -l
+Lower case s. This means there are execute permissions
+> chmod u+x file1
+> ls -l
+
+## Create and Configure Set-GID Directories for Collaboration
+
+chmod g+s
+chmod 2700 file1
+
+Files of the blueteam directory will enharent the GID
+> chmod g+s /home/blueteam
+
+## Setting the Sticky Bit Value
+
+> chmod a+t file
+> chmod 1777 file
+NOTE: The sticky bit has no effect if other does not have execute permissions.
+> chmod 1666 file
+> ls -la
+
 ## Diagnose and Correct File Permission Problems
 
 - Update the acl on a file or directory changes the MASK
@@ -63,10 +85,6 @@ The dash (-) mean std-in input from std-out
 - The cp command does not preserve ACL rules
 - The mv command does not preserve ACL rules
 - Default ACL permissions are for inheritance
-
-## Setting the Sticky Bit Value
-
-
 
 Things to think about...
 
@@ -82,3 +100,5 @@ https://wiki.archlinux.org/index.php/File_permissions_and_attributes
 
 Linux Sticky Bit Concept Explained with Examples
 https://www.thegeekstuff.com/2013/02/sticky-bit/?utm_source=feedburner
+
+http://permissions-calculator.org/info/

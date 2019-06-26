@@ -34,9 +34,11 @@ Recursively searching subdirectories `-r`
 
 ## Using Regex with grep (BRE) BRE
 
+Using `grep -E`
+
 Plain text  
 Matches with any word that contain (substring or no)
-> grep "foo" bar
+> grep -E "foo" bar
 
 Anchors `^`
 Very beginning of a line.
@@ -54,8 +56,6 @@ Any ticket between 3 and 4 AM
 > grep --color "0[3-4]:..:.." Traffic_Violations.csv
 
 Specifying Match Repetition `{}`
-> 
-
 
 Resources:
 

@@ -22,6 +22,9 @@
            600:700         hard    locks           10
 ```
 
+
+
+
 Resources:
 
 https://access.redhat.com/solutions/61334
