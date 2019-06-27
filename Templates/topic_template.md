@@ -4,16 +4,16 @@
 
 ## Sections
 
-- [Section One](##Section-One)
-  - [Section 1.1](###Section-1.1)
-- [Section Two](##Section-Two)
-- [Resources](##Resources)
+- [Section One](##section-one)
+  - [Section 1.1](###section-1.1)
+- [Section Two](##section-two)
+- [Resources](##resources)
 
-## Section-One
+## Section One
 
 ### Section 1.1
 
-## Section-Two
+## Section Two
 
 ## Resource
 
