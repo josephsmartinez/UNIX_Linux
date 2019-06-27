@@ -14,9 +14,7 @@ NOTE: Flag order matters!!!
 
 ## Compressing
 
-```console
 > gzip file.txt
-```
 
 Flags: -c create -f file name
 > tar -cvf myarchive.tar file1 file2 dir/ dir2/
@@ -53,3 +51,9 @@ Uncompress tar file (.tar) to another directory
 > tar xvC /var/tmp -f file.tar
 
 ### Resources
+
+tar(1) - Linux man page
+https://linux.die.net/man/1/tar
+
+18 Tar Command Examples in Linux
+https://www.tecmint.com/18-tar-command-examples-in-linux/
