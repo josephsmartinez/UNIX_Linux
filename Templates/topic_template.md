@@ -4,42 +4,17 @@
 
 ## Sections
 
-- [create an anchor](#anchors-in-markdown)
-- [create an anchor](#anchors-in-markdown)
-- [create an anchor](#bottom)
+- [Section One](#Section-One)
+  - [Section 1.1](#Section-1.1)
+- [Section Two](#Section-Two)
+- [Resources](#Resources)
 
-(#Section-One)
+## Section-One
 
-### Subsection ONE
+### Section 1.1
 
-(#Section-Two)
+## Section-Two
 
-Resource:
+## Resource
+
 [link](https://www.google.com)
-
-
-[create an anchor](#anchors-in-markdown)
-
-
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-TEST
-
-## Bottom
