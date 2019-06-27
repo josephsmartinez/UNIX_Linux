@@ -6,9 +6,9 @@ Compressed files use less disk space and download faster than large, uncompresse
 
 ## Sections
 
-- [Compressing](#Compressing)
-- [Decompressing](#Decompressing)
-- [Resources](#Resources)
+- [Compressing](#compressing)
+- [Decompressing](#decompressing)
+- [Resources](#resources)
 
 NOTE: Flag order matters!!!
 
