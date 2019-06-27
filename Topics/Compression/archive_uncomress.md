@@ -1,6 +1,16 @@
 # Archive, Compress, Unpack, and Uncompress Files
 
-NOTE: Flag order matters!!!S
+## About
+
+Compressed files use less disk space and download faster than large, uncompressed files.
+
+## Sections
+
+- [Compressing](##Compressing)
+- [Decompressing](##Decompressing)
+- [Resources](##Resources)
+
+NOTE: Flag order matters!!!
 
 ## Compressing
 
@@ -40,4 +50,4 @@ Compress from other directory
 Uncompress tar file (.tar) to another directory
 > tar xvC /var/tmp -f file.tar
 
-Resources:
+### Resources
