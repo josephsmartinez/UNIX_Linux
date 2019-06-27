@@ -1,6 +1,4 @@
 # Cockpit
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/getting_started_with_cockpit/index
-
 
 Package and Functions:
 
@@ -27,5 +25,11 @@ subscription-manager-cockpit.noarch : Subscription Manager Cockpit UI
 cockpit.x86_64 : A user interface for Linux servers
 
 ## Privileges and Permissions
+
 Cockpit can use the user's login password internally to escalate privileges in these situations. By selecting the Reuse my password for privileged tasks option on the login screen the login password will be cached internally and passed to Policy Kit when requested in order to escalate privileges.
 https://cockpit-project.org/guide/latest/privileges
+
+Resources:
+
+GETTING STARTED WITH COCKPIT - REDHAT
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/getting_started_with_cockpit/index

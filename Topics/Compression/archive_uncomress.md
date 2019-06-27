@@ -19,7 +19,7 @@ View the content of the .gz file
 > tar -ztvf myarchive.tar.gz
 
 Filter the archive through gzip
-> tar -cvz --file RabbitHole.tar.gz
+> tar -cvz --file Directory.tar.gz
 > tar -cvzf other_archive.tar.gz  file1 file2 dir/ dir2/
 
 Compression information
@@ -27,7 +27,7 @@ Compression information
 
 ## Decompressing
 
-> tar -xv --file RabbitHole.tar.gz
+> tar -xv --file Directory.tar.gz
 > gzip -d other_archive.tar.gz
 > tar -xvf other_archive.tar.gz
 
@@ -35,4 +35,9 @@ Check the difference of files before decompressing
 > tar - dvf other_archive.tar.gz
 
 Compress from other directory
-> tar czf /tmp/backup.tar.gz -C /home/centos/ RabbitHole
+> tar czf /tmp/backup.tar.gz -C /home/centos/ Directory
+
+Uncompress tar file (.tar) to another directory
+> tar xvC /var/tmp -f file.tar
+
+Resources:
