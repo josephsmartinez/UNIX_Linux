@@ -14,7 +14,9 @@ NOTE: Flag order matters!!!
 
 ## Compressing
 
-`gzip file.txt`
+```console
+> gzip file.txt
+```
 
 Flags: -c create -f file name
 > tar -cvf myarchive.tar file1 file2 dir/ dir2/
