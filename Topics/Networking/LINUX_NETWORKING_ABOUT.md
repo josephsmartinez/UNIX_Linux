@@ -1,7 +1,11 @@
 # Linux Network Settings
 
+
+
 Sections:
 
+- [Commands](#commands)
+- [Essential Files and Directories](#essential-files-and-directories)
 - Network Devices
 - Predictable Network Interface Device Names
 
@@ -20,6 +24,7 @@ Keyfile or Directories:
 - /etc/resolv.conf
 - /etc/hosts.resolv
 - /etc/network/interfaces
+- /etc/nsswitch.conf
 
 ## Network Devices
 

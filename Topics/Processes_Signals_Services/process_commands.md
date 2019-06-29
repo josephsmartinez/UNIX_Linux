@@ -7,7 +7,26 @@
 - top
 - vmstat
 - lsof
+- lsmod
 - iostat
+
+
+> top
+> uptime
+> ps
+> pstree
+> mpstat
+> iostat
+> sar
+> numastat
+> strace
+> free
+> vmstat
+> pmap
+> netstat
+> iptraf
+> tcpdump
+> wireshark
 
 ## Direcoties
 
@@ -122,21 +141,4 @@ Kill running process
 > top
 > k
 
-## Commands Listed:
-
-> top
-> uptime
-> ps
-> pstree
-> mpstat
-> iostat
-> sar
-> numastat
-> strace
-> free
-> vmstat
-> pmap
-> netstat
-> iptraf
-> tcpdump
-> wireshark
+#

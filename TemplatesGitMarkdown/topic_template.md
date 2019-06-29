@@ -17,4 +17,10 @@
 
 ## Resource
 
-[link](https://www.google.com)
+[link](https://www.google.com) ***
+[link](https://www.google.com) **
+[link](https://www.google.com) *
+
+stars (***) Great Read
+stars (**) So so
+stars (*) Only thing found thus far

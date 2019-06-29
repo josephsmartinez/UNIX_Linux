@@ -54,7 +54,7 @@ Find all GID and UID
 
 ## Execute command post find operation
 
-Use the cat command on all files own user jeff
+Use the cat command on all files own user jeff `-exec` [COMMAND] `\;`
 > find / -user jeff -type f -exec cat {} \;
 
 Find all files owned by jeff and copy to marry's account

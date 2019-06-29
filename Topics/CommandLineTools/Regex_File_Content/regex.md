@@ -282,3 +282,10 @@ String: "last_qtr_report.xls"
 Regex:  /apples??/
 String: "We picked apples."
 ```
+
+Regular Expressions Tutorial
+Learn How to Use and Get The Most out of Regular Expressions
+https://www.regular-expressions.info/tutorial.html
+
+
+https://regexr.com/

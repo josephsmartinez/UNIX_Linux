@@ -1,5 +1,9 @@
 # Configuring Network Time Protocal 
 
+
+- /etc/chrony.conf
+- /etc/ntp.conf
+
 ## Installation
 
 > yum install ntpd

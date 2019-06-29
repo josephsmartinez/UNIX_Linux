@@ -14,7 +14,6 @@
 > proxychain firefox
 > proxychain nmap [HOST]
 
-
 ##  Setting Up a SOCKS5 Proxy to mask your IP Address for Web Browsing
 
 -N Do not execute a remote command.  This is useful for just forwarding ports.
@@ -24,12 +23,7 @@
 Configure your web browser to connect to the loopback 127.0.0.1 on the port 
 the proxy server is connected to. (This case it would be 64000)
 
-
-
-
-
-
-Resources: 
+Resources:
 
 How to Evade Detection Using Proxychains
 https://null-byte.wonderhowto.com/how-to/hack-like-pro-evade-detection-using-proxychains-0154619/

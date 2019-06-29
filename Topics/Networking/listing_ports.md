@@ -17,7 +17,7 @@ All sessions
 > netstat -atp
 
 Active sessions
-> netstat -tp 
+> netstat -tp
 
 Displays routing table
 > netstat --route

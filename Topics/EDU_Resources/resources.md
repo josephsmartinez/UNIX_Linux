@@ -1,6 +1,5 @@
 # Education Resources
 
-
 CTS 4348 Summer 2019 | Unix Admin
 
 Assignment 1:

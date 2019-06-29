@@ -4,6 +4,7 @@ Types:
 
 - mutt
 - postfix
+- mailx
 
 ## Setting up postfix
 

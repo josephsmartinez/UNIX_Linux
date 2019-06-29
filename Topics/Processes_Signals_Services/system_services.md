@@ -1,7 +1,10 @@
 # System Services via systemctl
 
-list failed services
-> systemctl --failed --type=service
+
+
+
+list failed services ``
+> systemctl list-units --state=failed
 
 list loaded services
 > systemctl list-units --type=service
@@ -38,6 +41,7 @@ list all service unit configuration files regardless of whether they are active 
 > systemctl isolate multi-user.target
 > systemctl set-default multi-user.target
 
+## Review system timers
 
 > systemctl list-timers
 > systemctl list-unit-files | grep enabled

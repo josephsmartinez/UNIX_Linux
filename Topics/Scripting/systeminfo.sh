@@ -3,9 +3,10 @@
 # Sample script written for Part 4 of the RHCE series
 # This script will return the following set of system information:
 # -Hostname information:
-echo -e "\e[31;43m***** HOSTNAME INFORMATION *****\e[0m"
+echo -e "\e[31;43m***** NETWORKING INFORMATION *****\e[0m"
 hostnamectl
 ip addr | grep -E -o "(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)" | sort
+ip addr | grep -E ':\s.*?:' | cut -d ":" -f 2 | tr -d " "
 echo ""
 # -File system disk space usage:
 echo -e "\e[31;43m***** FILE SYSTEM DISK SPACE USAGE *****\e[0m"

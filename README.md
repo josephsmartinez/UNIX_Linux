@@ -5,7 +5,7 @@
 This should find any keyword(s) for something you need
 > grep --color -r -i -E "Some String Value"  Topics
 
-Topics
+## Linux Topics
 
 - Preface 
 - Linux Filesystem Tree Layout
@@ -51,6 +51,16 @@ Topics
 - Local System Security
 - Basic Troubleshooting
 - System Rescue
+
+## Python
+
+## Go
+
+## AWS
+
+## Ansible
+
+## Docker
 
 Resources:
 

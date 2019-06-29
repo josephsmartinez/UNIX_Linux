@@ -58,6 +58,19 @@ Show Progress While Transferring Data with rsync
 Do a Dry Run with rsync
 > rsync --dry-run --remove-source-files -zvh backup.tar /tmp/backups/
 
+Use of `--include` and `--exclude` Options
+Include those files and directory only which starts with ‘R’ and exclude all other files and directory.
+> rsync -avze ssh --include 'R*' --exclude '*' root@192.168.0.101:/var/lib/rpm/ /root/rpm
+
+Set the Max Size of Files to be Transferred
+> rsync -avzhe ssh --max-size='200k' /var/lib/rpm/ root@192.168.0.100:/root/tmprpm
+
+Automatically Delete source Files after successful Transfer
+> rsync --remove-source-files -zvh backup.tar /tmp/backups/
+
+Set Bandwidth Limit and Transfer File
+> rsync --bwlimit=100 -avzhe ssh  /var/lib/rpm/  root@192.168.0.100:/root/tmprpm/
+
 ## Resources
 
 cp(1) - Linux man page
