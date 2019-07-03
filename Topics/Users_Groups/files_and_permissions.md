@@ -18,6 +18,9 @@
 - `chcon`
 - `stat`
 - `file`
+- `lsattr`
+- `chattr`
+- `getfacl`
 
 ## File Permissions
 
@@ -36,10 +39,14 @@ chmod who=permissions filename
 
 ## Create and Manage Access Control Lists (ACLs)
 
-- ACL have a plus (+) at the end of the permission bits 
+NOTE:
+
+- Only works on ext4 and xfs filesystems
+- Maps to user id (UID)
+- ACL have a plus (+) at the end of the permission bits
 
 > getfacl file
-> setfacl -m u: johndoe:rw file1
+> setfacl -m u:johndoe:rw file1
 > setfacl -m m::r file1
 > setfacl -d -m u:starbuck /somedir
 > setfacl -m u:starbuck /somedir
@@ -85,6 +92,8 @@ NOTE: The sticky bit has no effect if other does not have execute permissions.
 - The cp command does not preserve ACL rules
 - The mv command does not preserve ACL rules
 - Default ACL permissions are for inheritance
+
+## Change file attributes on a Linux file system
 
 Things to think about...
 

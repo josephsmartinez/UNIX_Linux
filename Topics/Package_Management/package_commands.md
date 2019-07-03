@@ -43,6 +43,9 @@ Upgrade
 Install, verbos, hash progress bar
 > rpm -ivh nano-2.3.1-10.el7.x86_64.rpm
 
+Tells to what RPM package file belong
+> rpm -qf file
+
 List file when package is installed
 > rpm -ql nano
 

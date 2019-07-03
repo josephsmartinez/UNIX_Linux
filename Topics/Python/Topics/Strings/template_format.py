@@ -20,6 +20,9 @@ def main():
   str3 = templ.substitute(first_name='Joe', last_name='Mart', place='IHOP')
   print(str3)
 
+  # Exmaple 4: print f
+  
+
   # use the substitute method with a dictionary
   data = { 
       "first_name": "Joe Marini",

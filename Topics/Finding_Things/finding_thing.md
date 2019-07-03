@@ -30,6 +30,9 @@ All logs of type file
 > find / -type f -name "*.log"
 
 Searching by file size
+`+n - for greater than n`  
+`-n - for less than n`  
+`n - for exactly n`  
 > find /usr/bin -size +27000c
 > find /usr/bin -size +27000M
 
@@ -42,7 +45,7 @@ Find files based on permissions
 
 > find /usr/bin -prem 755
 
-Find file with SUID/SGID 
+Find file with SUID/SGID
 
 To find all the files with SUID
 > find / -perm +4000

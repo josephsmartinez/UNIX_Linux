@@ -18,6 +18,23 @@
 > conda env create -f example.yml
 > conda env export > /home/YOUR_NAME/Documents/example.yml
 
+## pip
+
+> pip3.7 install boto3
+> pip3.7 freeze
+> pip3.7 freeze > requirements.txt
+> mkdir ~/venvs
+> python3.7 -m venv ~/venvs/pg
+> source ~/venvs/pg/bin/activate
+> deactivate
+
+## pipenv
+
+> pip3.7 install --user pipenv
+> mkdir ~/database
+> cd ~/database
+> pipenv --python python3.7
+
 Resources:
 
 Anaconda Documentation
@@ -31,5 +48,3 @@ https://linuxacademy.com/devops/training/lesson/course/intro-to-python-developme
 
 IUS is a community project that provides RPM packages for newer versions of select software for Enterprise Linux distributions.
 https://ius.io/
-
-

@@ -30,8 +30,6 @@ http://mirrors.acm.wpi.edu/archlinux/iso/2019.05.02/
 > list --all
 > autostart [vm-name]
 
-
-
 Resources:
 
 Allow BIOS for vmware virtualization

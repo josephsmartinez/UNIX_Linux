@@ -29,6 +29,7 @@ def main():
     for m in zip(days, daysFr):
         print(m)
 
+    # combine zip and enumerate
     for i, m in enumerate(zip(days, daysFr), start=1):
         print(i, m[0], "=", m[1], "in French")
 
