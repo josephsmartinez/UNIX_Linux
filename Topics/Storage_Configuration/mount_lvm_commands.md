@@ -2,7 +2,11 @@
 
 ## NOTES
 
-LVM
+Features of Logical Volume Management (LVM)
+
+- Resizing of a logical volume to make more space for a volume
+- Snapshots of a live file system that can be used for backups
+
 
 - Labels are placed in the first part of the volume and/or last part of the physical volume.
 - xfs can only be increase not decreased

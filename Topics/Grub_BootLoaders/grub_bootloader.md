@@ -3,6 +3,8 @@
 ## Command
 
 - `update-grub`
+- `grub2-editenv list`
+- `grub2-mkconfig`
 
 ## Directories
 
@@ -15,7 +17,9 @@
 
 > find / -name grub* && ls /etc/grub.d/
 
-## Updating /etc/default/grub
+## Manual change to GRUB2
+
+- /etc/default/grub
 
 - Must update grup when making changes.
 

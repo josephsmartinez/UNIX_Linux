@@ -18,6 +18,12 @@
 > comm
 > fmt
 > ls
+> od
+> nl
+Message Digests
+> md5sum
+> sha256sum
+> sha512sum
 
 Examples:
 
