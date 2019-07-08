@@ -7,16 +7,19 @@
 - `|`
 - `>>`
 - `>`
+- `tee`
+- `xargs`
 
 ## Type and Symbol
 
-Type Symbol
-standard input 0<
-standard output 1>
-standard error 2>
-both err and out &>
-Take stderr to stdout  2>&1
-Pipe (|) excepts stdout only
+|    Type Symbol                |
+| ----------------------------- |
+| standard input        |  0<   |
+| standard output       |  1>   |
+| standard error        |  2>   |
+| both err and out      |  &>   |
+| Take stderr to stdout |  2>&1 |
+| Pipe (|) excepts stdout only  |
 
 ## STDIN
 
@@ -40,6 +43,13 @@ You can hide stderr by redirecting file descriptor 2 to /dev/null, the special d
 
 For example, if you try to grep the output of the find command, you'll notice that the error messages are not filtered, because only the standard output is piped to grep.
 > find / -name '*something*' | grep 'something'
+
+NOTE: 
+Creates *sublist* to the process the file simultaneously
+> find test/ -empty | xargs rm -f
+Handles file one at a time
+> find test/ -empty -exec rm -f {} \;
+
 
 Resources:
 

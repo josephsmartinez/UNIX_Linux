@@ -9,7 +9,21 @@
 - lsof
 - lsmod
 - iostat
+- killall
+- watch
+- screen
+- tmux
 
+Keep a Process Running
+
+- nohup
+- bd
+- &
+- fg
+- jobs
+
+man proc
+man signal
 
 > top
 > uptime
