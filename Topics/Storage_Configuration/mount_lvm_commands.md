@@ -48,6 +48,13 @@ Finding UUID
 > mkfs -t btrfs /dev/sdc1
 > mount  -U cca706bc-4af4-468b-a3c4-ec13da8de897  /mnt/sdc1/
 
+## Mounting with options
+
+Mounting and restricting execution rights
+> mount -L OPT -T xfs -o rw,noexec /opt
+Mounting an iso
+> mount /root/install.iso -o ro,loop /media
+
 ## Using LVM
 
 First make sure the partitions are set to LVM when using fdisk or gdisk

@@ -9,6 +9,10 @@
 - Sticky Bit
 - Diagnose and Correct File Permission Problems
 
+UID 1000
+GID 4000
+
+
 ## Commands
 
 - `chown`
