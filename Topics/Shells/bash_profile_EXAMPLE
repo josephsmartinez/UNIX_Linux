@@ -1,0 +1,29 @@
+# Setting PATH for Golang
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOPATH=$(go env GOPATH)
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/josephmartinez/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /d
+ev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/josephmartinez/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/josephmartinez/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/josephmartinez/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
