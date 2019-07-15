@@ -12,6 +12,15 @@ Compressed files use less disk space and download faster than large, uncompresse
 
 NOTE: Flag order matters!!!
 
+## Commands
+
+- `tar` compress and uncompress [tar, bz2, xz] files
+- `gzip`
+- `gunzip`
+- `bzip2`
+- `bzcat`
+- `bunzip2`
+
 ## Compressing
 
 > gzip file.txt

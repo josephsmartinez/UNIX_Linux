@@ -13,6 +13,22 @@ Bash configuration:
 Logout script
 ~/.bash_logout
 
+Commands
+
+- `screen`
+- `tmux`
+
+## screen
+
+Detached from current screen press `Ctrl+a d`
+> screen
+Return using screen's PID
+> screen -r 2081
+
+## tmux 
+> tmux
+> tmux ls
+
 Search path for executables defined:
 Globally in /etc/profile
 Per user in ~/.profile or ~/.bash_profile

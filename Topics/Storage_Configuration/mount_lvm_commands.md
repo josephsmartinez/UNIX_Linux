@@ -2,7 +2,11 @@
 
 ## NOTES
 
-LVM
+Features of Logical Volume Management (LVM)
+
+- Resizing of a logical volume to make more space for a volume
+- Snapshots of a live file system that can be used for backups
+
 
 - Labels are placed in the first part of the volume and/or last part of the physical volume.
 - xfs can only be increase not decreased
@@ -43,6 +47,13 @@ Finding UUID
 > mount -U [UUID]
 > mkfs -t btrfs /dev/sdc1
 > mount  -U cca706bc-4af4-468b-a3c4-ec13da8de897  /mnt/sdc1/
+
+## Mounting with options
+
+Mounting and restricting execution rights
+> mount -L OPT -T xfs -o rw,noexec /opt
+Mounting an iso
+> mount /root/install.iso -o ro,loop /media
 
 ## Using LVM
 

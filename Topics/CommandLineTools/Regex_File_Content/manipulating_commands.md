@@ -17,7 +17,15 @@
 > cut
 > comm
 > fmt
-> ls
+- `ls` list directories and can support globbing with regex * ? []
+> od
+> nl
+Message Digests
+> md5sum
+> sha256sum
+> sha512sum
+Archieve and Compression
+`dd` : copies and converts files. Ofter used to create file of arbitary size and to back up disk drives.
 
 Examples:
 

@@ -1,6 +1,14 @@
 # The Bash Shell
 
-Home directory files 
+## Commands
+
+- env
+- echo
+- set
+- unset
+- shopt
+
+Home directory files
 .bash_history
 .bash_logout
 .bashrc

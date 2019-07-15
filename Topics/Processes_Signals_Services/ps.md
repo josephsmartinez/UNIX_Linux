@@ -7,7 +7,8 @@ Top 20 runnning process by memory
 Top 20 runnning process by cpu
 > ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%cpu | head -20
 
-> 
+Get processes from the currently log user
+> ps -o pid,nice,cmd,user
 
 Resources:
 
