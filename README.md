@@ -7,25 +7,25 @@ This should find any keyword(s) for something you need
 
 ## Linux Topics
 
-- Preface 
+- Preface
 - Linux Filesystem Tree Layout
 - Processes
 - Signals
-- Package Management Systems 
+- Package Management Systems
 - RPM
 - DPKG
 - yum
-- zypper 
+- zypper
 - APT
-- System Monitoring 
-- Process Monitoring 
-- Memory: Monitoring Usage and Tuning 
-- I/O Monitoring and Tuning 
-- I/O Scheduling 
-- Linux Filesystems and the VFS 
-- Partitioning and Formatting Disks 
-- Filesystem Features: Attributes, Creating, Checking, Mounting 
-- Filesystem Features: Swap, Quotas, Usage 
+- System Monitoring
+- Process Monitoring
+- Memory: Monitoring Usage and Tuning
+- I/O Monitoring and Tuning
+- I/O Scheduling
+- Linux Filesystems and the VFS
+- Partitioning and Formatting Disks
+- Filesystem Features: Attributes, Creating, Checking, Mounting
+- Filesystem Features: Swap, Quotas, Usage
 - The Ext/Ext/Ext Filesystems
 - The XFS and btrfs Filesystems
 - Encrypting Disks
@@ -40,8 +40,8 @@ This should find any keyword(s) for something you need
 - Group Management
 - File Permissions and Ownership
 - Pluggable Authentication Modules (PAM)
-- Network Addresses 
-- Network Devices and Configuration 
+- Network Addresses
+- Network Devices and Configuration
 - Firewalls
 - System Startup and Shutdown
 - GRUB

@@ -119,9 +119,12 @@ Undo `git --reset`
 > git clone <local_repo> <new_repo>
 > git clone https://somerepo.git
 
-## SSH key setup
+## Tacking Remote Repositories
 
+> git remote -v
+> git fetch
 
+## Push, Push, and Create Pull Request
 
 
 Git SSH key setup
