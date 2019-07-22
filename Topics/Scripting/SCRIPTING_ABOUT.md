@@ -1,23 +1,31 @@
-# Basic and Advanced Shell Scripting
+# Basic and Advanced Bash Shell Scripting
 
 ## Sections
- 
-- Variables (User and Environment)
-- Command Subustitution
-- Redurection and Pipes
-- Math
-- Exit Codes
-- if-then-else
+
+- Basics
+  - Variables (User Defined and Environment)
+  - Arrays
+  - Commenting
+  - Command Subustitution
+  - Redurection and Pipes
+  - Arithmetic Operations
+  - Shell Expansion
+  - User input
+  - Exit Codes
+- Control Statement
+  - Command Line ARGS
+  - Loops with `for` statement
+  - `while` statement
+  - Iterating with `until` statement
+  - break and continue
+  - if-then-else
+  - Case Statements
+- Functions
+  - Variable Scope
 - Comparsions (Numbers, Strings, Files)
 - Compound Testing
-- Case Statements
-- Loops with `for` statement
-- `while` statement
-- Iterating with `until` statement
-- break and continue
-- User input
 
+## Resources
 
-## Custom Shell Prompts
-
-http://www.nparikh.org/unix/prompt.php#zsh
+Math in Shell Scripts
+http://faculty.salina.k-state.edu/tim/unix_sg/bash/math.html
