@@ -1,7 +1,7 @@
 
 
 
-> 
+> sudo stress --cpu 4 --io 3 --vm 2 --vm-bytes 256M --timeout 20s 
 
 
 Resources: 
@@ -14,3 +14,6 @@ https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/1.3/html/admi
 
 An Introduction to Load Testing
 https://www.digitalocean.com/community/tutorials/an-introduction-to-load-testing
+
+How to Impose High CPU Load and Stress Test on Linux Using ‘Stress-ng’ Tool
+https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
