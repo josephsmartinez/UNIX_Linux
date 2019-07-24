@@ -1,0 +1,937 @@
+
+jsonmart@amazon.com Support 
+8 
+270  
+75.17%
+Great Start!
+You did not pass the challenge on this attempt. This challenge is now locked and can be unlocked by using gems or by completing all of the recommended activities.
+lock This challenge is now locked.
+Linux Academy
+Report Card
+Expectations
+Score
+1. Demonstrate the ability to monitor the AWS environment
+77.78 %
+2. Demonstrate the ability to properly administer to highly available architecture in AWS
+66.67 %
+3. Demonstrate the ability to analyze and increase performance in an AWS environment
+44.44 %
+4. Demonstrate the ability to deploy and provision AWS resources
+88.89 %
+5. Demonstrate the ability to manage data and backups in an AWS environment
+77.78 %
+6. Demonstrate the ability to use key concepts to secure an AWS environment
+88.89 %
+7. Demonstrate the ability to properly configure, monitor, and troubleshoot AWS networking resources
+83.33 %
+Exam Breakdown
+Demonstrate the ability to monitor the AWS environment
+1.
+Your company is being audited by a third party IT auditing service; they have asked you for details about the physical network and virtualization infrastructure. What do you tell them?
+
+A. The audit does not apply to us since we do not have control over AWS
+
+B. You direct the auditing service to an AWS representative
+
+C. White papers and attestations about AWS Compliance and Assurance Programs are available on the AWS Compliance website. You can contact a compliance representative on that site for additional questions.
+
+done Correct
+D. You print off details about the AWS infrastructure provided by the AWS infrastructure website
+
+2.
+You notice that several of your AWS environment’s CloudWatch metrics are hovering near a value of 100. Which of these are you least concerned about?
+
+A. Elastic Load Balancer SpilloverCount
+
+B. A EBS VolumeThroughputPercentage
+
+close Your Answer
+forum
+Why is this incorrect?
+You may need to scale out your storage.
+
+C. ElastiCache CurrConnections
+
+done Correct
+forum
+Why is this correct?
+A high number of connections is not necessarily a bad thing, if there are adequate resources to serve those connections.
+
+D. RDS CPUUtilization
+
+3.
+What services can many types of security assessments or penetration tests be done against without first having to notify AWS support? (Choose all that apply)
+
+A. Amazon DNS (zone walking)
+
+B. AWS Lambda, Lambda Edge functions, and Amazon API Gateways
+
+done Correct
+C. Amazon RDS, Amazon Aurora, Amazon Lightsail resources, and Amazon Elastic Beanstalk environments
+
+done Correct
+D. Amazon EC2 instances, NAT Gateways, Amazon CloudFront, and Elastic Load Balancers
+
+done Correct
+4.
+Your EC2 instance has a system status check error with an error message of loss of network connectivity. What is the best way to attempt to resolve the EC2 status check error?
+
+A. Attempt to change the physical host the instance is on by stopping and starting the instance (EBS-backed)
+
+done Correct
+B. Remove and re-associate the Elastic IP
+
+C. Reboot the instance
+
+D. Terminate the instance and build a new one (instance store-backed)
+
+done Correct
+5.
+Which of the following CloudWatch metrics require installing an agent to populate the metric?
+
+A. CPU Utilization
+
+B. Swap Usage
+
+done Correct
+C. NetworkIn
+
+D. Available Disk Space
+
+done Correct
+6.
+If we want to be able to monitor billing and cost metrics and send billing alerts, what AWS configuration do we need to enable and use?
+
+A. Billing Alerts in Account Preferences
+
+done Correct
+forum
+Why is this correct?
+CloudWatch is used to monitor billing and cost metrics, BUT we are required to enable Billing Alerts in our Account Preferences before being able to create billing alerts with CloudWatch.
+
+B. CloudFormation
+
+C. CloudWatch Billing Metrics
+
+D. Billing Alerts in CloudWatch
+
+close Your Answer
+forum
+Why is this incorrect?
+This needs to be enabled in Account Preferences first.
+
+7.
+We have a web application that is using Auto Scaling and an ELB. We would like to monitor the application to make sure that it maintains a good quality of service for our customers, defined by the application’s page load time.
+
+What metric within CloudWatch can we use for this?
+
+A. CPU utilization for our web application tier
+
+B. The ELB RequestCount
+
+C. The latency that is reported by the ELB
+
+done Correct
+D. Networking for the web tier
+
+8.
+What are some steps you can take to optimize costs on AWS?
+
+A. AWS is already optimized for cost
+
+B. Detach unused EBS volumes and take a snapshot of the EBS volume. At that point, delete the EBS volume
+
+done Correct
+C. Purchase reserved instances
+
+done Correct
+D. For RDS DB instances that consistently have 0 connections, take a snapshot of the instance and terminate the instance
+
+done Correct
+9.
+Which one of the below setups would need a custom CloudWatch metric in order to be able to monitor it?
+
+A. The EBS volume state
+
+B. Our CPU utilization of an EC2 instance
+
+C. Our disk usage activity of an EBS volume attached to our EC2 instance
+
+D. Disk usage percentage of an Elastic Block Store volume
+
+done Correct
+Demonstrate the ability to properly administer to highly available architecture in AWS
+1.
+You have an Elastic Load Balancer (ELB) with an Auto Scaling group for your application. You also have 4 running instances, and you have Auto Scaling enabled. Some of those instances are running in one Availability Zone, and others are in a different Availability Zone. Some instances within one of the zones are not available to the ELB. What could be the cause?
+
+A. The Auto Scaling group is not configured for more than one Availability Zone.
+
+close Your Answer
+forum
+Why is this incorrect?
+Since the instances are launched, the problem is not with the Auto Scaling group.
+
+B. The Auto Scaling policy is not configured for multiple Availability Zones.
+
+C. The VPC is not configured for autoscaling into multiple subnets.
+
+D. The ELB is not configured for that Availability Zone.
+
+done Correct
+forum
+Why is this correct?
+When creating an ELB, you specify the subnets/AZs to which it will send traffic.
+
+2.
+You manage a technology blog website on EC2 instances in an Auto Scaling group behind an Elastic Load Balancer. Traffic volume to the site is consistently low, except during several weeks of the year when major technology conferences are occurring, when traffic increases 300 percent. What is the best way to manage this environment?
+
+A. Pre-warm the Elastic Load Balancer prior to technology conference weeks if load testing tools show the need.
+
+done Correct
+forum
+Why is this correct?
+Pre-warming the ELB is necessary if there is a sudden very large spike in traffic.
+
+B. Use on-demand instances to handle the increased load during the technology conference weeks.
+
+done Correct
+C. Upgrade the reserved instances that handle the typical load for the website to larger reserved instances during technology conference weeks.
+
+D. Increase the desired number of instances in the Auto-Scaling group during technology conference weeks.
+
+3.
+You manage a popular blog website on EC2 instances in an Auto Scaling group. You notice that between 8:00 am and 8:00 pm, you see a huge increase in traffic to your website. In addition, there are occasional random 1 to 2-hour spikes in traffic and some users are seeing timeouts when trying to load the index page during those spikes. What is the least cost-effective way to manage this Auto Scaling group?
+
+A. Use reserved instances for the instances needed to handle the load during the daytime hours
+
+B. Increase the maximum number of instances in the AutoScaling group
+
+C. Use reserved instances for the instances needed to handle the typical load during the night hours
+
+D. Use reserved instances for the instances needed to handle the load during traffic spikes
+
+done Correct
+4.
+You have been asked to maintain a small AWS environment consisting of five on-demand EC2 web server instances. Traffic from the Internet is distributed to these servers via an Elastic Load Balancer. Your supervisor is not pleased with a recent AWS bill. Assuming a consistent, moderately high load on the web servers, what option should you recommend to reduce the cost of this environment without negatively affecting availability?
+
+A. Create an Auto Scaling group to ensure that you are not paying for instances that are not needed.
+
+close Your Answer
+forum
+Why is this incorrect?
+Auto Scaling can often save money in environments with variable load, but would likely not help reduce costs in an environment with a consistently high load spread across all servers.
+
+B. Remove the Elastic Load Balancer since the instances already have public IP addresses.
+
+C. Use spot instances rather than on-demand instances.
+
+D. Use reserved EC2 instances rather than on-demand instances.
+
+done Correct
+forum
+Why is this correct?
+Reserved instances are recommended for instances with a consistently high load.
+
+5.
+Your MySQL RDS instance is experiencing high levels of read requests during business hours and performance is being affected. What is the first step you can do to resolve this issue?
+
+A. Enable Automated Backups of the Database.
+
+done Correct
+B. Create Read Replicas of the Database and offload some read request to the Read Replicas.
+
+C. Pre-warm the database before read request occur.
+
+D. Create snapshots of the Database and offload read request to the snapshots.
+
+6.
+You are managing a large magazine application inside of Amazon Web Services. Your company posts an article that gets picked up internationally, causing millions of visitors to hit your application. Such a large increase in traffic causes strain on your DB server which is servicing the blog's static content. You use EC2 instances for your web servers. How might you quickly resolve this issue and make the blog post infinitely scalable?
+
+A. Increase the size of the EC2 Instances.
+
+B. Enable Auto Scaling on the EC2 instances.
+
+C. Create a static HTML page using S3 and use Route 53 to point the DNS to the static S3 bucket.
+
+done Correct
+D. Increase the RDS instance size and enable Multi-AZ failover
+
+7.
+You are running an application that has an IP address assigned to the EC2 instance of the application. How might you apply high availability to the instance running that application in the future?
+
+A. None of these are correct
+
+B. Change the IP address in your application.
+
+C. Assign an elastic IP address to the EC2 instance, have a backup instance running. In the event of failure, move the Elastic IP from the primary instance to the backup instance.
+
+done Correct
+D. You can’t do this.
+
+8.
+Your website is hosted on 10 EC2 instances in five regions around the globe with two instances per region. How could you configure your site to maintain availability with minimum downtime if one of the five regions was to lose network connectivity for an extended period?
+
+A. Create a Route 53 Latency Based Routing Record Set that resolves to an Elastic Load Balancer in each region. Set an appropriate health check on each ELB.
+
+B. Establish VPN connections between the instances in each region. Rely on BGP to failover in the case of region-wide connectivity failure for an extended period.
+
+C. Create an Elastic Load Balancer to place in front of the EC2 instances. Set an appropriate health check in each ELB.
+
+D. Create a Route 53 Latency Based Routing Record Set that resolves to an Elastic Load Balancer in each region and has the Evaluate Target Health flag set to true.
+
+done Correct
+9.
+You have created an application that utilizes Auto Scaling behind an Elastic Load Balancer. You notice that user's sessions are not evenly distributed on the newly spun up instances. What could be a reason that your users' web sessions are stuck on one instance and not using others?
+
+A. DNS at the ELB level isn’t updating to include the new instances
+
+B. Users are using a firewall that is keeping them from initiating connections to the new instance which have different IP addresses. The ELB detects this and falls back to the instance that works
+
+C. You have not enabled the correct routing rules to allow new instances
+
+D. Your ELB is sending all the sessions to the old instance and not evenly sending sessions to all new instances that are spun up during Auto Scaling because of sticky sessions
+
+done Correct
+Demonstrate the ability to analyze and increase performance in an AWS environment
+1.
+We have a customer with a web application that uses cookie-based sessions to see if users are logged in. This uses the Amazon Elastic Load Balancer and Auto Scaling. When the load on the application increases, Auto Scaling launches new instances so that the load on the other instances does not increase too much. However, all of the existing users still experience slow response time.
+
+What could be the cause of this?
+
+A. The new instances are not being added to the ELB in the process of the Auto Scale cooldown period.
+
+B. The web app is using dynamic content features in Amazon CloudFront which is keeping our connections alive on the ELB.
+
+C. The TTL is set too high on our ELB DNS.
+
+D. The ELB is continuing to send the request to the web app with the previously established connections in the same backend instances rather than spreading them to the new instances.
+
+done Correct
+2.
+What might be the cause of an EC2 instance not launching in an auto-scaling group?
+
+A. The key pair associated with EC2 instance does not exist
+
+done Correct
+forum
+Why is this correct?
+A launch configuration that points to a non-existent key pair will fail to launch an EC2 instance.
+
+B. The Availability zone is no longer supported
+
+done Correct
+C. Security group placement
+
+D. Invalid EBS device mapping
+
+done Correct
+forum
+Why is this correct?
+The block device mappings specified in the launch configuration may not be supported on your instance type.
+
+3.
+You have enabled a CloudWatch metric on your Memcached ElastiCache cluster. Your alarm is triggered due to an increased amount of evictions. How might you go about solving the increased eviction errors from the ElastiCache cluster?
+
+A. Add a node to the cluster
+
+done Correct
+B. Reboot your MemCache cluster
+
+C. Increase the provisioned IOPS on the ElastiCache Node
+
+D. Increase the node size
+
+done Correct
+4.
+You are uploading 3 gigabytes of data every night to S3 from your on-premises data center. It takes 3 hours to upload and you are uploading it to Amazon S3. You are only using half of your available bandwidth through your internet provider. How might you decrease the amount of time to back up that 3GB of data from your on-premises data center to S3?
+
+A. Increase your provisioned IOPS
+
+close Your Answer
+forum
+Why is this incorrect?
+Provisioned IOPS are for EBS volumes, not S3 buckets.
+
+B. Increase your instance size
+
+C. You could establish a Direct Connect connection between your on-premises data center and AWS VPC
+
+D. You can use multipart upload to speed up the upload process
+
+done Correct
+forum
+Why is this correct?
+Multipart upload is generally recommended for objects > 100 MB in size. The objects will be split into chunks and uploaded in parallel.
+
+5.
+We need to run a business intelligence application against our production database. This application requires near real-time data from the database. How might we configure our RDS setup so that our application does not increase I/O load against our production database?
+
+A. Copy the production instance and create a cron that dumps the RDS data into the secondary instance
+
+B. Create a read replica from the production instance and point the application to the read replica
+
+done Correct
+C. Point the application to the Multi-AZ failover instance
+
+D. In order to receive real-time information, the application must query the primary database
+
+6.
+You see an increased load on an EC2 instance that is used as a web server. You decide to place the server behind an Elastic Load Balancer and deploying an additional instance to help meet this increased demand. You deploy the ELB, configure it to listen for traffic on port 80, bring up a second EC2 instance, move both instances behind the load balancer, and provide customers with the ELB’s URL - https://mywebapp-1234567890.us-west-2.elb.amazonaws.com. You immediately begin receiving complaints that customers cannot connect to the web application via the ELB’s URL. Why?
+
+A. You specified https:// in the ELB’s URL, but the EC2 instances are not configured to listen on port 443.
+
+B. You specified https:// in the ELB’s URL, but the ELB is not configured to listen on port 443.
+
+done Correct
+C. The ELB’s URL is not publicly accessible. You need to create an Alias record in Route 53 for the ELB.
+
+D. You specified https:// in the ELB’s URL, but the EC2 instances are not configured to listen on port 80.
+
+7.
+You have enabled a CloudWatch metric on your Redis ElastiCache cluster. Your alarm is triggered due to an increased amount of evictions. What is one way you might go about solving the increased eviction errors from the ElastiCache cluster?
+
+A. If you exceed your chosen threshold, scale your cache cluster out and add read replicas
+
+close Your Answer
+forum
+Why is this incorrect?
+Read replicas will increase the number of reads (read capacity), but not the amount of data that can be stored.
+
+B. Add a node to the cluster
+
+C. Increase the size of your node
+
+done Correct
+forum
+Why is this correct?
+This will provide more available memory to store more data.
+
+D. Reboot your cluster
+
+8.
+Your supervisor is concerned about losing read access to your RDS database in the unlikely event of an AWS regional failure. You design a plan to create a read replica of the database in another region, but your supervisor sees a problem with this plan. What problem does he see?
+
+A. Synchronous replication between the two regions will suffer from high latency.
+
+close Your Answer
+forum
+Why is this incorrect?
+You cannot use synchronous replication between the two regions because, while latency is an important metric, read replicas use asynchronous replication, not synchronous replication.
+
+B. Your RDS database is using an old version PostgreSQL, which does not support cross-region replication.
+
+done Correct
+forum
+Why is this correct?
+This feature requires version 9.5.2 or 9.4.7 and higher.
+
+C. Replication requires VPC peering between the regions, and you have overlapping CIDR blocks in the two VPCs.
+
+D. AWS does not support RDS read replicas in different regions from the source database.
+
+9.
+Your RDS instance is consistently maxed out on its resource utilization. What are multiple ways to solve this issue?
+
+A. Provision more RDS instance IOPS.
+
+close Your Answer
+forum
+Why is this incorrect?
+Insufficient IOPS will increase query latency but typically is not the cause for maxing out the resource utilization of the instance.
+
+B. Fire up an ElastiCache cluster in front of your RDS instance.
+
+done Correct
+C. Increase RDS instance size.
+
+done Correct
+forum
+Why is this correct?
+Increasing the RDS instance size will add more CPU, memory, and network capacity.
+
+D. Offload read-only activity to a read replica if the application is read-intensive.
+
+done Correct
+Demonstrate the ability to deploy and provision AWS resources
+1.
+What is a logical group of instances within a single AZ, recommended for applications that benefit from a low latency network connection?
+
+A. Cluster Placement Group
+
+done Correct
+B. Database Snapshots
+
+C. Private Subnets
+
+D. Target Group
+
+2.
+Your company is ready to start migrating its application over to the cloud, but you cannot afford any downtime. Your manager asks you to come up with a plan of action. She also wants a solution that offers the flexibility to test the application on AWS with only a subset of users, but with the ability to increase the number of users over time. Which of these options are you most likely to recommend?
+
+A. Create a VPN tunnel from your on-premises to the VPC on AWS that hosts your application's resources and configure that at the VPC level.
+
+B. Implement a Route53 failover routing policy that sends traffic back to the on-premises application if the AWS app doesn't work.
+
+C. Implement a Route53 weighted routing policy that distributes the traffic between your on-premises application and the AWS application depending on weight.
+
+done Correct
+D. Configure an Elastic Load Balancer to distribute the traffic between the on-premises application and the AWS application.
+
+3.
+You have been tasked by your manager to build a tiered storage setup for database backups and their logs. These backups must be archived to a durable solution. After 10 days, the backups can then be archived to a lower priced storage tier. The data, however, must be retained for compliance policies. Which tiered storage solution would help you save cost, and still meet this compliance policy?
+
+A. Backup your data every day, off-site from AWS, to your on-premise data center’s storage solution and manage the data backups with your existing backup solution.
+
+B. Create EC2 instances with attached EBS volumes that replicate files daily to multiple EBS volumes on other instances, then clean up files older than 10 days on the primary EBS volume.
+
+C. Using AWS is already elastic and highly available. Therefore, the need to setup lifecycle policies is already low cost and plenty of room for growth for your organization.
+
+D. Set up an independent EBS volume where we can store daily backups and then copy these files over to S3, where we configure a bucket that has a lifecycle policy to archive files older than 10 days to AWS Glacier
+
+done Correct
+4.
+When working with Amazon RDS, by default, AWS is responsible for implementing which two management-related activities?
+
+A. If automated backups are enabled, creating and maintaining automated database backups with a point-in-time recovery of up to five minutes
+
+done Correct
+B. Creating and maintaining automated database backups in compliance with regulatory long-term retention requirements
+
+C. Installing and periodically patching the database software
+
+done Correct
+D. Importing data and optimizing queries
+
+5.
+What sort of host might you set up in your AWS environment that can be used as a way to “hop” into your environment to gain access to secure servers within a private subnet?
+
+A. This is not possible
+
+B. Bastion host
+
+done Correct
+C. Sneaker-net
+
+D. VPN
+
+6.
+In Autoscaling, what set of instructions tells the Auto Scaling Group how to respond to alarm messages?
+
+A. Document
+
+B. Language
+
+C. Policy
+
+done Correct
+D. First In First Out
+
+7.
+What section of a CloudFormation template can we add configuration to that will allow us to automatically launch those resources in any region or instance family and size?
+
+A. Outputs
+
+B. Description
+
+C. Mappings
+
+done Correct
+D. Resources
+
+8.
+Your company is setting up an application that is used to share files. Because these files are important to the sales team, the application must be highly available. Which AWS-specific storage option would you set up for low cost, reliability, and security?
+
+A. Use Amazon S3, which can be accessed by end users with signed URLs.
+
+done Correct
+B. Spin up EC2 with ephemeral type storage to keep the cost down.
+
+C. Attach an EBS volume to each of the EC2 servers where the files could be uploaded.
+
+D. Create a Dropbox account to share your files.
+
+9.
+Your supervisor sends you a list of several processes in your AWS environment that she would like you to automate via scripts. Which of the following requires a custom script?
+
+A. Identify and replace unhealthy EC2 instances
+
+close Your Answer
+forum
+Why is this incorrect?
+This can be done by Autoscaling or EC2 Autorecovery.
+
+B. Identify and failover unhealthy RDS databases to a secondary copy in a different Availability Zone
+
+C. Implement CloudWatch alerts for EC2 instances’ memory usage
+
+done Correct
+forum
+Why is this correct?
+This requires you to write a script to push a custom metric to CloudWatch.
+
+D. Implement CloudWatch alerts for RDS instances’ free storage space
+
+Demonstrate the ability to manage data and backups in an AWS environment
+1.
+A user is using AWS SQS, which operations are NOT supported by AWS SQS?
+
+A. DeleteMessageBatch
+
+close Your Answer
+forum
+Why is this incorrect?
+Incorrect - this is a valid SQS operation. https://docs.aws.amazon.com/cli/latest/reference/sqs/index.html
+
+B. ReadMessage
+
+done Correct
+forum
+Why is this correct?
+Correct - there is NO ReadMessage ... the closest valid operation is receive-message
+
+C. SendMessageBatch
+
+D. CreateQueue
+
+2.
+Assuming you have enabled the setting and are using the automated backup services provided by AWS, which of the following can retain automated backups?
+
+A. An instance store root volume when the EC2 instance is terminated
+
+B. RDS Automated Backups can be retained after database deletion.
+
+done Correct
+C. An RDS database when the RDS instance is terminated
+
+D. An EBS root volume when the EC2 instance is terminated
+
+3.
+A successful systems administrator does not need to create a script for:
+
+A. Sending CPU Utilization metrics to CloudWatch
+
+done Correct
+forum
+Why is this correct?
+The CPU Utilization metric is sent to CloudWatch automatically.
+
+B. Automating backups of EBS volumes
+
+done Correct
+C. Downloading software and updates from a repository to an EC2 instance
+
+close Your Answer
+forum
+Why is this incorrect?
+This is typically automated using userdata scripts or cfn-init.
+
+D. Automating backups of RDS databases
+
+done Correct
+4.
+Which of the following events are mitigated by the Multi AZ feature? (Choose all that apply)
+
+A. Region Outage
+
+B. Loss of network connectivity to primary
+
+done Correct
+C. Storage failure on primary
+
+done Correct
+D. Loss of availability in primary Availability Zone
+
+done Correct
+5.
+How would you restore an EBS snapshot to an EC2 instance?
+
+A. Clone the snapshot
+
+B. Create a new volume from the snapshot, attach the volume to the EC2 instance, pre-warm the volume and mount it to the device
+
+done Correct
+C. Attach the volume to the EC2 instance, create a snapshot and clone the data
+
+D. Mount the device, create a volume from the snapshot, and mount the volume
+
+6.
+Which of the following is true regarding Redis backups?
+
+A. Snapshots backup the entire cluster at a specific point in time.
+
+done Correct
+B. It is better to take snapshots on master cache nodes than read replicas.
+
+C. Snapshots should be taken on read-replicas and be done at low usage times.
+
+done Correct
+D. Automated backups are available for Redis clusters.
+
+done Correct
+7.
+Which of the following will cause a light I/O delay to an AWS RDS instance?
+
+A. Creating a Snapshot
+
+done Correct
+B. Creating a Read Replica
+
+done Correct
+C. Pre-warm volumes
+
+D. Automated EBS Volumes
+
+8.
+Which of the following services have automated backups? (Choose all that apply.)
+
+A. RDS
+
+done Correct
+B. ElastiCache and Redshift
+
+done Correct
+C. EC2 Instance Stores
+
+D. EBS Volumes
+
+done Correct
+9.
+What happens during a failover process in a Multi-AZ deployment with AWS RDS instance?
+
+A. You only lose data on the instances in the failing AZ since the data is sharded across instances which are across multiple availability zones
+
+B. RDS automatically creates new RDS instances for you in a failover
+
+C. RDS data gets backed up off-site
+
+D. The DNS record of the DB instance changes from the primary to the standby DB instance
+
+done Correct
+Demonstrate the ability to use key concepts to secure an AWS environment
+1.
+We are preparing for our regularly scheduled security assessment. What two configuration management practices should our organization have implemented?
+
+A. Determine that our remote administrative access is performed securely
+
+done Correct
+B. Make sure that S3 bucket policies and ACLs correctly implement our security policies
+
+done Correct
+C. Be sure that our AWS Trusted Advisor has identified and disabled unnecessary users and services on our EC2 instances
+
+D. We will make sure that unnecessary users and services have been identified on all published AMIs
+
+2.
+You have an Amazon VPC that has a private subnet and a public subnet in which you have a NAT instance server. You have created a group of EC2 instances that configure themselves at startup by downloading a bootstrapping script from S3 that deploys an application via GIT.
+
+Which one of the following setups would give us the highest level of security?
+
+A. EC2 instances in our public subnet, no EIPs, route outgoing traffic via the IGW
+
+B. EC2 instance in our private subnet, assigned EIPs, and route our outgoing traffic via our IGW
+
+C. EC2 instances in our public subnet, assigned EIPs, and route outgoing traffic via the NAT
+
+D. EC2 instances in our private subnet, no EIPs, route outgoing traffic via the NAT
+
+done Correct
+3.
+Your company's compliance department mandates that within your multi-national organization, all data for customers in the UK must never leave UK servers and networks. Similarly, US data must never leave US servers and networks without explicit authorization first. What do we have to do to comply with this requirement in our web-based applications running on AWS in EC2? The user has already set up a user profile that states their geographic location.
+
+A. We can run EC2 instances in multiple regions and leverage Route 53’s latency-based routing capabilities to route traffic to the appropriate region based on a user’s profile.
+
+B. We can run our EC2 instances within multiple AWS Availability Zones in a single region, and use Elastic Load Balancers with session stickiness to route our traffic to the appropriate zone based on the user’s profile.
+
+C. We can run EC2 instances in multiple regions, and leverage a third-party data provider to determine whether a user should be redirected to the appropriate region based on that user’s profiles.
+
+done Correct
+D. We can run EC2 instances in multiple regions, leveraging Elastic Load Balancers with session stickiness to route traffic to the appropriate region based on a user’s profile.
+
+4.
+How might you assign permissions to an EC2 instance so that the EC2 custom CloudWatch metric scripts can send the required data to Amazon CloudWatch?
+
+A. Use API access keys to authenticate calls from the EC2 instance to write to CloudWatch
+
+B. Assign an IAM role to the EC2 instance at creation time or later with permissions to write to CloudWatch
+
+done Correct
+C. You do not need to assign special permissions, just install the scripts
+
+D. Assign an IAM role to the EC2 instance at the boot time with permissions to write to CloudWatch
+
+5.
+Which features can be used to restrict access to data in S3?
+
+
+
+
+
+6.
+Given the following IAM policy:
+
+{
+    "Version": "2014-19-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:Get",
+                "s3:List"
+            ],
+            "Resource": ""
+        },
+        {
+            "Effect": "Allow",
+            "Action": "s3:PutObject",
+            "Resource": "arn:aws:s3:::corporate_bucket/"
+        }
+    ]
+}
+What does the IAM policy allow?
+
+
+
+
+
+7.
+Which of the following is a security best practice for an AWS environment?
+
+A. Enable MFA on the root user for your AWS account and use IAM users rather than the root user for administrative tasks.
+
+done Correct
+B. Use the default VPC provided by AWS for deploying your EC2 and RDS instances.
+
+C. Enable MFA for all IAM user accounts that are used to execute automated scheduled tasks from EC2 instances.
+
+D. Only store IAM user credentials on private AMIs.
+
+8.
+What AWS services give you access to the underlying operating system?
+
+A. EC2
+
+done Correct
+forum
+Why is this correct?
+You can SSH (Linux) or RDP (Windows) to EC2 instances if you have access to private part of the key pair associated with the instance creation.
+
+B. Amazon EMR
+
+done Correct
+C. Elastic Beanstalk
+
+done Correct
+forum
+Why is this correct?
+You can access the instances created by Elastic Beanstalk the same way you access other EC2s.
+
+D. RDS
+
+9.
+Per the AWS Acceptable Use Policy, penetration testing of EC2 instances:
+
+A. May be performed in some cases by the customer against their own instances without prior authorization from AWS
+
+done Correct
+B. Can be freely performed without authorization
+
+C. May be performed by AWS and is periodically performed by AWS
+
+D. Are expressly prohibited under all circumstances
+
+Demonstrate the ability to properly configure, monitor, and troubleshoot AWS networking resources
+1.
+What would be a reason you would upgrade to Direct Connect instead of a traditional VPN connection?
+
+A. Direct Connect is free
+
+B. Using Direct Connect is easier than setting up a VPN connection
+
+C. Direct Connect gives you a greater connection speed
+
+D. You gain higher bandwidth and consistent network connectivity
+
+done Correct
+2.
+Which of the following can be overridden at the EC2 instance level?
+
+A. An IAM policy explicitly denying a user the right to terminate all EC2 instances.
+
+B. The choice to not use dedicated tenancy at the VPC level.
+
+done Correct
+C. The choice to use dedicated tenancy at the VPC level.
+
+close Your Answer
+forum
+Why is this incorrect?
+If the option to use dedicated tenancy is explicitly set at the VPC level, it cannot be overridden at the instance level.
+
+D. An IAM policy explicitly allowing a user the right to terminate all EC2 instances.
+
+done Correct
+forum
+Why is this correct?
+Explicit denies in IAM policies always trump explicit allows, so a user who is allowed to terminate all EC2 instances in an account can be denied the permission to terminate a particular instance.
+
+3.
+Your infrastructure does not have an Internet Gateway attached to the VPC. What might you do in order to SSH into your EC2 instances? All other configurations are correct.
+
+A. Open up port 22 on your subnets
+
+B. Open up port 22 on your security groups
+
+C. Bastion host
+
+D. Attach a Virtual Private Gateway and create a VPN connection
+
+done Correct
+4.
+What item, when attached to a VPC, will allow an internal subnet to communicate to external networks?
+
+A. NAT Instance
+
+B. Customer Gateway
+
+C. Virtual Private Gateway
+
+done Correct
+D. Internet Gateway (IGW)
+
+done Correct
+5.
+Rule 100 in a NACL associated with subnets A and B denies HTTP traffic from 0.0.0.0/0. Rule 105 in the same NACL allows HTTP traffic from 0.0.0.0/0. EC2 Instances in subnet A are associated with a security group that allows HTTP traffic from 192.168.0.0/24. EC2 Instances in subnet B are associated with a security group that denies HTTP traffic from 128.168.0.0/24. Which of the following statements are true?
+
+A. HTTP traffic from the internet will be allowed to EC2 instances in Subnet B.
+
+B. HTTP traffic from 192.168.0.0/24 will be denied to EC2 instances in Subnet A because of the NACL rules.
+
+done Correct
+C. HTTP traffic from 192.168.0.0/24 will be allowed to EC2 instances in Subnet A.
+
+D. HTTP traffic from the internet will be denied to EC2 instances in both subnets due to the NACL rules.
+
+done Correct
+6.
+When managing our VPC in an AWS region, we want to give other teams access to create their own instances and modify the security groups inside subnets dedicated to their teams. We have to make sure the development team can NOT do anything in their subnets that could allow their instances to impact production instances in the production subnets.
+
+What can we do to separate out our VPC so that instances that the dev team can access can never interfere or interact with the ones within our production?
+
+A. We can create NACLs that restrict which subnets can talk to each other
+
+done Correct
+B. We can make sure that the subnets are only allowing routing via our IGW and not the local router
+
+C. We can create two subnets in CIDR blocks that are not close together
+
+D. We can make sure that the dev team’s subnet are in one AZ and the production is in another
+
+ 
+Contact usContact us!
+We're not around, but we'd love to chat another time. Leave us a message and we'll get back in touch as soon as we're able!
+click here and type your Name
+click here and type your Email
+We're not around, but we'd love to chat another time. Leave us a message and we'll get back in touch as soon as we're able!
+We're not around, but we'd love to chat another time. Leave us a message and we'll get back in touch as soon as we're able!
+Send
+Powered by Olark
