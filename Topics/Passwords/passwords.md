@@ -13,9 +13,9 @@ Everything about openssl
 https://www.madboa.com/geek/openssl/
 
 
-`echo -n foobar | sha256sum`
+> echo -n foobar | sha256sum
 
-`echo -n "foobar" | openssl dgst -sha256`
+> echo -n "foobar" | openssl dgst -sha256
 
 ## Creating SSH Keys
 

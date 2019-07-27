@@ -1,0 +1,227 @@
+
+
+VPC
+A user has created a VPC with public and private subnets using the VPC Wizard. The VPC has CIDR 20.0.0.0/16. The private subnet uses CIDR 20.0.0.0/24. Which entry is required in the main route table for the instances within the VPC to communicate with each other?
+
+A
+Destination : 20.0.0.0/24 and Target : Local
+
+Destination: 20.0.0.0/16 and Target : ALL
+
+C
+Destination: 20.0.0.0/0 and Target : ALL
+
+*D
+Destination : 20.0.0.0/16 and Target : Local
+Explanation
+A user can create a subnet with VPC and launch instances inside that subnet. If the user has created a public private subnet, the instances in the public subnet can receive inbound traffic directly from the Internet, whereas the instances in the private subnet cannot. If these subnets are created with Wizard, AWS will create two route tables and attach to the subnets. The main route table will have the entry “Destination: 20.0.0.0/16 and Target: Local”, which allows all instances in the VPC to communicate with each other.
+
+ 
+#7
+
+CloudFront S3
+Which of the following statements about content distribution in CloudFront is false?
+
+A
+Signed URLs can be created to access S3 objects from CloudFront edge locations.
+*B
+CloudFront can only be used to distribute public content.
+C
+For CloudFront to get your objects from an HTTP server, the objects must remain publicly accessible.
+To require that users access your content through CloudFront URLs, you should create a special CloudFront user called an origin access identity.
+Explanation
+AWS CloudFront allows you to distribute content from your S3 buckets privately by removing direct access to your objects through the public S3 URLS and providing instead signed URLs that can be valid for a specific time window or that can only be requested from certain IP addresses.
+
+ 
+#9
+
+What type of resources can AWS Direct Connect communicate with through a virtual public interface?
+
+*A
+Only regional services
+
+B
+Only resource within a remote data center
+
+C
+Both resources within a VPC and a remote data center
+
+Only resources within a specific VPC
+
+Explanation
+In AWS Direct Connect, there are two types of virtual interface connections: public and private. Virtual public interfaces can connect a remote data center to AWS regional services in a specific region. Virtual private interfaces can connect a remote data center to resources within a specific VPC.
+
+ 
+#10
+
+DynamoDB
+In regard to DynamoDB, which of the following statements is correct?
+A
+An Item should have at least two value sets, a primary key and another attribute.
+B
+An attribute can have one or several other attributes.
+A primary key should be single-valued.
+*D
+An Item can have more than one attributes.
+Explanation
+In Amazon DynamoDB, a database is a collection of tables. A table is a collection of items and each item is a collection of attributes.
+
+ 
+#12
+
+RDS
+Which of the following DB engines is not supported by Amazon RDS?
+
+*A
+MongoDB
+B
+MySQL
+Oracle
+D
+Microsoft SQL Server
+Explanation
+Amazon RDS provides six familiar database engines to choose from, including Amazon Aurora, Oracle, Microsoft SQL Server, PostgreSQL, MySQL and MariaDB.
+
+ 
+#13
+
+How does AWS Batch simplify the batch computing process?
+
+It fully automates the batch computing process.
+*B
+It removes the need for expensive hardware, and time-consuming administrative and process management requirements.
+C
+It allows you to complete large processing jobs in a serverless computing model.
+D
+It allows you to manage cluster environments with minimal administrative requirements.
+Explanation
+As a fully managed service, AWS Batch enables developers, scientists, and engineers to run batch computing workloads of any scale. AWS Batch automatically provisions compute resources and optimizes the workload distribution based on the quantity and scale of the workloads. With AWS Batch, there is no need to install or manage batch computing software, which allows you to focus on analyzing results and solving problems. AWS Batch reduces operational complexities, saves time, and reduces costs, which makes it easy for developers, scientists, and engineers to run their batch jobs in the AWS Cloud.
+
+ 
+#15
+
+IAM
+An IAM group is a:
+
+A
+group of EC2 machines that gain the permissions specified in the group.
+B
+collection of AWS accounts.
+collection of resources that a user can use.
+*D
+collection of IAM users.
+Explanation
+Within the IAM service, a group is regarded as a collection of users.  You can use groups to specify permissions for a collection of users, which can make those permissions easier to manage for those users.
+
+ 
+#17
+
+Lambda
+The AWS Lambda container ____.
+
+A
+is never reused for subsequent function invocations
+involves no latency during setup and bootstrapping
+C
+allows a user to manage the creation and deletion of Lambda containers
+*D
+is an execution environment created from user-specified configuration settings
+Explanation
+When a Lambda function is invoked, AWS Lambda launches a container (that is, an execution environment) based on the configuration settings you provided. It takes time to set up a container and do the necessary bootstrapping, which adds some latency each time the Lambda function is invoked. AWS Lambda manages container creations and deletion, there is no AWS Lambda API for you to manage containers. After a Lambda function is executed, AWS Lambda maintains the container for some time in anticipation of another Lambda function invocation. 
+
+ 
+#20
+
+What is an advantage of using unmanaged compute environments in AWS Batch?
+
+AWS Batch provisions, handles, and terminates the compute instances
+*B
+More customization options
+C
+AWS Batch manages the Amazon ECS cluster
+D
+Less administrative and management tasks
+Explanation
+A managed environment means that the service itself will handle provisioning, scaling and termination of your compute instances based on configuration premises that you would enter regarding instance type and purchase method, such as On-demand or Spot instances. This environment is then created as an Amazon ECS Cluster. Unmanaged environments are provisioned, managed and maintained by you which gives greater customization, however, it requires greater administration and maintenance. 
+
+ 
+#24
+
+In AWS Batch, what is the purpose of a job definition?
+
+*A
+It dictates how the job will run and with what configuration.
+B
+It is where a job is placed before it processes.
+These contain the compute resources to carry out the job.
+D
+It controls when a job should be run and from which compute environment.
+Explanation
+AWS Batch job definitions specify how jobs are to be run. While each job must reference a job definition, many of the parameters that are specified in the job definition can be overridden at run time.
+
+ 
+#26
+
+CloudFormation Elastic Beanstalk
+Which of the following statements best describes a key difference between Elastic Beanstalk and CloudFormation?
+
+A
+Elastic Beanstalk is faster in deploying applications than CloudFormation.
+*B
+CloudFormation offers more potential for customization than Elastic Beanstalk, because you can actually design and script yourself.
+CloudFormation is faster in deploying applications than Elastic Beanstalk.
+D
+Elastic Beanstalk uses Elastic load balancing and CloudFormation doesn't.
+Explanation
+These services are designed to complement each other. AWS Elastic Beanstalk provides an environment to easily develop and run applications in the cloud. It is integrated with developer tools and provides a one-stop experience for you to manage the lifecycle of your applications. AWS CloudFormation is a convenient deployment mechanism for a broad range of AWS resources. It supports the infrastructure needs of many different types of applications such as existing enterprise applications, legacy applications, applications built using a variety of AWS resources and container-based solutions (including those built using AWS Elastic Beanstalk).
+
+AWS CloudFormation introduces two new concepts: The template, a JSON-format, text-based file that describes all the AWS resources you need to deploy to run your application and the stack, the set of AWS resources that are created and managed as a single unit when AWS CloudFormation instantiates a template.
+
+ 
+#28
+
+EC2 AWS General
+When you launch an instance using Amazon EC2, you must specify a geographic region in which to launch the instance, and a corresponding ____, which is an isolated location in that region where the physical hardware on which the instance will be launched is located.
+
+A
+sub-region
+B
+vicinity
+sector
+*D
+availability zone
+Explanation
+Amazon EC2 is hosted in multiple locations worldwide. These locations are composed of regions and Availability Zones. Each region is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones. Each region is completely independent. Each Availability Zone is isolated, but the Availability Zones in a region are connected through low-latency links.
+
+ 
+#29
+
+Lambda
+The code you run on the AWS Lambda is uploaded as a _____.
+
+Lambda instance
+B
+Lambda declaration
+*C
+Lambda function
+D
+Lambda logic
+Explanation
+The code you run on AWS Lambda is uploaded as a Lambda function. Each function has associated configuration information, such as its name, description, entry point, and resource requirements.
+
+ 
+#30
+
+What is one function of an AWS Snowball?
+
+*A
+To transfer petabyte-scale data into and out of the AWS cloud
+To migrate thousands of on-premises workloads to AWS
+C
+To transfer exabyte-scale data into and out of the AWS cloud
+D
+To migrate databases into and out of AWS
+Explanation
+AWS Snowball is a petabyte-scale data transport solution that can be used to securely transfer large amounts of data into and out of the AWS cloud.
+
+ 

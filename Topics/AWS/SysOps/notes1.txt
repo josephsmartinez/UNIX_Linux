@@ -689,6 +689,8 @@ done Correct
 }
 ```
 
+
+
 6.
 A deny overrides an allow in which circumstances?
 
@@ -767,6 +769,7 @@ What is the result of the following bucket policy?
     ]
 }
 
+- Enable automated backups of the database.
 
 9. We are preparing for our regularly scheduled security assessment. What two configuration management practices should our organization have implemented?
 
@@ -940,3 +943,31 @@ This is correct.
 18. What might be the cause of an EC2 instance not launching in an auto-scaling group?
 
 - The Availability zone is no longer supported
+
+19. Your RDS database is experiencing high levels of read requests during the business day and performance is slowing down. You have already verified that the source of the congestion is not from backups taking place during the business day, as automatic backups are not enabled. Which of the following is the first step you can take toward resolving the issue?
+
+- Enable automated backups of the database.
+
+20. You manage a social media website on EC2 instances in an Auto Scaling group. You have configured your Auto Scaling group to deploy one new EC2 instance when CPU utilization is greater than 90% for 3 consecutive periods of 10 minutes. You notice that between 6:00 pm and 10:00 pm every night, you see a gradual increase in traffic to your website. Although Auto Scaling launches several new instances every night, some users complain they are seeing timeouts when trying to load the index page during those hours. What is the least cost-effective way to resolve this problem?
+
+- 
+
+21. What would we need to attach to a Bastion host or NAT host for high availability in the event that the primary host went down and that we needed to send traffic to a secondary host?
+
+- Elastic IP Address
+
+22. Which of the following is the best procedure for disaster recovery as it relates to RDS?
+
+- 
+
+23. Which of the following would you be likely to schedule during a maintenance window (rather than during business hours) when working in a Multi-AZ RDS environment?
+
+- 
+
+24. Which one of the below setups would need a custom CloudWatch metric in order to be able to monitor it?
+
+- 
+
+25. We have developed a mobile application that gets downloaded several hundred times a week. What authentication method should we enable for the mobile clients to access images that are stored in an AWS S3 bucket that provides us with the highest flexibility and rotates credentials?
+
+- 
