@@ -1,5 +1,9 @@
 # Git and Git Management
 
+## Quich HOW TOs
+
+- change username and password
+
 ## Git Protcols
 
 - git://
@@ -17,6 +21,16 @@ info  -
 logs - logs
 objects - database of compressed file with hashed contents the have been commited the repo  
 refs - 
+
+## Configure username and password
+
+> git config --list
+> git config [--global] user.name "Full Name"
+> git config [--global] user.email "email@address.com"
+> git config --global user.name ""
+> git config --global user.email ""
+> git config user.name ""
+> git config user.email ""
 
 ## Creating  a Local Git Reposity
 
