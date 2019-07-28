@@ -6,8 +6,8 @@
 
 ## Git Protcols
 
-- git://
-- https://
+- git
+- https
 
 ## Git Repository Listing
 
@@ -17,10 +17,10 @@ config - configuration file for user information and repo
 decription - contain the name of the repo
 hooks - contains script used to automate processes during the commit phases
 index - contains staging area and commmit information
-info  - 
+info  -
 logs - logs
 objects - database of compressed file with hashed contents the have been commited the repo  
-refs - 
+refs -
 
 ## Configure username and password
 
@@ -63,7 +63,7 @@ commit a modified file in the stagin area
 ## Ignore certaub file types
 
 > touch .gitignore
-> git check-ignore <pattern>
+> git check-ignore `<pattern>`
 
 ## Using Tags
 
@@ -76,7 +76,7 @@ commit a modified file in the stagin area
 > git checkout <branch_name>
 > git ckeckout -b <branch_name>
 > git merge <branch_to_merge_to>
-> git branch -d <branch>
+> git branch -d `<branch>`
 
 ## Rebasing
 
@@ -104,12 +104,22 @@ commit a modified file in the stagin area
 > git log --graph
 > git log --stat
 > git log --pretty=format
-will display the one per line history of the commits 
+will display the one per line history of the commits
 > git log --oneline
 
-## Reset git head and Revert
+## Stash the changes
 
-> git revert <commit>
+Uncommitted changes
+> git stash save "description of changes"
+
+## Reset git head and Revert (How to undo all uncommitted changes)
+
+WARNING: Well, best practice is for you to stash the changes in case you were mistaken and later decide that you really wanted them after all
+
+> git reset --hard
+
+Revert
+> git revert `<commit>`
 > git revert HEAD~2
 
 Soft reset
@@ -130,7 +140,7 @@ Undo `git --reset`
 
 ## Cloning Local Respositories and HTTPS
 
-> git clone <local_repo> <new_repo>
+> git clone `<local_repo> <new_repo>`
 > git clone https://somerepo.git
 
 ## Tacking Remote Repositories
@@ -140,9 +150,7 @@ Undo `git --reset`
 
 ## Push, Push, and Create Pull Request
 
-
-Git SSH key setup
-https://stackoverflow.com/questions/34400272/visual-studio-code-always-asking-for-git-credentials/50420113#50420113
+[Git SSH key setup](https://stackoverflow.com/questions/34400272/visual-studio-code-always-asking-for-git-credentials/50420113#50420113)
 
 Git ignore Files
 https://github.com/github/gitignore
