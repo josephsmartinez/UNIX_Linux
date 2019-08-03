@@ -1,5 +1,6 @@
-# Text Manipulating Commands
+# Text and file Manipulating Commands
 
+> rm
 > cat
 > sed
 > awk
@@ -73,8 +74,12 @@ NOTE: uniq does not detect repeated lines unless they are adjacent. You may want
 Prints repeated users within joined file
 > uniq -d System_UsersSort.csv
 
-
 ## tee
 
 Change fstab so the volume will be mounted after a reboot
 > echo '/dev/disk/by-id/scsi-0DO_Volume_volume-nyc3-06 /mnt/volume_nyc3_06 ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab'
+
+## rm
+
+Use "--" to make rm stop parsing command line options, like this:
+> rm -- --help

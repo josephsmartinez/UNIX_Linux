@@ -31,6 +31,7 @@ file — determine file type
 > frag
 > freesp
 
+
 NOTE: Because each partition has its own set of inodes, hard links across partitions don't work. Soft links should, though.
 > link
 > unlink
