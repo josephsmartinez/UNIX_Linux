@@ -55,6 +55,9 @@ Used in regular expressions to mean that any single character can exist at the s
 Any ticket between 3 and 4 AM
 > grep --color "0[3-4]:..:.." Traffic_Violations.csv
 
+Find something between two chars
+grep -Po '(?<=\[).*(?=\])' configs/aws_account_profiles
+
 Specifying Match Repetition `{}`
 
 Resources:
